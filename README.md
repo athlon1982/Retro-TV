@@ -52,7 +52,7 @@ downloaded to your server.
 ### Option B — manual install from a release zip
 
 1. On the [Releases page](../../releases), download the latest
-   `retro-tv_x.y.z.zip` (current release: **0.3.0.2**).
+   `retro-tv_x.y.z.zip` (current release: **0.3.0.3**).
 2. In your Jellyfin **plugins** folder, create a folder named `RetroTv`.
 3. Extract the zip's contents into that folder (`Jellyfin.Plugin.RetroTv.dll`,
    `meta.json`, `icon.webp`).
@@ -72,8 +72,8 @@ tells you to.
 
 ### Step 1 — Weather zip (the one setting you must change)
 
-The weather channel needs your location. The default zip is 05773
-(Wallingford, VT) — change it to yours:
+The weather channel needs your location. The zip is blank until you enter
+your own:
 
 1. Type your zip code in the **Weather zip code** box.
 2. Press **Resolve zip**.
@@ -256,9 +256,9 @@ If you want the same catalog as a browsable on-demand library (not just
 live channels):
 
 1. On the plugin settings page, set an **Output folder** and press **Save**.
-2. Press **Create the Retro TV library** — the plugin creates the Jellyfin
-   library from that folder (mixed movies + TV) and the catalog build
-   writes the Retro TV icon into it automatically. No manual library step.
+2. Add that folder to Jellyfin as a library yourself (Dashboard → Libraries
+   → Add Library, mixed content) — the catalog build writes the Retro TV
+   icon into it automatically.
 3. The daily scheduled catalog build fills it. (Output folder blank =
    the build refuses to run — that's normal for Live TV only.)
 
@@ -324,7 +324,7 @@ to `archive.org`.
     ├── LICENSE             # GPL-3.0 — the plugin
     ├── PLUGIN-DESIGN.md    # full design (catalog, guide, weather, themes)
     ├── BUILD-PLAN.md       # slice plan
-    ├── BUILD-0.3.0.2-RECORD.md   # latest build + load-test record
+    ├── BUILD-0.3.0.3-RECORD.md   # latest build + load-test record
     └── Jellyfin.Plugin.RetroTv/  # C# source — dotnet build via build.sh
 ```
 
