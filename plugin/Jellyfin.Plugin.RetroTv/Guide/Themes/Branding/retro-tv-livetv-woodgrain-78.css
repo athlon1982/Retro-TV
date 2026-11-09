@@ -1,0 +1,274 @@
+/* =====================================================================
+   Retro TV — Jellyfin Live TV guide theme: Woodgrain '78
+   ---------------------------------------------------------------------
+   Paste this whole file into Jellyfin Dashboard > General > Custom CSS
+   (or apply it with the Branding API) to use this theme. To switch
+   themes, paste one of the other retro-tv-livetv-*.css files instead.
+   Only the THEME block below differs between variants; the layout
+   rules underneath are shared. No Jellyfin restart is needed — the
+   change takes effect on next page load.
+   SCOPE: every rule is scoped under .tvguide, so only the Live TV
+   Guide tab is restyled. The layout stays Jellyfin's (no live-picture
+   corner, no now/next header block — those DOM nodes do not exist in
+   Jellyfin's guide). Nothing that carries guide information is hidden.
+   CHANNEL ROWS (2026-11-09 fix v2): guide.js renders the name div ONLY
+   when the channel has NO image (!c && l.Name, where c is the Primary
+   image tag) — proven from the live served guide JS. The sidecar gives
+   every Retro channel the same logo, so .guideChannelName is NEVER in
+   the DOM for Retro rows and no CSS can show it (that is why fix v1,
+   which styled .guideChannelName, changed nothing on screen). Fix v2
+   renders the name from the button's title attribute ("Number Name",
+   always set by guide.js) via ::after, and hides the separate
+   number/name elements (their text is duplicated in the title). The
+   icon is KEPT, small at the far right. Rows read number + name +
+   icon, like the sidecar guide's channel list. The tier label under
+   the name (PUBLIC DOMAIN / USER-UPLOADED) is NOT in this file:
+   Jellyfin's guide DOM carries no tier data and CSS cannot invent
+   per-channel text — that line lives on the sidecar / plugin guide
+   page, which knows the tiers. The v1 column widening (12vw->18vw)
+   is REVERTED: it bought nothing (names never rendered) and stole
+   grid space — stock column widths apply again.
+   Selectors verified against jellyfin-web v12.4 (the exact version
+   this server runs): the served livetv-livetvguide CSS chunk AND the
+   served guide JS chunk (14553.<hash>.chunk.js) — the cell is built as
+   button.guide-channelHeaderCell > div.guideChannelImage (only if the
+   channel has a Primary image) + h3.guideChannelNumber (if numbered)
+   + div.guideChannelName (only if NO image and a name exists).
+   ===================================================================== */
+
+/* --- THEME: Woodgrain '78 (edit only this block to retheme) --- */
+.tvguide {
+  --rtv-bg: #2b1d12;
+  --rtv-panel: #3d2b1a;
+  --rtv-header: #1d130a;
+  --rtv-text: #f3e6c8;
+  --rtv-muted: #c9a86a;
+  --rtv-accent: #e8a33d;
+  --rtv-grid: #5a4026;
+  --rtv-block: #4a3220;
+  --rtv-block-hover: #5d3f27;
+  --rtv-live: #c0392b;
+  --rtv-now: #ff5a3c;
+  --rtv-button: #e8a33d;
+  --rtv-button-text: #1d130a;
+  --rtv-badge-new-bg: #e8a33d;
+  --rtv-badge-new-text: #1d130a;
+  --rtv-badge-premiere-bg: #c0392b;
+  --rtv-badge-premiere-text: #f3e6c8;
+  --rtv-badge-repeat-bg: #6b8e23;
+  --rtv-badge-repeat-text: #1d130a;
+  --rtv-display: Georgia, 'Times New Roman', serif;
+  --rtv-body: Georgia, 'Times New Roman', serif;
+}
+
+/* --- LAYOUT BASE (shared by all four themes) --- */
+
+/* Guide root: theme background + body font. */
+.tvguide {
+  background: var(--rtv-bg) !important;
+  color: var(--rtv-text);
+  font-family: var(--rtv-body);
+}
+
+/* Header bar (date tabs + time header row): dark header strip, yellow rule. */
+.tvguide .tvGuideHeader {
+  background: var(--rtv-header) !important;
+  border-bottom: 2px solid var(--rtv-accent) !important;
+}
+.tvguide .guideHeaderDateSelection {
+  background: var(--rtv-header) !important;
+}
+.tvguide .guide-date-tab-button {
+  color: var(--rtv-muted) !important;
+  font-family: var(--rtv-body);
+}
+.tvguide .guide-date-tab-button.emby-tab-button-active {
+  color: var(--rtv-accent) !important;
+  border-bottom: 2px solid var(--rtv-accent) !important;
+}
+
+/* Time header row: channel-column header + time slots. */
+.tvguide .guide-headerTimeslots {
+  background: var(--rtv-header) !important;
+  border-bottom: 2px solid var(--rtv-accent) !important;
+}
+.tvguide .guide-channelTimeslotHeader {
+  background: var(--rtv-header) !important;
+  color: var(--rtv-accent) !important;
+}
+.tvguide .timeslotHeader {
+  color: var(--rtv-accent) !important;
+  font-family: var(--rtv-display);
+  font-weight: bold;
+}
+.tvguide .btnGuideViewSettings {
+  color: var(--rtv-accent) !important;
+}
+
+/* Channel column: panel background, channel cells. */
+.tvguide .channelsContainer {
+  background: var(--rtv-panel) !important;
+}
+.tvguide .guide-channelHeaderCell {
+  background: var(--rtv-panel) !important;
+  border-color: var(--rtv-grid) !important;
+  color: var(--rtv-text) !important;
+}
+.tvguide .guide-channelHeaderCell:hover,
+.tvguide .guide-channelHeaderCell:focus {
+  background: var(--rtv-block-hover) !important;
+  outline: 2px solid var(--rtv-accent) !important;
+  outline-offset: -2px;
+}
+.tvguide .guideChannelNumber {
+  color: var(--rtv-accent) !important;
+  font-family: var(--rtv-display);
+  font-weight: bold;
+}
+.tvguide .guideChannelName {
+  color: var(--rtv-text) !important;
+  font-family: var(--rtv-body);
+}
+
+/* --- Channel-row fix v2 (2026-11-09): number + name + icon in every row ---
+   ROOT CAUSE, PROVEN from the live served guide JS (chunk 14553,
+   livetv-livetvguide module): guide.js renders the name div ONLY when
+   the channel has NO image:
+       c && (image div) ... !c && l.Name && (name div)
+   where c = l.ImageTags.Primary. The sidecar gives every Retro channel
+   the same logo, so c is always truthy and .guideChannelName is NEVER
+   in the DOM for Retro rows. No CSS can show an element that isn't
+   there — that is why fix v1 (which styled .guideChannelName) changed
+   nothing on screen even though the CSS loaded (the column widened
+   249->400px and the numbers went yellow, but no names appeared).
+   FIX: render the name from the button's title attribute, which
+   guide.js ALWAYS sets to "Number Name" (u.join(" ")). The row then
+   reads number + name + icon, like the sidecar guide's channel list.
+   The separate number/name elements are hidden because their text is
+   duplicated inside the title string. The icon is KEPT. The tier
+   label under the name is still not here (no tier data in Jellyfin's
+   DOM — it lives on the sidecar / plugin guide page). */
+/* Column widths: v1 widened the column (12vw->18vw) to give the never-
+   rendered names room; it bought nothing and stole grid space, so the
+   widening is REVERTED — this block is gone and stock widths apply. */
+/* Name text: the button's title attribute ("Number Name") rendered as
+   a pseudo-element, bold like the sidecar list. */
+.tvguide .guide-channelHeaderCell::after {
+  content: attr(title) !important;
+  display: block !important;
+  font-weight: bold !important;
+  font-family: var(--rtv-body) !important;
+  color: var(--rtv-text) !important;
+  margin-left: 1em !important;
+  margin-right: 24% !important;
+  max-width: 72% !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+/* Hide the separate number/name elements: their text is inside the
+   title string the ::after shows. (The name div only exists for
+   channels WITHOUT an image; hiding it keeps every row uniform.) */
+.tvguide .guideChannelNumber,
+.tvguide .guideChannelName {
+  display: none !important;
+}
+/* Icon: KEPT, as a small logo at the far right instead of a 40%-wide
+   overlay covering the name. */
+.tvguide .guideChannelImage {
+  width: 20% !important;
+  right: 2% !important;
+}
+@media (max-width: 62.5em) {
+  .tvguide .guideChannelImage {
+    width: 24% !important;
+  }
+  .tvguide .guide-channelHeaderCell::after {
+    max-width: 68% !important;
+    margin-right: 28% !important;
+  }
+}
+
+/* Program rows: grid lines between channels. */
+.tvguide .channelPrograms {
+  border-color: var(--rtv-grid) !important;
+}
+
+/* Program blocks: theme block color, grid border, readable text. */
+.tvguide .programCell {
+  background: var(--rtv-block) !important;
+  border-color: var(--rtv-grid) !important;
+  color: var(--rtv-text) !important;
+}
+.tvguide .programCell:hover {
+  background: var(--rtv-block-hover) !important;
+}
+.tvguide .programCell:focus {
+  outline: 2px solid var(--rtv-accent) !important;
+  outline-offset: -2px;
+}
+/* Category-tinted cells (kids/sports/news/movie) keep the uniform Retro
+   block color when color-coded backgrounds are on, instead of the app
+   theme's clashing tints. */
+.tvguide .programCell-kids,
+.tvguide .programCell-sports,
+.tvguide .programCell-news,
+.tvguide .programCell-movie {
+  background: var(--rtv-block) !important;
+}
+/* Currently airing: accent border, like the sidecar guide's NOW block. */
+.tvguide .programCell-active {
+  border: 2px solid var(--rtv-now) !important;
+  box-shadow: inset 0 0 0 1px var(--rtv-now);
+}
+.tvguide .guideProgramNameText {
+  color: var(--rtv-text) !important;
+  font-family: var(--rtv-display);
+}
+.tvguide .guideProgramSecondaryInfo,
+.tvguide .programSecondaryTitle {
+  color: var(--rtv-muted) !important;
+}
+
+/* Status badges: LIVE / NEW / PREMIERE / REPEAT + HD marker. */
+.tvguide .liveTvProgram {
+  background: var(--rtv-live) !important;
+  color: #fff !important;
+}
+.tvguide .newTvProgram {
+  background: var(--rtv-badge-new-bg) !important;
+  color: var(--rtv-badge-new-text) !important;
+}
+.tvguide .premiereTvProgram {
+  background: var(--rtv-badge-premiere-bg) !important;
+  color: var(--rtv-badge-premiere-text) !important;
+}
+.tvguide .repeatTvProgram {
+  background: var(--rtv-badge-repeat-bg) !important;
+  color: var(--rtv-badge-repeat-text) !important;
+}
+.tvguide .guide-programTextIcon {
+  background: var(--rtv-panel) !important;
+  color: var(--rtv-accent) !important;
+}
+.tvguide .timerIcon,
+.tvguide .seriesTimerIcon {
+  color: var(--rtv-accent) !important;
+}
+
+/* Guide scrollbars: thin, panel thumb on header track. */
+.tvguide .guideScroller {
+  scrollbar-color: var(--rtv-panel) var(--rtv-header);
+}
+.tvguide .guideScroller::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+.tvguide .guideScroller::-webkit-scrollbar-thumb {
+  background: var(--rtv-panel);
+  border: 2px solid var(--rtv-bg);
+}
+.tvguide .guideScroller::-webkit-scrollbar-track {
+  background: var(--rtv-header);
+}

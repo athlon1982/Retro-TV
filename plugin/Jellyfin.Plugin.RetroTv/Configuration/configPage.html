@@ -34,10 +34,30 @@
                 <h2>Retro TV</h2>
                 <p class="fieldDescription">Turns the Internet Archive into a retro-video library and live channels inside Jellyfin. Video streams direct from the Archive at play time — nothing is downloaded in Stage 1.</p>
 
+                <div id="retroTvGettingStarted" style="background: var(--rtv-panel); border: 2px solid var(--rtv-accent); padding: 0.75em; margin-bottom: 1em;">
+                    <h2 style="margin-top: 0;">Getting started — do this first</h2>
+                    <p class="fieldDescription">The plugin alone does not put channels in Live TV. Follow these three steps — everything else on this page is optional and the defaults already work.</p>
+                    <ol>
+                        <li><b>Weather zip:</b> if the zip below is not your town, change it, press <b>Resolve zip</b>, check the place name, then press <b>Save</b> at the bottom. Until you do this the weather channel has no location.</li>
+                        <li><b>Add the tuner:</b> in the Jellyfin dashboard go to <b>Live TV → TV Tuner → Add → M3U Tuner</b> and paste the first link below. Then add an <b>XMLTV guide provider</b> with the second link. <b>These two links are built from YOUR server's address — they are different on every install. Copy them from here, never from someone else's screenshot.</b></li>
+                        <li><b>Refresh Channels first, then Refresh Guide</b> (Dashboard → Live TV). If you refresh the guide first it comes up blank.</li>
+                        <li><b>Make Jellyfin's own guide match:</b> press <b>Apply this theme to Jellyfin's Live TV guide</b> next to the Guide theme below. One click writes the theme into Branding and keeps any CSS you already have. Without this, Jellyfin's guide shows no channel names.</li>
+                    </ol>
+                    <div class="inputContainer">
+                        <label class="inputLabel inputLabelUnfocused" for="txtRetroTvM3uUrl">M3U tuner link (copy this)</label>
+                        <input id="txtRetroTvM3uUrl" name="txtRetroTvM3uUrl" type="text" readonly is="emby-input" onclick="this.select();" />
+                    </div>
+                    <div class="inputContainer">
+                        <label class="inputLabel inputLabelUnfocused" for="txtRetroTvXmltvUrl">XMLTV guide link (copy this)</label>
+                        <input id="txtRetroTvXmltvUrl" name="txtRetroTvXmltvUrl" type="text" readonly is="emby-input" onclick="this.select();" />
+                    </div>
+                    <p class="fieldDescription">Done right you should see 154 channels in Live TV with a programme guide up to 96 hours out. The themeable guide page is <a href="/RetroTv/Guide" target="_blank">/RetroTv/Guide</a> on this server.</p>
+                </div>
+
                 <div class="inputContainer">
                     <label class="inputLabel inputLabelUnfocused" for="txtOutputFolder">Output folder</label>
                     <input id="txtOutputFolder" name="txtOutputFolder" type="text" is="emby-input" />
-                    <div class="fieldDescription">Where .strm / .nfo / poster files and catalog.json go. On Dayz this is F:\IA-Channels\ — add that folder to Jellyfin as a Movies library named "Retro TV".</div>
+                    <div class="fieldDescription">Where .strm / .nfo / poster files and catalog.json go for the on-demand library (Stage 1). Leave blank if you only want Live TV — the channels do not need it. If you do want the library, set a folder and add it to Jellyfin as a Movies library named "Retro TV".</div>
                 </div>
 
                 <div class="inputContainer">
@@ -72,6 +92,10 @@
                     <label class="inputLabel inputLabelUnfocused" for="selGuideTheme">Guide theme</label>
                     <select id="selGuideTheme" name="selGuideTheme" is="emby-select"></select>
                     <div class="fieldDescription"><span id="retroTvThemeSwatch"></span><span id="retroTvThemeDescription"></span> The theme applies to the guide page (Stage 2) and this page's accents. No restart needed.</div>
+                </div>
+                <div class="inputContainer">
+                    <button type="button" class="raised button-submit block emby-button" id="btnApplyTheme">Apply this theme to Jellyfin's Live TV guide</button>
+                    <div class="fieldDescription" id="retroTvBrandingResult">Writes the selected theme into Dashboard → General → Custom CSS (Branding) so Jellyfin's own guide shows channel names and the theme. Your existing CSS is kept. No restart needed — takes effect on next page load.</div>
                 </div>
 
                 <h2>Weather channel (Stage 2)</h2>
@@ -110,7 +134,7 @@
                 <div class="inputContainer">
                     <label class="inputLabel inputLabelUnfocused" for="txtFfmpegPath">ffmpeg path (optional)</label>
                     <input id="txtFfmpegPath" name="txtFfmpegPath" type="text" is="emby-input" />
-                    <div class="fieldDescription">Full path to the ffmpeg binary used to stitch channel streams. Leave blank to use "ffmpeg" from the PATH. On Dayz this is F:\Jellyfin\Server\ffmpeg.exe (Jellyfin's bundled ffmpeg). NVENC is used automatically when the ffmpeg reports h264_nvenc, otherwise the software encoder.</div>
+                    <div class="fieldDescription">Full path to the ffmpeg binary used to stitch channel streams. Leave blank to use "ffmpeg" from the PATH — on most installs that is Jellyfin's bundled ffmpeg. NVENC is used automatically when the ffmpeg reports h264_nvenc, otherwise the software encoder.</div>
                 </div>
                 <div class="inputContainer">
                     <label class="inputLabel inputLabelUnfocused" for="txtWeatherFontPath">Weather slate font (optional)</label>
@@ -120,7 +144,7 @@
 
                 <h2>Live TV wiring (Jellyfin dashboard)</h2>
                 <div class="inputContainer">
-                    <div class="fieldDescription">Point Jellyfin Live TV at this plugin: Dashboard → Live TV → TV Tuner → Add → M3U Tuner, URL <span id="retroTvM3uUrl"></span> — then add an XMLTV guide provider with URL <span id="retroTvXmltvUrl"></span>. Refresh Channels first, then Refresh Guide, or the guide comes up blank. The themeable guide page is <a href="/RetroTv/Guide" target="_blank">/RetroTv/Guide</a>.</div>
+                    <div class="fieldDescription">Same two links as in Getting started above — M3U tuner: <span id="retroTvM3uUrl"></span>, XMLTV guide provider: <span id="retroTvXmltvUrl"></span>. Refresh Channels first, then Refresh Guide, or the guide comes up blank. The themeable guide page is <a href="/RetroTv/Guide" target="_blank">/RetroTv/Guide</a>.</div>
                 </div>
 
                 <div>
@@ -250,12 +274,14 @@
                 var base = window.location.origin;
                 document.querySelector("#retroTvM3uUrl").textContent = base + "/RetroTv/channels.m3u";
                 document.querySelector("#retroTvXmltvUrl").textContent = base + "/RetroTv/guide.xml";
+                document.querySelector("#txtRetroTvM3uUrl").value = base + "/RetroTv/channels.m3u";
+                document.querySelector("#txtRetroTvXmltvUrl").value = base + "/RetroTv/guide.xml";
                 document.querySelector("#chkAutoBuild").checked = cfgGet("AutoBuildEnabled") !== false;
                 document.querySelector("#chkChannelsEnabled").checked = !!cfgGet("ChannelsEnabled");
                 document.querySelector("#chkCommercialBreaks").checked = cfgGet("CommercialBreaksEnabled") !== false;
                 var place = cfgGet("WeatherPlaceName");
                 if (place) document.querySelector("#retroTvGeoResult").textContent = "Resolved place: " + place + " — Weather data by Open-Meteo.com";
-                return loadThemes();
+                return loadThemes().then(refreshBrandingStatus);
             }).then(refreshStatus).catch(function (err) {
                 document.querySelector("#retroTvStatus").textContent = "Failed to load configuration: " + err;
             }).finally(function () {
@@ -289,6 +315,34 @@
         document.querySelector("#btnBuildPilot").addEventListener("click", function () { startBuild(true); });
         document.querySelector("#btnBuildFull").addEventListener("click", function () { startBuild(false); });
         document.querySelector("#btnRefreshStatus").addEventListener("click", refreshStatus);
+
+        function refreshBrandingStatus() {
+            var el = document.querySelector("#retroTvBrandingResult");
+            return ApiClient.ajax({ type: "GET", url: "RetroTv/Branding/Status" }).then(function (s) {
+                var has = s.hasRetroTvTheme !== undefined ? s.hasRetroTvTheme : s.HasRetroTvTheme;
+                var theme = s.theme || s.Theme || "";
+                if (has) {
+                    el.textContent = "Jellyfin's guide is themed with Retro TV (" + theme + "). Press the button again to re-apply after switching themes — your other CSS is kept.";
+                } else {
+                    el.textContent = "No Retro TV theme in Branding yet — Jellyfin's own guide shows no channel names until you press the button. Your existing CSS is kept.";
+                }
+            }).catch(function () {
+                el.textContent = "Could not read Branding status. The button below still works — press it to apply the theme.";
+            });
+        }
+
+        document.querySelector("#btnApplyTheme").addEventListener("click", function () {
+            var theme = document.querySelector("#selGuideTheme").value || "woodgrain-78";
+            var el = document.querySelector("#retroTvBrandingResult");
+            el.textContent = "Applying theme " + theme + " to Branding...";
+            ApiClient.ajax({ type: "POST", url: "RetroTv/Branding/ApplyTheme?theme=" + encodeURIComponent(theme) }).then(function (r) {
+                var replaced = r.replacedPrevious !== undefined ? r.replacedPrevious : r.ReplacedPrevious;
+                var kept = r.preservedExistingCss !== undefined ? r.preservedExistingCss : r.PreservedExistingCss;
+                el.textContent = "Theme " + theme + " applied to Jellyfin's guide." + (replaced ? " Replaced the previous Retro TV theme." : "") + (kept ? " Your other CSS was kept." : "") + " Reload the guide page to see it.";
+            }).catch(function (err) {
+                el.textContent = "Could not apply the theme: " + (err && err.statusText ? err.statusText : err) + ". You can still paste the CSS by hand into Dashboard → General → Custom CSS.";
+            });
+        });
 
         document.querySelector("#retroTvConfigForm").addEventListener("submit", function (e) {
             e.preventDefault();
