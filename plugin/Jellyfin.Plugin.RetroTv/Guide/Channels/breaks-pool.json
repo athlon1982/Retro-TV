@@ -1,0 +1,670 @@
+{
+ "generated_at": "2026-11-09T13:25:24.830Z",
+ "source": "stage1 catalog Ad Break (98, runtimes probed via ffprobe 2026-11-09) + sidecar ad-break pool extras",
+ "eligible_seconds": [
+  20,
+  90
+ ],
+ "spots": [
+  {
+   "identifier": "1950sTelevisionCommercialBlueMagicCheerad1",
+   "title": "1950's Television Commercial: Blue Magic Cheer (Ad 1)",
+   "year": null,
+   "runtime_seconds": 62,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1950sTelevisionCommercialBlueMagicCheerad1/BlueCheer_512kb.mp4",
+   "poster_url": "https://archive.org/download/1950sTelevisionCommercialBlueMagicCheerad1/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1957IdealShirleyTempleDollAndTeaSet",
+   "title": "Shirley Temple Doll And Tea Set",
+   "year": 1957,
+   "runtime_seconds": 59,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1957IdealShirleyTempleDollAndTeaSet/1957%20Ideal%20Shirley%20Temple%20doll%20and%20tea%20set.mp4",
+   "poster_url": "https://archive.org/download/1957IdealShirleyTempleDollAndTeaSet/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1958_Chicken_Butt",
+   "title": "Classic 1958 Commercial for Jell-O Pudding with Johnny Carson",
+   "year": 1958,
+   "runtime_seconds": 63,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1958_Chicken_Butt/Pudding_512kb.mp4",
+   "poster_url": "https://archive.org/download/1958_Chicken_Butt/__ia_thumb.jpg",
+   "source": "sidecar-pool"
+  },
+  {
+   "identifier": "1960KelloggsOKsCerealWithYogiBear",
+   "title": "Kellogg's OK's Cereal with Yogi Bear",
+   "year": 1960,
+   "runtime_seconds": 60,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1960KelloggsOKsCerealWithYogiBear/1960%20Kellogg's%20OK's%20Cereal%20with%20Yogi%20Bear.mp4",
+   "poster_url": "https://archive.org/download/1960KelloggsOKsCerealWithYogiBear/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1960sHartsBreadSnoopyVsTheRedBaron",
+   "title": "Hart's Bread \"Snoopy Vs The Red Baron\"",
+   "year": null,
+   "runtime_seconds": 60,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1960sHartsBreadSnoopyVsTheRedBaron/1960s%20Hart's%20Bread%20%20Snoopy%20Vs%20the%20Red%20Baron.mp4",
+   "poster_url": "https://archive.org/download/1960sHartsBreadSnoopyVsTheRedBaron/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1961ClassicTelevisionCommercialCoca-colawithNelsons",
+   "title": "1961 Classic Television Commercial: Coca-Cola (with Nelsons)",
+   "year": null,
+   "runtime_seconds": 62,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1961ClassicTelevisionCommercialCoca-colawithNelsons/Coke8March1961_512kb.mp4",
+   "poster_url": "https://archive.org/download/1961ClassicTelevisionCommercialCoca-colawithNelsons/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1961RoyRogersQuickShooterHat",
+   "title": "1961 Roy Rogers Quick Shooter Hat",
+   "year": 1961,
+   "runtime_seconds": 50,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1961RoyRogersQuickShooterHat/1961%20Roy%20Rogers%20Quick%20Shooter%20Hat.mp4",
+   "poster_url": "https://archive.org/download/1961RoyRogersQuickShooterHat/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1964RemcosMr.KellysCarWash",
+   "title": "Mr. Kelly's Automatic Car Wash toy",
+   "year": null,
+   "runtime_seconds": 60,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1964RemcosMr.KellysCarWash/1964%20Remco's%20Mr.%20Kelly's%20Car%20Wash.mp4",
+   "poster_url": "https://archive.org/download/1964RemcosMr.KellysCarWash/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1967CrestWithMarciaWallaceDanFrazier",
+   "title": "Crest Toothpaste with Marcia Wallace & Dan Frazier",
+   "year": null,
+   "runtime_seconds": 30,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1967CrestWithMarciaWallaceDanFrazier/1967%20Crest%20with%20Marcia%20Wallace%20%26%20Dan%20Frazier.mp4",
+   "poster_url": "https://archive.org/download/1967CrestWithMarciaWallaceDanFrazier/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1968JenosPizzaRollsWithTheLoneRanger",
+   "title": "Jeno's Pizza Rolls with The Lone Ranger",
+   "year": null,
+   "runtime_seconds": 61,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1968JenosPizzaRollsWithTheLoneRanger/1968%20Jeno's%20Pizza%20Rolls%20with%20The%20Lone%20Ranger.mp4",
+   "poster_url": "https://archive.org/download/1968JenosPizzaRollsWithTheLoneRanger/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1968MarxCarryAllActionPlaysetsWithChrisKnight",
+   "title": "Marx Carry-All Action Playsets with Chris Knight",
+   "year": 1968,
+   "runtime_seconds": 60,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1968MarxCarryAllActionPlaysetsWithChrisKnight/1968%20Marx%20Carry-All%20Action%20Playsets%20with%20Chris%20Knight.mp4",
+   "poster_url": "https://archive.org/download/1968MarxCarryAllActionPlaysetsWithChrisKnight/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1970KingVitamanAndTheNotSoBrightKnight",
+   "title": "King Vitaman Cereal Commercials",
+   "year": 1970,
+   "runtime_seconds": 61,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1970KingVitamanAndTheNotSoBrightKnight/1970%20King%20Vitaman%20and%20the%20Blue%20Baron.mp4",
+   "poster_url": "https://archive.org/download/1970KingVitamanAndTheNotSoBrightKnight/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1970s7UpSeeTheLight1",
+   "title": "See the Light with 7-Up!",
+   "year": 1975,
+   "runtime_seconds": 60,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1970s7UpSeeTheLight1/SeeTheLightOf7-up1970s1.mp4",
+   "poster_url": "https://archive.org/download/1970s7UpSeeTheLight1/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1970sAmericanExpressWithMelBlanc",
+   "title": "1970s American Express With Mel Blanc",
+   "year": null,
+   "runtime_seconds": 30,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1970sAmericanExpressWithMelBlanc/1970s%20American%20Express%20with%20Mel%20Blanc.mp4",
+   "poster_url": "https://archive.org/download/1970sAmericanExpressWithMelBlanc/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1970sFlorsheimShoesWithPeterBoyle",
+   "title": "Florsheim Shoes with Peter Boyle",
+   "year": null,
+   "runtime_seconds": 40,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1970sFlorsheimShoesWithPeterBoyle/1970s%20Florsheim%20Shoes%20with%20Peter%20Boyle.mp4",
+   "poster_url": "https://archive.org/download/1970sFlorsheimShoesWithPeterBoyle/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1971KodakInstamaticMovieCameraWithDickVanDyke",
+   "title": "Kodak Instamatic Movie Camera with Dick Van Dyke",
+   "year": null,
+   "runtime_seconds": 60,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1971KodakInstamaticMovieCameraWithDickVanDyke/1971%20Kodak%20Instamatic%20Movie%20Camera%20with%20Dick%20Van%20Dyke.mp4",
+   "poster_url": "https://archive.org/download/1971KodakInstamaticMovieCameraWithDickVanDyke/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1972WaffleWhiffer",
+   "title": "Waffle Whiffer",
+   "year": 1972,
+   "runtime_seconds": 62,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1972WaffleWhiffer/1972%20Waffle%20Whiffer%20and%20the%20Bell%20Tower.mp4",
+   "poster_url": "https://archive.org/download/1972WaffleWhiffer/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1976CampbellsChickenNoodleOsSoup",
+   "title": "Campbell's Chicken Noodle O's Soup",
+   "year": null,
+   "runtime_seconds": 30,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1976CampbellsChickenNoodleOsSoup/1976%20Campbell's%20Chicken%20Noodle%20O's%20Soup.mp4",
+   "poster_url": "https://archive.org/download/1976CampbellsChickenNoodleOsSoup/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1977BlanskysBeautiesFishStarskyHutch",
+   "title": "Blansky's Beauties/Fish/Starsky & Hutch promo",
+   "year": 1977,
+   "runtime_seconds": 31,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1977BlanskysBeautiesFishStarskyHutch/1977%20Blansky's%20Beauties%20Fish%20Starsky%20Hutch.mp4",
+   "poster_url": "https://archive.org/download/1977BlanskysBeautiesFishStarskyHutch/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1977BoyScoutsOfAmerica",
+   "title": "The Boy Scouts Of America",
+   "year": 1977,
+   "runtime_seconds": 23,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1977BoyScoutsOfAmerica/1977%20Boy%20Scouts%20of%20America.mp4",
+   "poster_url": "https://archive.org/download/1977BoyScoutsOfAmerica/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1977ChevroletWithJerryOrbach",
+   "title": "1977 Chevrolet with Jerry Orbach",
+   "year": 1977,
+   "runtime_seconds": 31,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1977ChevroletWithJerryOrbach/1977%20Chevrolet%20with%20Jerry%20Orbach.mp4",
+   "poster_url": "https://archive.org/download/1977ChevroletWithJerryOrbach/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1977CocaColaCokeAddsLife",
+   "title": "Coca-Cola (Coke Adds Life)",
+   "year": 1977,
+   "runtime_seconds": 30,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1977CocaColaCokeAddsLife/1977%20Coca-Cola%20(Coke%20Adds%20Life).mp4",
+   "poster_url": "https://archive.org/download/1977CocaColaCokeAddsLife/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1977DelMonteCornWithBillCosby",
+   "title": "Del Monte Corn with Bill Cosby",
+   "year": 1977,
+   "runtime_seconds": 31,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1977DelMonteCornWithBillCosby/1977%20Del%20Monte%20Corn%20with%20Bill%20Cosby.mp4",
+   "poster_url": "https://archive.org/download/1977DelMonteCornWithBillCosby/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1977GravyTrainDogFoodWithJuneLockhart",
+   "title": "Gravy Train Dog Food with June Lockhart",
+   "year": 1977,
+   "runtime_seconds": 30,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1977GravyTrainDogFoodWithJuneLockhart/1977%20Gravy%20Train%20Dog%20Food%20with%20June%20Lockhart.mp4",
+   "poster_url": "https://archive.org/download/1977GravyTrainDogFoodWithJuneLockhart/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1977NecafeInstantCoffeeCommercial",
+   "title": "Necafe Instant Coffee",
+   "year": 1977,
+   "runtime_seconds": 31,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1977NecafeInstantCoffeeCommercial/1977%20Necafe%20Instant%20Coffee%20commercial.mp4",
+   "poster_url": "https://archive.org/download/1977NecafeInstantCoffeeCommercial/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1977TheEasterBunnysComingToTownPromo",
+   "title": "The Easter Bunny's Comin' To Town promo",
+   "year": 1977,
+   "runtime_seconds": 21,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1977TheEasterBunnysComingToTownPromo/1977%20The%20Easter%20Bunny's%20Coming%20to%20Town%20promo.mp4",
+   "poster_url": "https://archive.org/download/1977TheEasterBunnysComingToTownPromo/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1977USSavingsBondsTheAntTheGrasshopper",
+   "title": "US Savings Bonds: The Ant & The Grasshopper",
+   "year": null,
+   "runtime_seconds": 31,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1977USSavingsBondsTheAntTheGrasshopper/1977%20US%20Savings%20Bonds%20-%20The%20Ant%20%26%20The%20Grasshopper.mp4",
+   "poster_url": "https://archive.org/download/1977USSavingsBondsTheAntTheGrasshopper/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1981ToyotaCommercialWithEarlCampbell",
+   "title": "Toyota Commercial with Earl Campbell",
+   "year": 1981,
+   "runtime_seconds": 30,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1981ToyotaCommercialWithEarlCampbell/1981%20Toyota%20Commercial%20with%20Earl%20Campbell.mp4",
+   "poster_url": "https://archive.org/download/1981ToyotaCommercialWithEarlCampbell/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "1983CanadianCommercialBootleggerJeansStores",
+   "title": "Bootlegger Jeans Stores commercial (Canada, 1983)",
+   "year": null,
+   "runtime_seconds": 30,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/1983CanadianCommercialBootleggerJeansStores/1983%20Canadian%20commercial%20-%20Bootlegger%20jeans%20stores.mp4",
+   "poster_url": "https://archive.org/download/1983CanadianCommercialBootleggerJeansStores/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "Blue_Cheer",
+   "title": "Classic Fifties Commercial for \"Blue Cheer\" (Ad 2)",
+   "year": 1955,
+   "runtime_seconds": 64,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/Blue_Cheer/Cheer.mp4",
+   "poster_url": "https://archive.org/download/Blue_Cheer/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "BorisKarloffRonsonCometLighter1968",
+   "title": "Ronson Comet Lighter with Boris Karloff",
+   "year": 1968,
+   "runtime_seconds": 59,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/BorisKarloffRonsonCometLighter1968/Boris%20Karloff%20Ronson%20Comet%20Lighter%201968.mp4",
+   "poster_url": "https://archive.org/download/BorisKarloffRonsonCometLighter1968/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "casasustriguerosyciaweb",
+   "title": "Pelís-Lagunilla: Casasus, Trigueros Y CIA, S.A., anuncio de televisión",
+   "year": null,
+   "runtime_seconds": 36,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/casasustriguerosyciaweb/CasasusTriguerosYCia-Web.mp4",
+   "poster_url": "https://archive.org/download/casasustriguerosyciaweb/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "Chevrolet_Commercial_1956",
+   "title": "1956 Chevrolet Commercial",
+   "year": null,
+   "runtime_seconds": 76,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/Chevrolet_Commercial_1956/Chevrolet1956_512kb.mp4",
+   "poster_url": "https://archive.org/download/Chevrolet_Commercial_1956/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "Cigarette_Commercials_Alpine",
+   "title": "Cigarette Commercials Alpine",
+   "year": null,
+   "runtime_seconds": 60,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/Cigarette_Commercials_Alpine/Commercial_Alpine_Cigarettes_1967_w_young_Roy_Schieder_512kb.mp4",
+   "poster_url": "https://archive.org/download/Cigarette_Commercials_Alpine/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "Cigarette_Commercials_Chesterfield",
+   "title": "Cigarette Commercials Chesterfield",
+   "year": null,
+   "runtime_seconds": 30,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/Cigarette_Commercials_Chesterfield/Commercial_Chesterfield_101_Cigarettes_A_silly_millimeter_longer_512kb.mp4",
+   "poster_url": "https://archive.org/download/Cigarette_Commercials_Chesterfield/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "Cigarette_Commercials_Galaxy",
+   "title": "Cigarette Commercials Galaxy",
+   "year": null,
+   "runtime_seconds": 40,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/Cigarette_Commercials_Galaxy/Commercial_Galaxy_Cigarettes_Coupon_saving_Duchess_512kb.mp4",
+   "poster_url": "https://archive.org/download/Cigarette_Commercials_Galaxy/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "Cigarette_Commercials_Marlboro_3-of-3",
+   "title": "Cigarette Commercials Marlboro 3 of 3",
+   "year": null,
+   "runtime_seconds": 66,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/Cigarette_Commercials_Marlboro_3-of-3/Commercial_Marlboro_Cigarettes_New_from_Phillip_Morris_512kb.mp4",
+   "poster_url": "https://archive.org/download/Cigarette_Commercials_Marlboro_3-of-3/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "Cigarette_Commercials_Old_Gold",
+   "title": "Cigarette Commercials Old Gold",
+   "year": null,
+   "runtime_seconds": 57,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/Cigarette_Commercials_Old_Gold/Commercial_Old_Gold_Cigarettes_Dancing_Cigarette_Pack_512kb.mp4",
+   "poster_url": "https://archive.org/download/Cigarette_Commercials_Old_Gold/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "Cigarette_Commercials_Winston_02",
+   "title": "Cigarette Commercials Winston page 02",
+   "year": null,
+   "runtime_seconds": 60,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/Cigarette_Commercials_Winston_02/Commercial_Winston_Cigarettes_1964_Get_acquainted_512kb.mp4",
+   "poster_url": "https://archive.org/download/Cigarette_Commercials_Winston_02/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "Cigarette_Commercials_York",
+   "title": "Cigarette Commercials York",
+   "year": null,
+   "runtime_seconds": 60,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/Cigarette_Commercials_York/Commercial_York_Cigarettes_B-W_512kb.mp4",
+   "poster_url": "https://archive.org/download/Cigarette_Commercials_York/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "crying_indian_psa_hd",
+   "title": "Crying Indian • HD",
+   "year": 1971,
+   "runtime_seconds": 60,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/crying_indian_psa_hd/crying_indian_psa_hd.mp4",
+   "poster_url": "https://archive.org/download/crying_indian_psa_hd/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "DeSoto4",
+   "title": "Classic Car Commercial: DeSoto",
+   "year": null,
+   "runtime_seconds": 88,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/DeSoto4/DeSoto4.mp4",
+   "poster_url": "https://archive.org/download/DeSoto4/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "DeSoto5",
+   "title": "Classic Car Commercial: 1955 DeSoto",
+   "year": null,
+   "runtime_seconds": 82,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/DeSoto5/DeSoto5.mp4",
+   "poster_url": "https://archive.org/download/DeSoto5/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "DeSoto8",
+   "title": "Classic 1950's DeSoto Car Commercial with Famous TV Host",
+   "year": null,
+   "runtime_seconds": 79,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/DeSoto8/DeSoto8.mp4",
+   "poster_url": "https://archive.org/download/DeSoto8/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "huevosgarcesweb",
+   "title": "Pelís-Lagunilla: Fabrica de Huevos Garcés, anuncio de televisión",
+   "year": null,
+   "runtime_seconds": 41,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/huevosgarcesweb/HuevosGarces-Web.mp4",
+   "poster_url": "https://archive.org/download/huevosgarcesweb/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "industriadehuevosweb",
+   "title": "Pelís-Lagunilla: Huevos, anuncio de televisión",
+   "year": null,
+   "runtime_seconds": 48,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/industriadehuevosweb/IndustriaDeHuevos-Web.mp4",
+   "poster_url": "https://archive.org/download/industriadehuevosweb/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "KelloggsCommercial2",
+   "title": "Kellogg's Commercial 2",
+   "year": 1953,
+   "runtime_seconds": 66,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/KelloggsCommercial2/KelloggsCommercial2.mp4",
+   "poster_url": "https://archive.org/download/KelloggsCommercial2/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "KelloggsCommercial3",
+   "title": "Kellogg's Commercial 3",
+   "year": 1953,
+   "runtime_seconds": 65,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/KelloggsCommercial3/KelloggsCommercial3.mp4",
+   "poster_url": "https://archive.org/download/KelloggsCommercial3/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "KoolAidKoolersCommercial1986",
+   "title": "Kool Aid Koolers Commercial 1986",
+   "year": null,
+   "runtime_seconds": 32,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/KoolAidKoolersCommercial1986/Kool_Aid_Koolers_commercial_1986.mp4",
+   "poster_url": "https://archive.org/download/KoolAidKoolersCommercial1986/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "Listerine1ApprovedByGoku",
+   "title": "Fifties Television Commercial for Listerine",
+   "year": null,
+   "runtime_seconds": 64,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/Listerine1ApprovedByGoku/Listerine1.mp4",
+   "poster_url": "https://archive.org/download/Listerine1ApprovedByGoku/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "LoisJeansSpotJamaica1980",
+   "title": "Lois jeans commercial (Jamaica, 1980)",
+   "year": null,
+   "runtime_seconds": 61,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/LoisJeansSpotJamaica1980/Lois%20Jeans%20Spot%20Jamaica%20%201980.mp4",
+   "poster_url": "https://archive.org/download/LoisJeansSpotJamaica1980/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "Lucky_Strike_1956",
+   "title": "Lucky Strike Cigarette \"Baseball\" Commercial",
+   "year": 1956,
+   "runtime_seconds": 60,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/Lucky_Strike_1956/Lucky_Strike_89345749573495749587348957349_512kb.mp4",
+   "poster_url": "https://archive.org/download/Lucky_Strike_1956/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "Lucky_Strike_Kitchen",
+   "title": "Lucky Strike Cigarette Commercial from 1955",
+   "year": 1955,
+   "runtime_seconds": 64,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/Lucky_Strike_Kitchen/Lucky_Strike_563683_512kb.mp4",
+   "poster_url": "https://archive.org/download/Lucky_Strike_Kitchen/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "Promo_Jetsons_ABC-TV_1963",
+   "title": "Promo_Jetsons_ABC-TV_1963",
+   "year": null,
+   "runtime_seconds": 60,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/Promo_Jetsons_ABC-TV_1963/Promo_Jetsons_ABC-TV_1963_512kb.mp4",
+   "poster_url": "https://archive.org/download/Promo_Jetsons_ABC-TV_1963/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "Promo_O.K.Crackerby_ABC-TV_1965_Thursday_night",
+   "title": "Promo_O.K.Crackerby_ABC-TV_1965_Thursday_night",
+   "year": null,
+   "runtime_seconds": 59,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/Promo_O.K.Crackerby_ABC-TV_1965_Thursday_night/Promo_O.K.Crackerby_ABC-TV_1965_Thursday_night_512kb.mp4",
+   "poster_url": "https://archive.org/download/Promo_O.K.Crackerby_ABC-TV_1965_Thursday_night/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "QuispCerealTelevisionCommercial1966",
+   "title": "Quisp Cereal : Television  Commercial : 1966",
+   "year": null,
+   "runtime_seconds": 63,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/QuispCerealTelevisionCommercial1966/Quisp_1966_512kb.mp4",
+   "poster_url": "https://archive.org/download/QuispCerealTelevisionCommercial1966/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "Roast_Lamb_with_Gravy",
+   "title": "A 4th Classic Commercial for Coca-Cola (29/September/1954)",
+   "year": 1954,
+   "runtime_seconds": 78,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/Roast_Lamb_with_Gravy/Coca-Cola_4.mp4",
+   "poster_url": "https://archive.org/download/Roast_Lamb_with_Gravy/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "ShastaSodaCommercial-Frankenstein",
+   "title": "Shasta soda commercial - Frankenstein",
+   "year": null,
+   "runtime_seconds": 56,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/ShastaSodaCommercial-Frankenstein/Commercial-ShastaFrankenstein_512kb.mp4",
+   "poster_url": "https://archive.org/download/ShastaSodaCommercial-Frankenstein/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "TheSixMillionDollarManDannysInfernoPromo",
+   "title": "The Six Million Dollar Man - \"Danny's Inferno\" promo",
+   "year": 1977,
+   "runtime_seconds": 21,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/TheSixMillionDollarManDannysInfernoPromo/The%20Six%20Million%20Dollar%20Man%20-%20Danny's%20Inferno%20promo.mp4",
+   "poster_url": "https://archive.org/download/TheSixMillionDollarManDannysInfernoPromo/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "TiparilloCigarsFredWillard",
+   "title": "Tiparillo Cigars with Fred Willard",
+   "year": null,
+   "runtime_seconds": 29,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/TiparilloCigarsFredWillard/Tiparillo%20Cigars%20-%20Fred%20Willard.mp4",
+   "poster_url": "https://archive.org/download/TiparilloCigarsFredWillard/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "TriscuitsBettyBuckley",
+   "title": "Triscuits with Betty Buckley",
+   "year": 1976,
+   "runtime_seconds": 31,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/TriscuitsBettyBuckley/Triscuits%20-%20Betty%20Buckley.mp4",
+   "poster_url": "https://archive.org/download/TriscuitsBettyBuckley/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "tvcommercialmegazone27",
+   "title": "TV Commercial For MegaZone Issue 27",
+   "year": 1993,
+   "runtime_seconds": 30,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/tvcommercialmegazone27/TVCommercial_MegaZone27.mp4",
+   "poster_url": "https://archive.org/download/tvcommercialmegazone27/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "UpToTheMinuteCinematographicTechnologyNewSlateFilms",
+   "title": "Up To The Minute Cinematographic Technology – New Slate Films",
+   "year": null,
+   "runtime_seconds": 60,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/UpToTheMinuteCinematographicTechnologyNewSlateFilms/Up%20To%20The%20Minute%20Cinematographic%20Technology%20%E2%80%93%20New%20Slate%20Films.mp4",
+   "poster_url": "https://archive.org/download/UpToTheMinuteCinematographicTechnologyNewSlateFilms/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "Video-Ranger_ring",
+   "title": "Classic Commercial for ''Video Ranger ring'' (c. 1950)",
+   "year": 1950,
+   "runtime_seconds": 83,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/Video-Ranger_ring/Video-Ranger_ring.mp4",
+   "poster_url": "https://archive.org/download/Video-Ranger_ring/__ia_thumb.jpg",
+   "source": "sidecar-pool"
+  },
+  {
+   "identifier": "Video-Ranger-Ring-3",
+   "title": "Another classic commercial for the ''Video Ranger ring''",
+   "year": 1950,
+   "runtime_seconds": 89,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/Video-Ranger-Ring-3/Video-Ranger-Ring2.mp4",
+   "poster_url": "https://archive.org/download/Video-Ranger-Ring-3/__ia_thumb.jpg",
+   "source": "catalog"
+  },
+  {
+   "identifier": "WinstonCigaretteCommecial-TheFlintstones",
+   "title": "Winston cigarette commecial - The Flintstones",
+   "year": null,
+   "runtime_seconds": 80,
+   "tier": "pd",
+   "mp4_url": "https://archive.org/download/WinstonCigaretteCommecial-TheFlintstones/Vintage60sTvCommercials-Flintstones-WinstonCig_512kb.mp4",
+   "poster_url": "https://archive.org/download/WinstonCigaretteCommecial-TheFlintstones/__ia_thumb.jpg",
+   "source": "catalog"
+  }
+ ]
+}

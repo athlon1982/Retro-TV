@@ -59,6 +59,9 @@ public class PluginConfiguration : BasePluginConfiguration
     /// <summary>Stage 2 master switch. Live channels ship in 0.2.0.0, so new installs get them on; an admin can still turn them off.</summary>
     public bool ChannelsEnabled { get; set; } = true;
 
+    /// <summary>Old-school commercial breaks between programmes: at most once per hour per channel, 1 spot of 30-60 s, at programme boundaries. Default ON.</summary>
+    public bool CommercialBreaksEnabled { get; set; } = true;
+
     /// <summary>ffmpeg binary path for the live channel streams. Empty = "ffmpeg" on the PATH. On Dayz this is F:\Jellyfin\Server\ffmpeg.exe (Jellyfin's bundled ffmpeg 8.1.3).</summary>
     public string FfmpegPath { get; set; } = string.Empty;
 

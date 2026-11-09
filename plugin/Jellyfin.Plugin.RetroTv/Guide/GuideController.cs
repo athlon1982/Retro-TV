@@ -61,16 +61,16 @@ public class GuideController : ControllerBase
         return Content(html, "text/html");
     }
 
-    /// <summary>Guide data as JSON (channels + programs + now-line), the same schedule the XMLTV feed carries. ?hours= (1-48, default 48). ?theme= is read by the page, not the API.</summary>
+    /// <summary>Guide data as JSON (channels + programs + now-line), the same schedule the XMLTV feed carries. ?hours= (1-96, default 96). ?theme= is read by the page, not the API.</summary>
     [HttpGet("Guide/Data")]
-    public ActionResult GuideData([FromQuery] double hours = 48)
+    public ActionResult GuideData([FromQuery] double hours = 96)
     {
         if (!ChannelsEnabled())
         {
             return StatusCode(503, "Retro TV live channels are disabled. Enable them on the Retro TV plugin settings page.");
         }
 
-        hours = Math.Clamp(hours, 1, 48);
+        hours = Math.Clamp(hours, 1, 96);
         _ = _weather.RefreshAsync(CancellationToken.None).ContinueWith(
             t => _logger.LogWarning(t.Exception, "[RetroTv] Background weather refresh faulted."),
             TaskContinuationOptions.OnlyOnFaulted);
@@ -90,7 +90,7 @@ public class GuideController : ControllerBase
         return Content(_guide.BuildM3u(BaseUrl()), "audio/x-mpegurl");
     }
 
-    /// <summary>XMLTV guide (48 h) for Jellyfin's XMLTV provider. Add the M3U tuner first, then this guide — refresh Channels first, then Refresh Guide, or the guide comes up blank.</summary>
+    /// <summary>XMLTV guide (96 h) for Jellyfin's XMLTV provider. Add the M3U tuner first, then this guide — refresh Channels first, then Refresh Guide, or the guide comes up blank.</summary>
     [HttpGet("guide.xml")]
     public ActionResult GuideXml()
     {
@@ -99,7 +99,7 @@ public class GuideController : ControllerBase
             return StatusCode(503, "Retro TV live channels are disabled. Enable them on the Retro TV plugin settings page.");
         }
 
-        return Content(_guide.BuildXmltv(48), "application/xml");
+        return Content(_guide.BuildXmltv(96), "application/xml");
     }
 
     /// <summary>All available guide themes (built-ins + valid user themes) for the config page dropdown and the guide page switcher.</summary>

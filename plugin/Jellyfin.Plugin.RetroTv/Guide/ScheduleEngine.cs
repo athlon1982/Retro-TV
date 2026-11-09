@@ -43,8 +43,22 @@ public static class ScheduleEngine
         public string? PosterUrl { get; init; }
         public string Tier { get; init; } = "pd";
 
+        /// <summary>True for an interleaved commercial-break spot (Title is "Commercial Break", Description is the spot's title). The guide shows it as a break; the stream plays the spot's MP4.</summary>
+        public bool IsCommercialBreak { get; init; }
+
         public int EffectiveRuntimeSeconds =>
             RuntimeSeconds is > 0 ? RuntimeSeconds.Value : DefaultRuntimeSeconds;
+    }
+
+    /// <summary>One vintage commercial spot from breaks-pool.json.</summary>
+    public class BreakSpot
+    {
+        public required string Identifier { get; init; }
+        public required string Title { get; init; }
+        public int? Year { get; init; }
+        public required int RuntimeSeconds { get; init; }
+        public required string Mp4Url { get; init; }
+        public string? PosterUrl { get; init; }
     }
 
     /// <summary>The programme playing at <paramref name="time"/> on a channel whose items cycle in order.</summary>
@@ -141,5 +155,187 @@ public static class ScheduleEngine
             return byYear != 0 ? byYear : string.Compare(a.Title, b.Title, StringComparison.Ordinal);
         });
         return list;
+    }
+
+    /// <summary>
+    /// Commercial breaks — a direct port of the Stage 2 sidecar's break
+    /// engine (server.mjs v0.2.0), same constants, same FNV-1a spot pick,
+    /// same greedy boundaries + repeat-boundary guard, so the plugin's
+    /// guide and the sidecar's guide agree break-for-break. Rule: at most
+    /// ONE break per hour per channel, one 30–60 s spot, at programme
+    /// boundaries only. Breaks are interleaved into the channel's
+    /// effective item list, so the guide (XMLTV + JSON) and the live
+    /// stream (ffmpeg batch) can never disagree — both walk the same
+    /// list. With breaks off, the original list is returned unchanged,
+    /// so OFF reproduces the pre-breaks feed exactly.
+    /// </summary>
+    public static class CommercialBreaks
+    {
+        /// <summary>At most one break per hour per channel.</summary>
+        public const int MinGapSeconds = 3600;
+
+        /// <summary>One spot per break, 30–60 s.</summary>
+        public const int SpotMinSeconds = 30;
+
+        /// <summary>One spot per break, 30–60 s.</summary>
+        public const int SpotMaxSeconds = 60;
+
+        /// <summary>Eligible pool spots run 20–90 s.</summary>
+        public const int EligibleMinSeconds = 20;
+
+        /// <summary>Eligible pool spots run 20–90 s.</summary>
+        public const int EligibleMaxSeconds = 90;
+
+        /// <summary>Channel slugs that never get breaks (their programmes ARE commercials/bumpers, or audio-only).</summary>
+        public static readonly HashSet<string> ExcludedSlugs = new(StringComparer.OrdinalIgnoreCase)
+        {
+            "ad-break", "ads-1950s", "ads-1960s", "ads-1970s", "station-break", "audiobooks"
+        };
+
+        /// <summary>FNV-1a 32-bit, same as the sidecar's hashStr (uint arithmetic wraps mod 2^32, matching JS Math.imul).</summary>
+        public static uint Fnv1aHash(string s)
+        {
+            uint h = 2166136261u;
+            foreach (var c in s)
+            {
+                h ^= c;
+                h *= 16777619u;
+            }
+
+            return h;
+        }
+
+        /// <summary>One spot for a boundary: a pure function of (channel, boundary index), so the schedule is stable across restarts and across the on/off toggle. Short pool (30–60 s) first, full pool (20–90 s) as fallback.</summary>
+        public static BreakSpot? PickSpot(string channelSlug, int boundaryIndex, IReadOnlyList<BreakSpot> shortPool, IReadOnlyList<BreakSpot> fullPool)
+        {
+            var pool = shortPool.Count > 0 ? shortPool : fullPool;
+            if (pool.Count == 0)
+            {
+                return null;
+            }
+
+            return pool[(int)(Fnv1aHash(channelSlug + ":" + boundaryIndex) % (uint)pool.Count)];
+        }
+
+        /// <summary>Boundary indices (into baseItems) after which a break goes. Greedy: a break only once &gt;= MinGapSeconds of programming have played since the last break. The list repeats forever, so the starting "time since last break" is iterated until the tail stops changing (max 10 passes) — then the repeat-boundary guard drops the first break if the wraparound gap (tail + first-break offset) would come in under the minimum.</summary>
+        public static HashSet<int> BreakBoundariesFor(IReadOnlyList<GuideItem> baseItems)
+        {
+            var startElapsed = 0;
+            var chosen = new List<int>();
+            for (var pass = 0; pass < 10; pass++)
+            {
+                var breaks = new List<int>();
+                var elapsed = startElapsed;
+                for (var i = 0; i < baseItems.Count; i++)
+                {
+                    elapsed += baseItems[i].EffectiveRuntimeSeconds;
+                    if (elapsed >= MinGapSeconds)
+                    {
+                        breaks.Add(i);
+                        elapsed = 0;
+                    }
+                }
+
+                int tail;
+                if (breaks.Count > 0)
+                {
+                    tail = 0;
+                    for (var i = breaks[^1] + 1; i < baseItems.Count; i++)
+                    {
+                        tail += baseItems[i].EffectiveRuntimeSeconds;
+                    }
+                }
+                else
+                {
+                    tail = 0;
+                    foreach (var item in baseItems)
+                    {
+                        tail += item.EffectiveRuntimeSeconds;
+                    }
+                }
+
+                chosen = breaks;
+                if (tail == startElapsed)
+                {
+                    break;
+                }
+
+                startElapsed = tail;
+            }
+
+            if (chosen.Count >= 2)
+            {
+                var firstOffset = 0;
+                for (var i = 0; i <= chosen[0]; i++)
+                {
+                    firstOffset += baseItems[i].EffectiveRuntimeSeconds;
+                }
+
+                var tail = 0;
+                for (var i = chosen[^1] + 1; i < baseItems.Count; i++)
+                {
+                    tail += baseItems[i].EffectiveRuntimeSeconds;
+                }
+
+                if (tail + firstOffset < MinGapSeconds)
+                {
+                    chosen = chosen.Skip(1).ToList();
+                }
+            }
+
+            return new HashSet<int>(chosen);
+        }
+
+        /// <summary>The channel's effective item list: the original items, repeated until they span at least two break gaps (a channel whose whole cycle is shorter than the gap would otherwise never earn a break), with one break spot interleaved after each qualifying boundary.</summary>
+        public static List<GuideItem> BuildEffectiveItems(IReadOnlyList<GuideItem> orig, string channelSlug, IReadOnlyList<BreakSpot> shortPool, IReadOnlyList<BreakSpot> fullPool)
+        {
+            if (orig.Count == 0)
+            {
+                return new List<GuideItem>();
+            }
+
+            var baseItems = new List<GuideItem>();
+            var baseSeconds = 0;
+            while (baseSeconds < MinGapSeconds * 2)
+            {
+                foreach (var item in orig)
+                {
+                    baseItems.Add(item);
+                    baseSeconds += item.EffectiveRuntimeSeconds;
+                }
+            }
+
+            var breaksAt = BreakBoundariesFor(baseItems);
+            var effective = new List<GuideItem>();
+            for (var i = 0; i < baseItems.Count; i++)
+            {
+                effective.Add(baseItems[i]);
+                if (!breaksAt.Contains(i))
+                {
+                    continue;
+                }
+
+                var spot = PickSpot(channelSlug, i, shortPool, fullPool);
+                if (spot is null)
+                {
+                    continue;
+                }
+
+                effective.Add(new GuideItem
+                {
+                    Identifier = "adbreak-" + spot.Identifier,
+                    Title = "Commercial Break",
+                    Year = spot.Year,
+                    RuntimeSeconds = spot.RuntimeSeconds,
+                    Description = spot.Title,
+                    Mp4Url = spot.Mp4Url,
+                    PosterUrl = spot.PosterUrl,
+                    Tier = "pd",
+                    IsCommercialBreak = true
+                });
+            }
+
+            return effective;
+        }
     }
 }

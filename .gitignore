@@ -1,0 +1,17 @@
+# Local config (host-specific: paths, Jellyfin address) — never commit.
+config.local.json
+# Generated catalog output — the repo holds code and docs, not the catalog.
+output/
+catalog.json
+catalog.prev.json
+*.log
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Plugin build outputs — never commit.
+plugin/**/bin/
+plugin/**/obj/
+plugin/**/dist/
+# Full-catalog working config — host-specific outputDir, live job reads it.
+config.full.json

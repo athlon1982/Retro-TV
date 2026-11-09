@@ -15,8 +15,11 @@ namespace Jellyfin.Plugin.RetroTv.Guide.Channels;
 /// numbering starting at 4, kids first, single-show channels where the
 /// catalog has the depth. Only channels with at least one pool item are
 /// served (a defined channel with no items is inactive, never an empty
-/// entry in the guide). Linear is PD-only in v0.2.0.0 — user-uploaded tier
-/// channels are defined but disabled; they stay on-demand only.
+/// entry in the guide). Since 0.3.0.0 the full lineup is live — PD and
+/// user-uploaded tiers alike (the user-uploaded tier stays clearly
+/// marked everywhere, never presented as public domain). Audiobooks is
+/// the one defined-but-disabled channel: its items are MP3s and the
+/// plugin has no audio-only stream path yet (sidecar-only).
 /// </summary>
 public class ChannelDefinition
 {

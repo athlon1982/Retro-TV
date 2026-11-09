@@ -21,10 +21,15 @@ namespace Jellyfin.Plugin.RetroTv.Guide;
 /// The channel guide service — loads the lineup and the channel pools,
 /// computes deterministic schedules, and builds the M3U + XMLTV + guide
 /// JSON the plugin serves. Pools come from the plugin data dir
-/// (pools.json); on first use the verified Stage 2 seed pools are copied
-/// there. A catalog build refreshes the pools from catalog.json so the
-/// guide grows with the catalog. Linear is PD-only in v0.2.0.0 — the
-/// user-uploaded tier stays on-demand only.
+/// (pools.json); on first use the embedded full-lineup seed pools are
+/// copied there (155 channels, 3,032 items in 0.3.0.0). A catalog build
+/// refreshes the pools from catalog.json — additively, by identifier, so
+/// the guide only ever grows: channels the catalog can't fill keep their
+/// seed pools. Commercial breaks (sidecar v0.2.0 rules) interleave into
+/// each channel's effective item list when the config switch is on, so
+/// the guide and the streams can never disagree. Audiobooks is not
+/// served: its items are MP3s and the plugin has no audio-only stream
+/// path (sidecar-only channel).
 /// </summary>
 public class GuideService
 {
@@ -41,6 +46,8 @@ public class GuideService
     private IReadOnlyList<ChannelDefinition> _lineup = Array.Empty<ChannelDefinition>();
     private List<GuideChannel> _channels = new();
     private bool _loaded;
+    private IReadOnlyList<ScheduleEngine.BreakSpot> _breakPool = Array.Empty<ScheduleEngine.BreakSpot>();
+    private IReadOnlyList<ScheduleEngine.BreakSpot> _breakPoolShort = Array.Empty<ScheduleEngine.BreakSpot>();
 
     public GuideService(IApplicationPaths applicationPaths, ILogger<GuideService> logger, WeatherChannel weather)
     {
@@ -48,6 +55,44 @@ public class GuideService
         _weather = weather;
         _poolsPath = Path.Combine(applicationPaths.ProgramDataPath, "RetroTv", "pools.json");
         _lineup = ChannelLineup.Load(logger);
+        LoadBreakPool();
+    }
+
+    /// <summary>Commercial breaks on/off, from the plugin config page (default ON). Read per call so a config save takes effect without a restart.</summary>
+    public bool CommercialBreaksEnabled => Plugin.Instance?.Configuration.CommercialBreaksEnabled ?? true;
+
+    /// <summary>Break pool stats for the guide JSON / diagnostics.</summary>
+    public (int Pool, int ShortPool, int Channels) BreakStats => (
+        _breakPool.Count,
+        _breakPoolShort.Count,
+        GetActiveChannels().Count(c => ChannelGetsBreaks(c.Definition)));
+
+    /// <summary>Whether a channel gets commercial breaks (excluded slugs + audio-only + weather never do).</summary>
+    public static bool ChannelGetsBreaks(ChannelDefinition def)
+    {
+        if (def.Weather)
+        {
+            return false;
+        }
+
+        return !ScheduleEngine.CommercialBreaks.ExcludedSlugs.Contains(def.Slug);
+    }
+
+    /// <summary>The channel's effective item list: the original pool items, with one 30–60 s commercial-break spot interleaved at most once an hour when breaks are on and the channel qualifies. With breaks off (or an excluded channel, or an empty pool) the original list is returned unchanged.</summary>
+    public IReadOnlyList<ScheduleEngine.GuideItem> GetEffectiveItems(GuideChannel channel)
+    {
+        if (channel.Definition.Weather || !CommercialBreaksEnabled || !ChannelGetsBreaks(channel.Definition))
+        {
+            return channel.Items;
+        }
+
+        if (_breakPool.Count == 0)
+        {
+            return channel.Items;
+        }
+
+        return ScheduleEngine.CommercialBreaks.BuildEffectiveItems(
+            channel.Items, channel.Definition.Slug, _breakPoolShort, _breakPool);
     }
 
     /// <summary>One active channel: its lineup definition + its ordered pool items.</summary>
@@ -82,7 +127,7 @@ public class GuideService
             return _weather.GetSchedule(from, hours);
         }
 
-        return ScheduleEngine.ScheduleFrom(channel.Items, from, hours);
+        return ScheduleEngine.ScheduleFrom(GetEffectiveItems(channel), from, hours);
     }
 
     /// <summary>The programme playing on a channel right now (null when the channel has no items).</summary>
@@ -94,10 +139,21 @@ public class GuideService
             return progs.Count == 0 ? null : progs[0];
         }
 
-        return channel.Items.Count == 0 ? null : ScheduleEngine.ProgramAt(channel.Items, at);
+        var items = GetEffectiveItems(channel);
+        return items.Count == 0 ? null : ScheduleEngine.ProgramAt(items, at);
     }
 
-    /// <summary>Rebuild the pools from the catalog the builder just wrote. Best-effort: a failure is logged and the old pools keep serving — it never fails the build.</summary>
+    /// <summary>
+    /// Merge the catalog the builder just wrote into the guide pools.
+    /// Additive by identifier: catalog items that match a channel are
+    /// added (or refresh the matching pool entry's metadata); nothing is
+    /// ever removed, and channels the catalog can't fill keep their seed
+    /// pools untouched. A channel's lineup Folder is the catalog folder
+    /// it draws from — defs whose Folder is their own channel name never
+    /// match a catalog folder, so they are refresh-frozen by design.
+    /// Best-effort: a failure is logged and the old pools keep serving —
+    /// it never fails the build.
+    /// </summary>
     public bool RefreshPoolsFromCatalog(string catalogPath)
     {
         try
@@ -116,35 +172,95 @@ public class GuideService
                 return false;
             }
 
-            var pools = new PoolsDocument { Library = doc.Library, GeneratedAt = DateTimeOffset.UtcNow.ToString("o") };
-            var total = 0;
+            EnsureLoaded();
+            // Base document = the pools file itself (seeded from the
+            // embedded pools on first use by EnsureLoaded), so existing
+            // pool items keep every field the catalog doesn't carry
+            // (licenseurl, collection, ...). The merge only adds catalog
+            // items or refreshes matching entries' metadata.
+            PoolsDocument pools;
+            if (File.Exists(_poolsPath))
+            {
+                pools = JsonSerializer.Deserialize<PoolsDocument>(File.ReadAllText(_poolsPath), JsonOptions)
+                    ?? new PoolsDocument { Library = "Retro TV", GeneratedAt = DateTimeOffset.UtcNow.ToString("o") };
+            }
+            else
+            {
+                pools = new PoolsDocument { Library = "Retro TV", GeneratedAt = DateTimeOffset.UtcNow.ToString("o") };
+            }
+
+            pools.GeneratedAt = DateTimeOffset.UtcNow.ToString("o");
+
+            var byName = pools.Channels.ToDictionary(c => c.Name, c => c, StringComparer.OrdinalIgnoreCase);
+            var added = 0;
+            var updated = 0;
             foreach (var def in _lineup)
             {
-                if (!def.Enabled || def.Weather || def.Tier != "pd" || string.IsNullOrEmpty(def.Folder))
+                if (!def.Enabled || def.Weather || string.IsNullOrEmpty(def.Folder))
                 {
                     continue;
                 }
 
-                var items = doc.Items
-                    .Where(e => e.Tier == "pd" && def.Matches(e.Folder, e.Title, e.Description, e.Year))
-                    .Select(e => new PoolItem
+                if (!byName.TryGetValue(def.Name, out var poolChannel))
+                {
+                    poolChannel = new PoolChannel
                     {
-                        Identifier = e.Identifier,
-                        Title = e.Title,
-                        Year = e.Year,
-                        RuntimeSeconds = e.RuntimeSeconds ?? ScheduleEngine.DefaultRuntimeSeconds,
-                        LicenseUrl = e.LicenseUrl,
-                        Tier = e.Tier,
-                        Collection = e.Collection,
-                        Mp4Url = e.Mp4Url,
-                        PosterUrl = e.PosterUrl,
-                        Description = e.Description
-                    })
+                        Id = def.ChannelId,
+                        Slug = def.Slug,
+                        Name = def.Name,
+                        Tier = def.Tier,
+                        Items = new List<PoolItem>()
+                    };
+                    pools.Channels.Add(poolChannel);
+                    byName[def.Name] = poolChannel;
+                }
+
+                var matches = doc.Items
+                    .Where(e => e.Tier == def.Tier && def.Matches(e.Folder, e.Title, e.Description, e.Year))
                     .ToList();
+                if (matches.Count == 0)
+                {
+                    continue;
+                }
+
+                var byId = poolChannel.Items.ToDictionary(i => i.Identifier, i => i, StringComparer.Ordinal);
+                foreach (var e in matches)
+                {
+                    if (byId.TryGetValue(e.Identifier, out var existing))
+                    {
+                        existing.Title = e.Title;
+                        existing.Year = e.Year;
+                        existing.RuntimeSeconds = e.RuntimeSeconds ?? ScheduleEngine.DefaultRuntimeSeconds;
+                        existing.Mp4Url = e.Mp4Url;
+                        existing.PosterUrl = e.PosterUrl;
+                        existing.Description = e.Description;
+                        updated++;
+                    }
+                    else
+                    {
+                        var item = new PoolItem
+                        {
+                            Identifier = e.Identifier,
+                            Title = e.Title,
+                            Year = e.Year,
+                            RuntimeSeconds = e.RuntimeSeconds ?? ScheduleEngine.DefaultRuntimeSeconds,
+                            LicenseUrl = e.LicenseUrl,
+                            Tier = e.Tier,
+                            Collection = e.Collection,
+                            Mp4Url = e.Mp4Url,
+                            PosterUrl = e.PosterUrl,
+                            Description = e.Description
+                        };
+                        poolChannel.Items.Add(item);
+                        byId[e.Identifier] = item;
+                        added++;
+                    }
+                }
+
                 if (def.OldestFirst)
                 {
                     // Soaps play oldest episode first.
-                    items.Sort((a, b) =>
+                    poolChannel.Items.Sort((a, b) =>
                     {
                         var ya = a.Year ?? int.MaxValue;
                         var yb = b.Year ?? int.MaxValue;
@@ -152,22 +268,18 @@ public class GuideService
                         return byYear != 0 ? byYear : string.Compare(a.Title, b.Title, StringComparison.Ordinal);
                     });
                 }
-
-                pools.Channels.Add(new PoolChannel
-                {
-                    Id = def.ChannelId,
-                    Slug = def.Slug,
-                    Name = def.Name,
-                    Tier = def.Tier,
-                    Items = items
-                });
-                total += items.Count;
             }
 
-            pools.Counts = new PoolsCounts { Channels = pools.Channels.Count, Items = total };
+            pools.Counts = new PoolsCounts
+            {
+                Channels = pools.Channels.Count,
+                Items = pools.Channels.Sum(c => c.Items.Count)
+            };
             Directory.CreateDirectory(Path.GetDirectoryName(_poolsPath)!);
             File.WriteAllText(_poolsPath, JsonSerializer.Serialize(pools, JsonOptions) + "\n");
-            _logger.LogInformation("[RetroTv] Guide pools refreshed from catalog: {Channels} channels, {Items} items -> {Path}", pools.Channels.Count, total, _poolsPath);
+            _logger.LogInformation(
+                "[RetroTv] Guide pools merged from catalog: {Channels} channels, {Items} items ({Added} added, {Updated} updated) -> {Path}",
+                pools.Channels.Count, pools.Counts.Items, added, updated, _poolsPath);
 
             lock (_lock)
             {
@@ -198,8 +310,8 @@ public class GuideService
         return string.Join("\n", lines) + "\n";
     }
 
-    /// <summary>XMLTV guide (48 h by default) for Jellyfin's XMLTV provider. Same schedule the guide page and the streams use, so they can never disagree.</summary>
-    public string BuildXmltv(double hours = 48)
+    /// <summary>XMLTV guide (96 h by default) for Jellyfin's XMLTV provider. Same schedule the guide page and the streams use, so they can never disagree. The 96 h window means a 48 h refresh cycle always leaves ~48 h of overlap — no gaps even if a refresh runs late.</summary>
+    public string BuildXmltv(double hours = 96)
     {
         var now = DateTimeOffset.UtcNow;
         var sb = new StringBuilder();
@@ -229,7 +341,15 @@ public class GuideService
                 }
 
                 sb.Append("    <category>Retro TV</category>\n");
-                sb.Append("    <category>").Append(p.Item.Tier == "user-uploaded" ? "User-Uploaded Recording" : "Public Domain").Append("</category>\n");
+                if (p.Item.IsCommercialBreak)
+                {
+                    sb.Append("    <category>Commercial Break</category>\n");
+                }
+                else
+                {
+                    sb.Append("    <category>").Append(p.Item.Tier == "user-uploaded" ? "User-Uploaded Recording" : "Public Domain").Append("</category>\n");
+                }
+
                 sb.Append("  </programme>\n");
             }
         }
@@ -239,9 +359,10 @@ public class GuideService
     }
 
     /// <summary>Guide data as JSON — the same schedule the XMLTV feed carries, for the plugin's own guide page.</summary>
-    public object BuildGuideJson(double hours = 48)
+    public object BuildGuideJson(double hours = 96)
     {
         var now = DateTimeOffset.UtcNow;
+        var breaks = BreakStats;
         return new
         {
             library = "Retro TV",
@@ -249,6 +370,9 @@ public class GuideService
             hours,
             anchor = ScheduleEngine.Anchor.ToString("o"),
             attribution = "Program data from the Internet Archive. Weather data by Open-Meteo.com.",
+            commercial_breaks = CommercialBreaksEnabled && _breakPool.Count > 0,
+            commercial_break_pool = breaks.Pool,
+            commercial_break_channels = breaks.Channels,
             channels = GetActiveChannels().Select(ch => new
             {
                 id = ch.Definition.ChannelId,
@@ -268,7 +392,8 @@ public class GuideService
                     identifier = p.Item.Identifier,
                     poster_url = p.Item.PosterUrl,
                     tier = p.Item.Tier,
-                    runtime_seconds = p.Item.EffectiveRuntimeSeconds
+                    runtime_seconds = p.Item.EffectiveRuntimeSeconds,
+                    commercial_break = p.Item.IsCommercialBreak
                 }).ToList()
             }).ToList()
         };
@@ -288,6 +413,89 @@ public class GuideService
         }
     }
 
+    /// <summary>Load the embedded breaks-pool.json (66 eligible vintage spots, 20–90 s; the 30–60 s subset is what breaks actually play). A missing or unreadable pool disables breaks (empty pool = original schedules).</summary>
+    private void LoadBreakPool()
+    {
+        try
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            var resourceName = assembly.GetManifestResourceNames()
+                .FirstOrDefault(n => n.EndsWith("breaks-pool.json", StringComparison.OrdinalIgnoreCase));
+            if (resourceName is null)
+            {
+                _logger.LogWarning("[RetroTv] Embedded breaks-pool.json was not found; commercial breaks are disabled.");
+                return;
+            }
+
+            using var stream = assembly.GetManifestResourceStream(resourceName)!;
+            using var reader = new StreamReader(stream);
+            var doc = JsonSerializer.Deserialize<BreakPoolDocument>(reader.ReadToEnd(), JsonOptions);
+            if (doc?.Spots is null)
+            {
+                _logger.LogWarning("[RetroTv] breaks-pool.json did not parse; commercial breaks are disabled.");
+                return;
+            }
+
+            var eligible = doc.Spots
+                .Where(s => !string.IsNullOrWhiteSpace(s.Mp4Url)
+                    && s.RuntimeSeconds >= ScheduleEngine.CommercialBreaks.EligibleMinSeconds
+                    && s.RuntimeSeconds <= ScheduleEngine.CommercialBreaks.EligibleMaxSeconds)
+                .Select(s => new ScheduleEngine.BreakSpot
+                {
+                    Identifier = s.Identifier,
+                    Title = s.Title,
+                    Year = s.Year,
+                    RuntimeSeconds = s.RuntimeSeconds,
+                    Mp4Url = s.Mp4Url,
+                    PosterUrl = s.PosterUrl
+                })
+                .ToList();
+            _breakPool = eligible;
+            _breakPoolShort = eligible
+                .Where(s => s.RuntimeSeconds >= ScheduleEngine.CommercialBreaks.SpotMinSeconds
+                    && s.RuntimeSeconds <= ScheduleEngine.CommercialBreaks.SpotMaxSeconds)
+                .ToList();
+            _logger.LogInformation(
+                "[RetroTv] Break pool loaded: {Pool} eligible spots, {Short} in the 30–60 s break range.",
+                _breakPool.Count, _breakPoolShort.Count);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogWarning(ex, "[RetroTv] Break pool failed to load: {Message} — commercial breaks are disabled.", ex.Message);
+            _breakPool = Array.Empty<ScheduleEngine.BreakSpot>();
+            _breakPoolShort = Array.Empty<ScheduleEngine.BreakSpot>();
+        }
+    }
+
+    // ---- breaks-pool.json document shape ----
+
+    private class BreakPoolDocument
+    {
+        [JsonPropertyName("spots")]
+        public List<BreakPoolSpot> Spots { get; set; } = new();
+    }
+
+    private class BreakPoolSpot
+    {
+        [JsonPropertyName("identifier")]
+        public string Identifier { get; set; } = string.Empty;
+
+        [JsonPropertyName("title")]
+        public string Title { get; set; } = string.Empty;
+
+        [JsonPropertyName("year")]
+        public int? Year { get; set; }
+
+        [JsonPropertyName("runtime_seconds")]
+        public int RuntimeSeconds { get; set; }
+
+        [JsonPropertyName("mp4_url")]
+        public string Mp4Url { get; set; } = string.Empty;
+
+        [JsonPropertyName("poster_url")]
+        public string? PosterUrl { get; set; }
+    }
+
     private List<GuideChannel> LoadPools()
     {
         var channels = new List<GuideChannel>();
@@ -301,7 +509,7 @@ public class GuideService
             }
             else
             {
-                // First use: seed from the verified Stage 2 pools (175 items, PD-only).
+                // First use: seed from the embedded full-lineup pools (153 channels, 2,982 items in 0.3.0.0).
                 var assembly = Assembly.GetExecutingAssembly();
                 var resourceName = assembly.GetManifestResourceNames()
                     .FirstOrDefault(n => n.EndsWith("pools-seed.json", StringComparison.OrdinalIgnoreCase));

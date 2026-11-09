@@ -205,7 +205,7 @@ function buildNfo(entry) {
   return lines.join("\n") + "\n";
 }
 
-async function buildItem(client, outDir, folder, tier, identifier, pruneSet, overrides = {}) {
+async function buildItem(client, outDir, folder, tier, identifier, pruneSet, overrides = {}, usedDirs = new Set()) {
   if (pruneSet.has(identifier)) return { skipped: identifier, reason: "pruned" };
   const data = await client.metadata(identifier);
   const meta = data.metadata || {};
@@ -246,7 +246,12 @@ async function buildItem(client, outDir, folder, tier, identifier, pruneSet, ove
   const posterUrl = posterFile ? `${IA}/download/${encodeURIComponent(identifier)}/__ia_thumb.jpg` : null;
 
   const baseName = sanitize(finalYear ? `${finalTitle} (${finalYear})` : finalTitle);
-  const itemDir = path.join(outDir, sanitize(folder), baseName);
+  // Distinct identifiers can share a title/year (e.g. 11 Ozzie & Harriet
+  // episodes) — a bare title dir would clobber earlier siblings. Disambiguate
+  // with the identifier so every item keeps its own .strm/.nfo/poster.
+  let itemDir = path.join(outDir, sanitize(folder), baseName);
+  if (usedDirs.has(itemDir)) itemDir = path.join(outDir, sanitize(folder), `${baseName} [${identifier}]`);
+  usedDirs.add(itemDir);
   await fs.mkdir(itemDir, { recursive: true });
 
   const strmName = `${baseName}.strm`;
@@ -309,6 +314,7 @@ async function main() {
 
   const items = [];
   const skipped = [];
+  const usedDirs = new Set();
   let jobs = [];
 
   if (args.pilot) {
@@ -328,7 +334,7 @@ async function main() {
   for (const job of jobs) {
     process.stdout.write(`- ${job.identifier} [${job.folder} / ${job.tier}] ... `);
     try {
-      const res = await buildItem(client, outDir, job.folder, job.tier, job.identifier, pruneSet, config.overrides || {});
+      const res = await buildItem(client, outDir, job.folder, job.tier, job.identifier, pruneSet, config.overrides || {}, usedDirs);
       if (res.entry) {
         items.push(res.entry);
         console.log(`OK (${res.entry.title.slice(0, 50)}${res.entry.year ? `, ${res.entry.year}` : ""})`);

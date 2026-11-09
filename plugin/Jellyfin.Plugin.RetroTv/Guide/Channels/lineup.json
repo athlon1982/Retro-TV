@@ -1,1 +1,1606 @@
-[{"folder":"Saturday Morning Cartoons","group":"Kids & cartoons","name":"Saturday Morning Cartoons","notes":"Flagship kids channel. BackWhen slot 17 SATURDAY MORNING.","number":17,"slug":"saturday-morning-cartoons","tier":"pd"},{"folder":"Saturday Morning Cartoons","group":"Kids & cartoons","name":"Popeye","notes":"Single-character channel. BackWhen slot 25 POPEYE.","number":25,"slug":"popeye","tier":"pd","titleKeywords":["popeye"]},{"folder":"Saturday Morning Cartoons","group":"Kids & cartoons","name":"Betty Boop","notes":"Single-character channel. BackWhen slot 26 BETTY BOOP.","number":26,"slug":"betty-boop","tier":"pd","titleKeywords":["betty boop"]},{"folder":"Saturday Morning Cartoons","group":"Kids & cartoons","name":"Felix the Cat","notes":"Single-character channel. BackWhen slot 27 FELIX THE CAT. Inactive until the catalog has Felix items.","number":27,"slug":"felix-the-cat","tier":"pd","titleKeywords":["felix"]},{"folder":"Saturday Morning Cartoons","group":"Kids & cartoons","name":"Superman 1940s","notes":"Single-character channel. BackWhen slot 28 SUPERMAN 1940s. Inactive until the catalog has Superman items.","number":28,"slug":"superman-1940s","tier":"pd","titleKeywords":["superman"]},{"folder":"Classic TV","group":"Sitcoms & classic TV","name":"Classic TV","notes":"Sitcoms, westerns, detectives. BackWhen slot 30 TV LAND SITCOMS.","number":30,"slug":"classic-tv","tier":"pd"},{"folder":"Drive-In Movies","group":"Movies","name":"Drive-In Movies","notes":"General movie channel — everything in the Drive-In folder. BackWhen slot 79 SILVER SCREEN CLASSICS.","number":79,"slug":"drive-in-movies","tier":"pd"},{"folder":"Drive-In Movies","genreKeywords":["western","cowboy","outlaw","rustler","horse","ranch","frontier","sheriff","gunfighter"],"group":"Movies","name":"Western Flicks","notes":"Genre split of Drive-In Movies. BackWhen slot 81 WESTERN FLICKS. Activates when the catalog has matching items.","number":81,"slug":"western-flicks","tier":"pd"},{"folder":"Drive-In Movies","genreKeywords":["noir","detective","crime","gangster","murder","mystery","private eye"],"group":"Movies","name":"Shadow Hour","notes":"Genre split of Drive-In Movies. BackWhen slot 82 SHADOW HOUR. Activates when the catalog has matching items.","number":82,"slug":"shadow-hour","tier":"pd"},{"folder":"Drive-In Movies","genreKeywords":["horror","zombie","monster","ghost","vampire","frankenstein","haunted","terror","devil","demon","curse","mummy","werewolf","undead"],"group":"Movies","name":"Haunted Drive-In","notes":"Genre split of Drive-In Movies. BackWhen slot 83 HAUNTED DRIVE-IN. Activates when the catalog has matching items.","number":83,"slug":"haunted-drive-in","tier":"pd"},{"folder":"Creature Features","group":"Movies","name":"Creature Features","notes":"Horror / sci-fi features. BackWhen slot 84 MONSTER MATINEE.","number":84,"slug":"creature-features","tier":"pd"},{"folder":"Drive-In Movies","genreKeywords":["sci-fi","science fiction","outer space","alien","robot","rocket","missile","martian","flying saucer","atomic"],"group":"Movies","name":"Sci-Fi Theater","notes":"Genre split of Drive-In Movies. BackWhen slot 85 SCI-FI THEATER. Activates when the catalog has matching items.","number":85,"slug":"sci-fi-theater","tier":"pd"},{"enabled":false,"folder":"Soaps","group":"Soap operas & novelas","name":"General Hospital","notes":"User-uploaded tier — NOT in the linear guide in v0.2.0.0 (linear is PD-only); on-demand only. Soaps play oldest episode first when enabled.","number":93,"oldestFirst":true,"slug":"general-hospital","tier":"user-uploaded"},{"enabled":false,"folder":"Soaps","group":"Soap operas & novelas","name":"Dark Shadows","notes":"User-uploaded tier — NOT in the linear guide in v0.2.0.0 (linear is PD-only); on-demand only. Soaps play oldest episode first when enabled.","number":99,"oldestFirst":true,"slug":"dark-shadows","tier":"user-uploaded"},{"group":"News, nature & science","name":"Weather","notes":"Weather channel for the configured zip code (default 05773 Wallingford, VT), fed by Open-Meteo. BackWhen slot 125 WEATHER. Weather data by Open-Meteo.com.","number":125,"slug":"weather","tier":"pd","weather":true},{"folder":"Ad Break","group":"Commercials, vaults & home video","name":"Ad Break","notes":"Vintage ads. BackWhen slot 130 ADS: 1990s (this channel spans all decades).","number":130,"slug":"ad-break","tier":"pd"},{"folder":"VHS Vault","group":"Commercials, vaults & home video","name":"VHS Vault","notes":"General VHS Vault channel. BackWhen slots 137-146 are per-year; those activate when the catalog has dated items.","number":137,"slug":"vhs-vault","tier":"pd"},{"folder":"VHS Vault","group":"Commercials, vaults & home video","name":"VHS Vault 1999","notes":"Per-year VHS Vault. Inactive until the catalog has items dated 1999.","number":138,"slug":"vhs-vault-1999","tier":"pd","year":1999},{"folder":"VHS Vault","group":"Commercials, vaults & home video","name":"VHS Vault 1998","notes":"Per-year VHS Vault. Inactive until the catalog has items dated 1998.","number":139,"slug":"vhs-vault-1998","tier":"pd","year":1998},{"folder":"VHS Vault","group":"Commercials, vaults & home video","name":"VHS Vault 1997","notes":"Per-year VHS Vault. Inactive until the catalog has items dated 1997.","number":140,"slug":"vhs-vault-1997","tier":"pd","year":1997},{"folder":"VHS Vault","group":"Commercials, vaults & home video","name":"VHS Vault 1996","notes":"Per-year VHS Vault. Inactive until the catalog has items dated 1996.","number":141,"slug":"vhs-vault-1996","tier":"pd","year":1996},{"folder":"VHS Vault","group":"Commercials, vaults & home video","name":"VHS Vault 1995","notes":"Per-year VHS Vault. Inactive until the catalog has items dated 1995.","number":142,"slug":"vhs-vault-1995","tier":"pd","year":1995},{"folder":"VHS Vault","group":"Commercials, vaults & home video","name":"VHS Vault 1994","notes":"Per-year VHS Vault. Inactive until the catalog has items dated 1994.","number":143,"slug":"vhs-vault-1994","tier":"pd","year":1994},{"folder":"VHS Vault","group":"Commercials, vaults & home video","name":"VHS Vault 1993","notes":"Per-year VHS Vault. Inactive until the catalog has items dated 1993.","number":144,"slug":"vhs-vault-1993","tier":"pd","year":1993},{"folder":"VHS Vault","group":"Commercials, vaults & home video","name":"VHS Vault 1992","notes":"Per-year VHS Vault. Inactive until the catalog has items dated 1992.","number":145,"slug":"vhs-vault-1992","tier":"pd","year":1992},{"folder":"VHS Vault","group":"Commercials, vaults & home video","name":"VHS Vault 1991","notes":"Per-year VHS Vault. Inactive until the catalog has items dated 1991.","number":146,"slug":"vhs-vault-1991","tier":"pd","year":1991},{"folder":"Prelinger Theater","group":"Commercials, vaults & home video","name":"Prelinger Theater","notes":"Prelinger Archive shorts. BackWhen slot 147 PRELINGER VAULT.","number":147,"slug":"prelinger-theater","tier":"pd"}]
+[
+  {
+    "number": 1,
+    "name": "Saturday Morning Cartoons",
+    "slug": "sat-morning-cartoons",
+    "group": "Kids & cartoons",
+    "folder": "Saturday Morning Cartoons",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 2,
+    "name": "Looney Tunes",
+    "slug": "looney-tunes",
+    "group": "Kids & cartoons",
+    "folder": "Looney Tunes",
+    "tier": "pd",
+    "titleKeywords": [
+      "looney tunes"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 3,
+    "name": "Toonami",
+    "slug": "toonami",
+    "group": "Kids & cartoons",
+    "folder": "Toonami",
+    "tier": "user-uploaded",
+    "titleKeywords": [
+      "toonami"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 4,
+    "name": "Nickelodeon",
+    "slug": "nickelodeon",
+    "group": "Kids & cartoons",
+    "folder": "Nickelodeon",
+    "tier": "user-uploaded",
+    "titleKeywords": [
+      "nickelodeon"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 5,
+    "name": "Popeye",
+    "slug": "popeye",
+    "group": "Kids & cartoons",
+    "folder": "Saturday Morning Cartoons",
+    "tier": "pd",
+    "titleKeywords": [
+      "popeye"
+    ],
+    "enabled": true,
+    "notes": "Single-character channel. BackWhen slot 25 POPEYE."
+  },
+  {
+    "number": 6,
+    "name": "Betty Boop",
+    "slug": "betty-boop",
+    "group": "Kids & cartoons",
+    "folder": "Saturday Morning Cartoons",
+    "tier": "pd",
+    "titleKeywords": [
+      "betty boop"
+    ],
+    "enabled": true,
+    "notes": "Single-character channel. BackWhen slot 26 BETTY BOOP."
+  },
+  {
+    "number": 7,
+    "name": "Felix the Cat",
+    "slug": "felix-the-cat",
+    "group": "Kids & cartoons",
+    "folder": "Saturday Morning Cartoons",
+    "tier": "pd",
+    "titleKeywords": [
+      "felix"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 8,
+    "name": "Superman 1940s",
+    "slug": "superman-1940s",
+    "group": "Kids & cartoons",
+    "folder": "Superman 1940s",
+    "tier": "pd",
+    "titleKeywords": [
+      "superman"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 9,
+    "name": "Classic TV",
+    "slug": "classic-tv",
+    "group": "Sitcoms & classic TV",
+    "folder": "Classic TV",
+    "tier": "pd",
+    "enabled": true,
+    "notes": "Sitcoms, westerns, detectives. BackWhen slot 30 TV LAND SITCOMS."
+  },
+  {
+    "number": 10,
+    "name": "Hit Sitcoms",
+    "slug": "hit-sitcoms",
+    "group": "Sitcoms & classic TV",
+    "folder": "Classic TV",
+    "tier": "pd",
+    "genreKeywords": [
+      "sitcom",
+      "situation comedy"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 11,
+    "name": "Buzzer Row",
+    "slug": "buzzer-row",
+    "group": "Sitcoms & classic TV",
+    "folder": "Classic TV",
+    "tier": "pd",
+    "genreKeywords": [
+      "game show"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 12,
+    "name": "Variety Show",
+    "slug": "variety-show",
+    "group": "Sitcoms & classic TV",
+    "folder": "Classic TV",
+    "tier": "pd",
+    "genreKeywords": [
+      "variety"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 13,
+    "name": "Action Night",
+    "slug": "action-night",
+    "group": "Action & adventure TV",
+    "folder": "Classic TV",
+    "tier": "user-uploaded",
+    "genreKeywords": [
+      "action"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 14,
+    "name": "Knight Rider",
+    "slug": "knight-rider",
+    "group": "Action & adventure TV",
+    "folder": "Knight Rider",
+    "tier": "user-uploaded",
+    "titleKeywords": [
+      "knight rider"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 15,
+    "name": "Detective TV",
+    "slug": "detective-tv",
+    "group": "Drama, mystery & sci-fi",
+    "folder": "Classic TV",
+    "tier": "pd",
+    "genreKeywords": [
+      "detective"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 16,
+    "name": "Sci-Fi TV",
+    "slug": "scifi-tv",
+    "group": "Drama, mystery & sci-fi",
+    "folder": "Classic TV",
+    "tier": "user-uploaded",
+    "genreKeywords": [
+      "science fiction"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 17,
+    "name": "Twilight Zone",
+    "slug": "twilight-zone",
+    "group": "Drama, mystery & sci-fi",
+    "folder": "Twilight Zone",
+    "tier": "user-uploaded",
+    "titleKeywords": [
+      "twilight zone"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 18,
+    "name": "Hitchcock",
+    "slug": "hitchcock",
+    "group": "Drama, mystery & sci-fi",
+    "folder": "Hitchcock",
+    "tier": "user-uploaded",
+    "titleKeywords": [
+      "hitchcock"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 19,
+    "name": "Dynasty",
+    "slug": "dynasty",
+    "group": "Drama, mystery & sci-fi",
+    "folder": "Dynasty",
+    "tier": "user-uploaded",
+    "titleKeywords": [
+      "dynasty"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 20,
+    "name": "Bonanza",
+    "slug": "bonanza",
+    "group": "Drama, mystery & sci-fi",
+    "folder": "Bonanza",
+    "tier": "user-uploaded",
+    "titleKeywords": [
+      "bonanza"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 21,
+    "name": "Music Videos",
+    "slug": "music-videos",
+    "group": "Music",
+    "folder": "Music Videos",
+    "tier": "pd",
+    "genreKeywords": [
+      "music video"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 22,
+    "name": "Rock Videos",
+    "slug": "rock-videos",
+    "group": "Music",
+    "folder": "Rock Videos",
+    "tier": "pd",
+    "genreKeywords": [
+      "music video",
+      "rock"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 23,
+    "name": "Old School Hip-Hop",
+    "slug": "old-school-hip-hop",
+    "group": "Music",
+    "folder": "Old School Hip-Hop",
+    "tier": "pd",
+    "genreKeywords": [
+      "hip-hop"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 24,
+    "name": "Jazz Club",
+    "slug": "jazz-club",
+    "group": "Music",
+    "folder": "Jazz Club",
+    "tier": "pd",
+    "genreKeywords": [
+      "jazz"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 25,
+    "name": "Country Music",
+    "slug": "country-music",
+    "group": "Music",
+    "folder": "Country Music",
+    "tier": "pd",
+    "genreKeywords": [
+      "country music"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 26,
+    "name": "Music Videos 80s",
+    "slug": "music-videos-80s",
+    "group": "Music",
+    "folder": "Music Videos 80s",
+    "tier": "pd",
+    "genreKeywords": [
+      "music video"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 27,
+    "name": "Music Videos 90s",
+    "slug": "music-videos-90s",
+    "group": "Music",
+    "folder": "Music Videos 90s",
+    "tier": "pd",
+    "genreKeywords": [
+      "music video"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 28,
+    "name": "Drive-In Movies",
+    "slug": "drive-in-movies",
+    "group": "Movies",
+    "folder": "Drive-In Movies",
+    "tier": "pd",
+    "enabled": true,
+    "notes": "General movie channel — everything in the Drive-In folder. BackWhen slot 79 SILVER SCREEN CLASSICS."
+  },
+  {
+    "number": 29,
+    "name": "Film Noir",
+    "slug": "film-noir",
+    "group": "Movies",
+    "folder": "Drive-In Movies",
+    "tier": "pd",
+    "genreKeywords": [
+      "noir"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 30,
+    "name": "Silent Films",
+    "slug": "silent-films",
+    "group": "Movies",
+    "folder": "Drive-In Movies",
+    "tier": "pd",
+    "genreKeywords": [
+      "silent"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 31,
+    "name": "Westerns",
+    "slug": "westerns",
+    "group": "Movies",
+    "folder": "Drive-In Movies",
+    "tier": "pd",
+    "genreKeywords": [
+      "western"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 32,
+    "name": "Creature Features",
+    "slug": "creature-features",
+    "group": "Movies",
+    "folder": "Creature Features",
+    "tier": "pd",
+    "genreKeywords": [
+      "horror",
+      "science fiction"
+    ],
+    "enabled": true,
+    "notes": "Horror / sci-fi features. BackWhen slot 84 MONSTER MATINEE."
+  },
+  {
+    "number": 33,
+    "name": "Three Stooges",
+    "slug": "three-stooges",
+    "group": "Movies",
+    "folder": "Three Stooges",
+    "tier": "pd",
+    "titleKeywords": [
+      "stooges"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 34,
+    "name": "Chaplin",
+    "slug": "chaplin",
+    "group": "Movies",
+    "folder": "Chaplin",
+    "tier": "pd",
+    "titleKeywords": [
+      "chaplin"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 35,
+    "name": "Movie Trailers",
+    "slug": "movie-trailers",
+    "group": "Movies",
+    "folder": "Movie Trailers",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 36,
+    "name": "General Hospital",
+    "slug": "general-hospital",
+    "group": "Soap operas & novelas",
+    "folder": "Soaps",
+    "tier": "user-uploaded",
+    "titleKeywords": [
+      "general hospital"
+    ],
+    "oldestFirst": true,
+    "enabled": true,
+    "notes": "User-uploaded tier — NOT in the linear guide in v0.2.0.0 (linear is PD-only); on-demand only. Soaps play oldest episode first when enabled."
+  },
+  {
+    "number": 37,
+    "name": "Dark Shadows",
+    "slug": "dark-shadows",
+    "group": "Soap operas & novelas",
+    "folder": "Soaps",
+    "tier": "user-uploaded",
+    "titleKeywords": [
+      "dark shadows"
+    ],
+    "oldestFirst": true,
+    "enabled": true,
+    "notes": "User-uploaded tier — NOT in the linear guide in v0.2.0.0 (linear is PD-only); on-demand only. Soaps play oldest episode first when enabled."
+  },
+  {
+    "number": 38,
+    "name": "Guiding Light",
+    "slug": "guiding-light",
+    "group": "Soap operas & novelas",
+    "folder": "Soaps",
+    "tier": "user-uploaded",
+    "titleKeywords": [
+      "guiding light"
+    ],
+    "oldestFirst": true,
+    "enabled": true
+  },
+  {
+    "number": 39,
+    "name": "All My Children",
+    "slug": "all-my-children",
+    "group": "Soap operas & novelas",
+    "folder": "All My Children",
+    "tier": "user-uploaded",
+    "titleKeywords": [
+      "all my children"
+    ],
+    "oldestFirst": true,
+    "enabled": true
+  },
+  {
+    "number": 40,
+    "name": "Soaps",
+    "slug": "soaps",
+    "group": "Soap operas & novelas",
+    "folder": "Soaps",
+    "tier": "user-uploaded",
+    "titleKeywords": [
+      "general hospital",
+      "guiding light",
+      "dark shadows",
+      "days of our lives",
+      "young and the restless"
+    ],
+    "oldestFirst": true,
+    "enabled": true
+  },
+  {
+    "number": 41,
+    "name": "Julia Child",
+    "slug": "julia-child",
+    "group": "Home, food & fitness",
+    "folder": "Julia Child",
+    "tier": "user-uploaded",
+    "titleKeywords": [
+      "julia child"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 42,
+    "name": "This Old House",
+    "slug": "this-old-house",
+    "group": "Home, food & fitness",
+    "folder": "This Old House",
+    "tier": "user-uploaded",
+    "titleKeywords": [
+      "this old house"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 43,
+    "name": "Boxing",
+    "slug": "boxing",
+    "group": "Sports",
+    "folder": "Boxing",
+    "tier": "pd",
+    "genreKeywords": [
+      "boxing"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 44,
+    "name": "Olympics",
+    "slug": "olympics",
+    "group": "Sports",
+    "folder": "Olympics",
+    "tier": "pd",
+    "genreKeywords": [
+      "olympics"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 45,
+    "name": "Newsreels",
+    "slug": "newsreels",
+    "group": "News, nature & science",
+    "folder": "Newsreels",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 46,
+    "name": "World War II",
+    "slug": "world-war-ii",
+    "group": "News, nature & science",
+    "folder": "Prelinger Theater",
+    "tier": "pd",
+    "genreKeywords": [
+      "world war II"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 47,
+    "name": "NASA TV",
+    "slug": "nasa-tv",
+    "group": "News, nature & science",
+    "folder": "NASA TV",
+    "tier": "pd",
+    "titleKeywords": [
+      "nasa"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 48,
+    "name": "Computer Chronicles",
+    "slug": "computer-chronicles",
+    "group": "News, nature & science",
+    "folder": "Computer Chronicles",
+    "tier": "user-uploaded",
+    "titleKeywords": [
+      "computer chronicles"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 49,
+    "name": "Prelinger Theater",
+    "slug": "prelinger-theater",
+    "group": "Commercials, vaults & home video",
+    "folder": "Prelinger Theater",
+    "tier": "pd",
+    "enabled": true,
+    "notes": "Prelinger Archive shorts. BackWhen slot 147 PRELINGER VAULT."
+  },
+  {
+    "number": 50,
+    "name": "Ad Break",
+    "slug": "ad-break",
+    "group": "Commercials, vaults & home video",
+    "folder": "Ad Break",
+    "tier": "pd",
+    "enabled": true,
+    "notes": "Vintage ads. BackWhen slot 130 ADS: 1990s (this channel spans all decades)."
+  },
+  {
+    "number": 51,
+    "name": "Ads: 1950s",
+    "slug": "ads-1950s",
+    "group": "Commercials, vaults & home video",
+    "folder": "Ad Break",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 52,
+    "name": "Ads: 1980s",
+    "slug": "ads-1980s",
+    "group": "Commercials, vaults & home video",
+    "folder": "Ad Break",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 53,
+    "name": "Ads: 1990s",
+    "slug": "ads-1990s",
+    "group": "Commercials, vaults & home video",
+    "folder": "Ad Break",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 54,
+    "name": "Infomercials",
+    "slug": "infomercials",
+    "group": "Commercials, vaults & home video",
+    "folder": "Infomercials",
+    "tier": "user-uploaded",
+    "genreKeywords": [
+      "infomercial"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 55,
+    "name": "School Days",
+    "slug": "school-days",
+    "group": "Commercials, vaults & home video",
+    "folder": "Prelinger Theater",
+    "tier": "pd",
+    "genreKeywords": [
+      "education"
+    ],
+    "enabled": true
+  },
+  {
+    "number": 56,
+    "name": "VHS Vault 1990",
+    "slug": "vhs-vault-1990",
+    "group": "Commercials, vaults & home video",
+    "folder": "VHS Vault",
+    "tier": "pd",
+    "year": 1990,
+    "enabled": true
+  },
+  {
+    "number": 57,
+    "name": "VHS Vault 1991",
+    "slug": "vhs-vault-1991",
+    "group": "Commercials, vaults & home video",
+    "folder": "VHS Vault 1991",
+    "tier": "pd",
+    "year": 1991,
+    "enabled": true
+  },
+  {
+    "number": 58,
+    "name": "VHS Vault 1992",
+    "slug": "vhs-vault-1992",
+    "group": "Commercials, vaults & home video",
+    "folder": "VHS Vault",
+    "tier": "pd",
+    "year": 1992,
+    "enabled": true
+  },
+  {
+    "number": 59,
+    "name": "VHS Vault 1993",
+    "slug": "vhs-vault-1993",
+    "group": "Commercials, vaults & home video",
+    "folder": "VHS Vault",
+    "tier": "pd",
+    "year": 1993,
+    "enabled": true
+  },
+  {
+    "number": 60,
+    "name": "VHS Vault 1994",
+    "slug": "vhs-vault-1994",
+    "group": "Commercials, vaults & home video",
+    "folder": "VHS Vault",
+    "tier": "pd",
+    "year": 1994,
+    "enabled": true
+  },
+  {
+    "number": 61,
+    "name": "VHS Vault 1995",
+    "slug": "vhs-vault-1995",
+    "group": "Commercials, vaults & home video",
+    "folder": "VHS Vault",
+    "tier": "pd",
+    "year": 1995,
+    "enabled": true
+  },
+  {
+    "number": 62,
+    "name": "VHS Vault 1996",
+    "slug": "vhs-vault-1996",
+    "group": "Commercials, vaults & home video",
+    "folder": "VHS Vault",
+    "tier": "pd",
+    "year": 1996,
+    "enabled": true
+  },
+  {
+    "number": 63,
+    "name": "VHS Vault 1997",
+    "slug": "vhs-vault-1997",
+    "group": "Commercials, vaults & home video",
+    "folder": "VHS Vault",
+    "tier": "pd",
+    "year": 1997,
+    "enabled": true
+  },
+  {
+    "number": 64,
+    "name": "VHS Vault 1998",
+    "slug": "vhs-vault-1998",
+    "group": "Commercials, vaults & home video",
+    "folder": "VHS Vault",
+    "tier": "pd",
+    "year": 1998,
+    "enabled": true
+  },
+  {
+    "number": 65,
+    "name": "VHS Vault 1999",
+    "slug": "vhs-vault-1999",
+    "group": "Commercials, vaults & home video",
+    "folder": "VHS Vault",
+    "tier": "pd",
+    "year": 1999,
+    "enabled": true
+  },
+  {
+    "number": 66,
+    "name": "VHS Vault",
+    "slug": "vhs-vault",
+    "group": "Commercials, vaults & home video",
+    "folder": "VHS Vault",
+    "tier": "pd",
+    "enabled": true,
+    "notes": "General VHS Vault channel. BackWhen slots 137-146 are per-year; those activate when the catalog has dated items."
+  },
+  {
+    "number": 67,
+    "name": "Audiobooks",
+    "slug": "audiobooks",
+    "group": "Audiobooks",
+    "folder": "Audiobooks",
+    "tier": "pd",
+    "enabled": false,
+    "notes": "Audio-only MP3 channel — the plugin has no audio-only stream path yet (sidecar-only). Enabled=false so it appears in neither the M3U nor the guide."
+  },
+  {
+    "number": 68,
+    "name": "NASA",
+    "slug": "nasa",
+    "group": "News, nature & science",
+    "folder": "NASA",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 83,
+    "name": "Haunted Drive-In",
+    "slug": "haunted-drive-in",
+    "group": "Movies",
+    "folder": "Creature Features",
+    "tier": "pd",
+    "genreKeywords": [
+      "horror",
+      "zombie",
+      "monster",
+      "ghost",
+      "vampire",
+      "frankenstein",
+      "haunted",
+      "terror",
+      "devil",
+      "demon",
+      "curse",
+      "mummy",
+      "werewolf",
+      "undead"
+    ],
+    "enabled": true,
+    "notes": "Genre split of Drive-In Movies. BackWhen slot 83 HAUNTED DRIVE-IN. Activates when the catalog has matching items."
+  },
+  {
+    "number": 85,
+    "name": "Sci-Fi Theater",
+    "slug": "sci-fi-theater",
+    "group": "Movies",
+    "folder": "Creature Features",
+    "tier": "pd",
+    "genreKeywords": [
+      "science fiction",
+      "sci-fi",
+      "space",
+      "alien",
+      "robot",
+      "monster",
+      "mutant",
+      "invasion",
+      "planet",
+      "rocket"
+    ],
+    "enabled": true,
+    "notes": "Genre split of Drive-In Movies. BackWhen slot 85 SCI-FI THEATER. Activates when the catalog has matching items."
+  },
+  {
+    "number": 89,
+    "name": "Laurel & Hardy",
+    "slug": "laurel-hardy",
+    "group": "Movies",
+    "folder": "Laurel & Hardy",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 125,
+    "name": "Weather",
+    "slug": "weather",
+    "group": "News, nature & science",
+    "folder": "",
+    "tier": "pd",
+    "weather": true,
+    "enabled": true,
+    "notes": "Synthetic Open-Meteo slate channel (plugin weather). The pool's 25 IA weather videos are not served."
+  },
+  {
+    "number": 132,
+    "name": "Ads: 1970s",
+    "slug": "ads-1970s",
+    "group": "Commercials, vaults & home video",
+    "folder": "Ad Break",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 133,
+    "name": "Ads: 1960s",
+    "slug": "ads-1960s",
+    "group": "Commercials, vaults & home video",
+    "folder": "Ad Break",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 134,
+    "name": "MTV",
+    "slug": "mtv",
+    "group": "Music",
+    "folder": "MTV",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 135,
+    "name": "VEVO 90s",
+    "slug": "vevo-90s",
+    "group": "Music",
+    "folder": "VEVO 90s",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 136,
+    "name": "Yo! MTV",
+    "slug": "yo-mtv",
+    "group": "Music",
+    "folder": "Yo! MTV",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 137,
+    "name": "Heavy Rotation",
+    "slug": "heavy-rotation",
+    "group": "Music",
+    "folder": "Heavy Rotation",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 138,
+    "name": "VEVO 80s",
+    "slug": "vevo-80s",
+    "group": "Music",
+    "folder": "VEVO 80s",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 139,
+    "name": "VEVO 2000s",
+    "slug": "vevo-2000s",
+    "group": "Music",
+    "folder": "VEVO 2000s",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 140,
+    "name": "VEVO 70s",
+    "slug": "vevo-70s",
+    "group": "Music",
+    "folder": "VEVO 70s",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 141,
+    "name": "VEVO Pop",
+    "slug": "vevo-pop",
+    "group": "Music",
+    "folder": "VEVO Pop",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 143,
+    "name": "VEVO Rock",
+    "slug": "vevo-rock",
+    "group": "Music",
+    "folder": "VEVO Rock",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 144,
+    "name": "Rock & Metal",
+    "slug": "rock-metal",
+    "group": "Music",
+    "folder": "Rock & Metal",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 145,
+    "name": "VEVO Country",
+    "slug": "vevo-country",
+    "group": "Music",
+    "folder": "VEVO Country",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 147,
+    "name": "CMT",
+    "slug": "cmt",
+    "group": "Music",
+    "folder": "CMT",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 148,
+    "name": "Front Row Live",
+    "slug": "front-row-live",
+    "group": "Music",
+    "folder": "Front Row Live",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 149,
+    "name": "Live Concerts",
+    "slug": "live-concerts",
+    "group": "Music",
+    "folder": "Live Concerts",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 150,
+    "name": "Rock & Roll",
+    "slug": "rock-roll",
+    "group": "Music",
+    "folder": "Rock & Roll",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 151,
+    "name": "Jazz Videos",
+    "slug": "jazz-videos",
+    "group": "Music",
+    "folder": "Jazz Videos",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 152,
+    "name": "90s Kids",
+    "slug": "90s-kids",
+    "group": "Kids & cartoons",
+    "folder": "90s Kids",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 153,
+    "name": "90s Kids 2",
+    "slug": "90s-kids-2",
+    "group": "Kids & cartoons",
+    "folder": "90s Kids 2",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 154,
+    "name": "Mecha Afternoon",
+    "slug": "mecha-afternoon",
+    "group": "Kids & cartoons",
+    "folder": "Mecha Afternoon",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 155,
+    "name": "Toy Box Heroes",
+    "slug": "toy-box-heroes",
+    "group": "Kids & cartoons",
+    "folder": "Ad Break",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 156,
+    "name": "Cape & Cowl",
+    "slug": "cape-cowl",
+    "group": "Kids & cartoons",
+    "folder": "Saturday Morning Cartoons",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 157,
+    "name": "Mister Rogers",
+    "slug": "mister-rogers",
+    "group": "Kids & cartoons",
+    "folder": "Mister Rogers",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 158,
+    "name": "Reading Rainbow",
+    "slug": "reading-rainbow",
+    "group": "Kids & cartoons",
+    "folder": "Reading Rainbow",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 159,
+    "name": "Saturday Morning Live",
+    "slug": "saturday-morning-live",
+    "group": "Kids & cartoons",
+    "folder": "Saturday Morning Live",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 160,
+    "name": "Anime Zone",
+    "slug": "anime-zone",
+    "group": "Kids & cartoons",
+    "folder": "Anime Zone",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 161,
+    "name": "Storytime Station",
+    "slug": "storytime-station",
+    "group": "Kids & cartoons",
+    "folder": "Prelinger Theater",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 162,
+    "name": "Little Learners",
+    "slug": "little-learners",
+    "group": "Kids & cartoons",
+    "folder": "Prelinger Theater",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 163,
+    "name": "Family Room Afternoons",
+    "slug": "family-room-afternoons",
+    "group": "Kids & cartoons",
+    "folder": "Saturday Morning Cartoons",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 164,
+    "name": "Toon Lab",
+    "slug": "toon-lab",
+    "group": "Kids & cartoons",
+    "folder": "Saturday Morning Cartoons",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 165,
+    "name": "Pajama Saturday",
+    "slug": "pajama-saturday",
+    "group": "Kids & cartoons",
+    "folder": "Saturday Morning Cartoons",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 166,
+    "name": "Orange Couch",
+    "slug": "orange-couch",
+    "group": "Kids & cartoons",
+    "folder": "Orange Couch",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 167,
+    "name": "Kids TV",
+    "slug": "kids-tv",
+    "group": "Kids & cartoons",
+    "folder": "Kids TV",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 168,
+    "name": "Kids Classics",
+    "slug": "kids-classics",
+    "group": "Kids & cartoons",
+    "folder": "Kids Classics",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 169,
+    "name": "Cartoon Club",
+    "slug": "cartoon-club",
+    "group": "Kids & cartoons",
+    "folder": "Prelinger Theater",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 170,
+    "name": "90s Throwback",
+    "slug": "90s-throwback",
+    "group": "Kids & cartoons",
+    "folder": "90s Throwback",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 171,
+    "name": "TGIF Sitcoms",
+    "slug": "tgif-sitcoms",
+    "group": "Sitcoms & classic TV",
+    "folder": "TGIF Sitcoms",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 172,
+    "name": "Sitcom TV",
+    "slug": "sitcom-tv",
+    "group": "Sitcoms & classic TV",
+    "folder": "Classic TV",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 173,
+    "name": "Rabbit Ears",
+    "slug": "rabbit-ears",
+    "group": "Sitcoms & classic TV",
+    "folder": "Classic TV",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 174,
+    "name": "Primetime Tapes",
+    "slug": "primetime-tapes",
+    "group": "Sitcoms & classic TV",
+    "folder": "Classic TV",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 175,
+    "name": "Cable Classics After Dark",
+    "slug": "cable-classics-after-dark",
+    "group": "Sitcoms & classic TV",
+    "folder": "Classic TV",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 176,
+    "name": "Talk Show",
+    "slug": "talk-show",
+    "group": "Sitcoms & classic TV",
+    "folder": "Talk Show",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 177,
+    "name": "Back Roads & Backfires",
+    "slug": "back-roads-backfires",
+    "group": "Action & adventure TV",
+    "folder": "Prelinger Theater",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 178,
+    "name": "Cops & Cruises",
+    "slug": "cops-cruises",
+    "group": "Action & adventure TV",
+    "folder": "Classic TV",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 179,
+    "name": "Classic TV Drama",
+    "slug": "classic-tv-drama",
+    "group": "Drama, mystery & sci-fi",
+    "folder": "Classic TV Drama",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 180,
+    "name": "TV Land Drama",
+    "slug": "tv-land-drama",
+    "group": "Drama, mystery & sci-fi",
+    "folder": "Classic TV",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 181,
+    "name": "Strange Tales Theater",
+    "slug": "strange-tales-theater",
+    "group": "Drama, mystery & sci-fi",
+    "folder": "Strange Tales Theater",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 182,
+    "name": "Badge & Trench Coat",
+    "slug": "badge-trench-coat",
+    "group": "Action & adventure TV",
+    "folder": "Badge & Trench Coat",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 183,
+    "name": "Rocketship Theater",
+    "slug": "rocketship-theater",
+    "group": "Drama, mystery & sci-fi",
+    "folder": "Creature Features",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 184,
+    "name": "Tumbleweed Theater",
+    "slug": "tumbleweed-theater",
+    "group": "Movies",
+    "folder": "Tumbleweed Theater",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 185,
+    "name": "Western Heroes",
+    "slug": "western-heroes",
+    "group": "Movies",
+    "folder": "Western Heroes",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 186,
+    "name": "VEVO R&B",
+    "slug": "vevo-rb",
+    "group": "Music",
+    "folder": "VEVO R&B",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 187,
+    "name": "Classic Country",
+    "slug": "classic-country",
+    "group": "Music",
+    "folder": "Classic Country",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 188,
+    "name": "Dragon Dojo",
+    "slug": "dragon-dojo",
+    "group": "Movies",
+    "folder": "Dragon Dojo",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 189,
+    "name": "Funny Pages Cinema",
+    "slug": "funny-pages-cinema",
+    "group": "Movies",
+    "folder": "Drive-In Movies",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 190,
+    "name": "Flicker Hall",
+    "slug": "flicker-hall",
+    "group": "Movies",
+    "folder": "Drive-In Movies",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 191,
+    "name": "B-Movie",
+    "slug": "b-movie",
+    "group": "Movies",
+    "folder": "Drive-In Movies",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 192,
+    "name": "As the World Turns",
+    "slug": "as-the-world-turns",
+    "group": "Soap operas & novelas",
+    "folder": "As the World Turns",
+    "tier": "user-uploaded",
+    "oldestFirst": true,
+    "enabled": true
+  },
+  {
+    "number": 193,
+    "name": "Another World",
+    "slug": "another-world",
+    "group": "Soap operas & novelas",
+    "folder": "Another World",
+    "tier": "user-uploaded",
+    "oldestFirst": true,
+    "enabled": true
+  },
+  {
+    "number": 194,
+    "name": "Edge of Night",
+    "slug": "edge-of-night",
+    "group": "Soap operas & novelas",
+    "folder": "Edge of Night",
+    "tier": "user-uploaded",
+    "oldestFirst": true,
+    "enabled": true
+  },
+  {
+    "number": 195,
+    "name": "Classic Soaps",
+    "slug": "classic-soaps",
+    "group": "Soap operas & novelas",
+    "folder": "Soaps",
+    "tier": "user-uploaded",
+    "oldestFirst": true,
+    "enabled": true
+  },
+  {
+    "number": 196,
+    "name": "Soap Opera Mix",
+    "slug": "soap-opera-mix",
+    "group": "Soap operas & novelas",
+    "folder": "Soaps",
+    "tier": "user-uploaded",
+    "oldestFirst": true,
+    "enabled": true
+  },
+  {
+    "number": 197,
+    "name": "Soap Opera Vault",
+    "slug": "soap-opera-vault",
+    "group": "Soap operas & novelas",
+    "folder": "Soaps",
+    "tier": "user-uploaded",
+    "oldestFirst": true,
+    "enabled": true
+  },
+  {
+    "number": 198,
+    "name": "Telenovelas",
+    "slug": "telenovelas",
+    "group": "Soap operas & novelas",
+    "folder": "Telenovelas",
+    "tier": "user-uploaded",
+    "oldestFirst": true,
+    "enabled": true
+  },
+  {
+    "number": 199,
+    "name": "Novelas",
+    "slug": "novelas",
+    "group": "Soap operas & novelas",
+    "folder": "Novelas",
+    "tier": "user-uploaded",
+    "oldestFirst": true,
+    "enabled": true
+  },
+  {
+    "number": 200,
+    "name": "Telenovelas Clasicas",
+    "slug": "telenovelas-clasicas",
+    "group": "Soap operas & novelas",
+    "folder": "Telenovelas Clasicas",
+    "tier": "user-uploaded",
+    "oldestFirst": true,
+    "enabled": true
+  },
+  {
+    "number": 201,
+    "name": "Home Improvement",
+    "slug": "home-improvement",
+    "group": "Home, food & fitness",
+    "folder": "Prelinger Theater",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 202,
+    "name": "Garden Channel",
+    "slug": "garden-channel",
+    "group": "Home, food & fitness",
+    "folder": "Prelinger Theater",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 203,
+    "name": "Do It Yourself",
+    "slug": "do-it-yourself",
+    "group": "Home, food & fitness",
+    "folder": "Prelinger Theater",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 204,
+    "name": "Interior Design",
+    "slug": "interior-design",
+    "group": "Home, food & fitness",
+    "folder": "Interior Design",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 205,
+    "name": "Quilt & Sew",
+    "slug": "quilt-sew",
+    "group": "Home, food & fitness",
+    "folder": "Prelinger Theater",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 206,
+    "name": "Garage TV",
+    "slug": "garage-tv",
+    "group": "Home, food & fitness",
+    "folder": "Prelinger Theater",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 207,
+    "name": "Workout TV",
+    "slug": "workout-tv",
+    "group": "Home, food & fitness",
+    "folder": "Workout TV",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 208,
+    "name": "Travelogue",
+    "slug": "travelogue",
+    "group": "Home, food & fitness",
+    "folder": "Prelinger Theater",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 209,
+    "name": "Seventh Inning Stretch",
+    "slug": "seventh-inning-stretch",
+    "group": "Sports",
+    "folder": "Seventh Inning Stretch",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 210,
+    "name": "Turnbuckle TV",
+    "slug": "turnbuckle-tv",
+    "group": "Sports",
+    "folder": "Turnbuckle TV",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 211,
+    "name": "90s News",
+    "slug": "90s-news",
+    "group": "News, nature & science",
+    "folder": "90s News",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 212,
+    "name": "C-SPAN",
+    "slug": "c-span",
+    "group": "News, nature & science",
+    "folder": "C-SPAN",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 213,
+    "name": "Election Night",
+    "slug": "election-night",
+    "group": "News, nature & science",
+    "folder": "Prelinger Theater",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 214,
+    "name": "Public Affairs",
+    "slug": "public-affairs",
+    "group": "News, nature & science",
+    "folder": "Public Affairs",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 215,
+    "name": "Trail & Treetops",
+    "slug": "trail-treetops",
+    "group": "News, nature & science",
+    "folder": "Prelinger Theater",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 216,
+    "name": "Station Break",
+    "slug": "station-break",
+    "group": "Commercials, vaults & home video",
+    "folder": "Station Break",
+    "tier": "pd",
+    "enabled": true
+  }
+]

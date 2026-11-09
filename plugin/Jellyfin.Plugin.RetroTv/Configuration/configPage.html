@@ -98,6 +98,13 @@
                     </label>
                     <div class="fieldDescription">Turn the guide off here to stop the channels without uninstalling. The guide page lives at <a href="/RetroTv/Guide" target="_blank">/RetroTv/Guide</a> on this server.</div>
                 </div>
+                <div class="inputContainer">
+                    <label>
+                        <input id="chkCommercialBreaks" name="chkCommercialBreaks" type="checkbox" is="emby-checkbox" />
+                        <span>Old-school commercial breaks</span>
+                    </label>
+                    <div class="fieldDescription">One vintage commercial (30–60 s) at most once an hour per channel, between programmes — like BackWhen TV. Uncheck to play programmes back-to-back. The switch is server-wide (the whole household) and Jellyfin picks it up at its next guide refresh. Ad Break and the decade ad channels, Station Break, and Audiobooks never get breaks.</div>
+                </div>
 
                 <h2>Live channel streams</h2>
                 <div class="inputContainer">
@@ -245,6 +252,7 @@
                 document.querySelector("#retroTvXmltvUrl").textContent = base + "/RetroTv/guide.xml";
                 document.querySelector("#chkAutoBuild").checked = cfgGet("AutoBuildEnabled") !== false;
                 document.querySelector("#chkChannelsEnabled").checked = !!cfgGet("ChannelsEnabled");
+                document.querySelector("#chkCommercialBreaks").checked = cfgGet("CommercialBreaksEnabled") !== false;
                 var place = cfgGet("WeatherPlaceName");
                 if (place) document.querySelector("#retroTvGeoResult").textContent = "Resolved place: " + place + " — Weather data by Open-Meteo.com";
                 return loadThemes();
@@ -296,6 +304,7 @@
             cfgSet("WeatherFontPath", document.querySelector("#txtWeatherFontPath").value.trim());
             cfgSet("AutoBuildEnabled", document.querySelector("#chkAutoBuild").checked);
             cfgSet("ChannelsEnabled", document.querySelector("#chkChannelsEnabled").checked);
+            cfgSet("CommercialBreaksEnabled", document.querySelector("#chkCommercialBreaks").checked);
             ApiClient.updatePluginConfiguration(RetroTvConfig.pluginId, RetroTvConfig.config).then(Dashboard.processPluginConfigurationUpdateResult);
         });
     </script>

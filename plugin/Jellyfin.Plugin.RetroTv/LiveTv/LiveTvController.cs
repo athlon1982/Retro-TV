@@ -103,15 +103,26 @@ public class LiveTvController : ControllerBase
 
     private async Task StreamChannelAsync(GuideService.GuideChannel channel, string ffmpeg)
     {
+        // The effective item list — with commercial-break spots interleaved
+        // when breaks are on — is the same list the guide walks, so the
+        // stream plays exactly what the guide shows.
+        var effectiveItems = _guide.GetEffectiveItems(channel).ToList();
+        if (effectiveItems.Count == 0)
+        {
+            Response.StatusCode = 503;
+            await Response.WriteAsync("Channel has no programmes to stream.").ConfigureAwait(false);
+            return;
+        }
+
         var now = DateTimeOffset.UtcNow;
-        var current = ScheduleEngine.ProgramAt(channel.Items, now);
+        var current = ScheduleEngine.ProgramAt(effectiveItems, now);
         var items = new List<(ScheduleEngine.GuideItem Item, double OffsetSec)>();
         var totalPlayed = 0.0;
         var idx = current.Index;
         var t = current.Start;
         while (totalPlayed < BatchSeconds)
         {
-            var item = channel.Items[idx % channel.Items.Count];
+            var item = effectiveItems[idx % effectiveItems.Count];
             var offsetSec = idx == current.Index ? current.Offset.TotalSeconds : 0;
             items.Add((item, offsetSec));
             totalPlayed += item.EffectiveRuntimeSeconds - offsetSec;
@@ -141,8 +152,8 @@ public class LiveTvController : ControllerBase
             items.RemoveAt(0);
             if (items.Count == 0)
             {
-                var nextIdx = (current.Index + 1) % channel.Items.Count;
-                items.Add((channel.Items[nextIdx], 0));
+                var nextIdx = (current.Index + 1) % effectiveItems.Count;
+                items.Add((effectiveItems[nextIdx], 0));
             }
 
             // Re-time from the new batch start and top the batch back up.
@@ -152,10 +163,10 @@ public class LiveTvController : ControllerBase
                 totalPlayed += item.EffectiveRuntimeSeconds;
             }
 
-            var tailIdx = (items.Count == 0 ? current.Index : channel.Items.IndexOf(items[^1].Item) + 1) % channel.Items.Count;
+            var tailIdx = (items.Count == 0 ? current.Index : effectiveItems.IndexOf(items[^1].Item) + 1) % effectiveItems.Count;
             while (totalPlayed < BatchSeconds)
             {
-                var item = channel.Items[tailIdx % channel.Items.Count];
+                var item = effectiveItems[tailIdx % effectiveItems.Count];
                 items.Add((item, 0));
                 totalPlayed += item.EffectiveRuntimeSeconds;
                 tailIdx++;
