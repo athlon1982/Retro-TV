@@ -32,7 +32,7 @@
         <div class="content-primary">
             <form id="retroTvConfigForm">
                 <h2>Retro TV</h2>
-                <p class="fieldDescription">Turns the Internet Archive into a retro-video library and live channels inside Jellyfin. Video streams direct from the Archive at play time — nothing is downloaded in Stage 1.</p>
+                <p class="fieldDescription">Turns the Internet Archive into a retro-video library and live channels inside Jellyfin. Video streams direct from the Archive at play time — nothing is downloaded to your server.</p>
 
                 <div id="retroTvGettingStarted" style="background: var(--rtv-panel); border: 2px solid var(--rtv-accent); padding: 0.75em; margin-bottom: 1em;">
                     <h2 style="margin-top: 0;">Getting started — do this first</h2>
@@ -57,12 +57,7 @@
                 <div class="inputContainer">
                     <label class="inputLabel inputLabelUnfocused" for="txtOutputFolder">Output folder</label>
                     <input id="txtOutputFolder" name="txtOutputFolder" type="text" is="emby-input" />
-                    <div class="fieldDescription">Where .strm / .nfo / poster files and catalog.json go for the on-demand library (Stage 1). Leave blank if you only want Live TV — the channels do not need it. If you do want the library, set a folder, press Save at the bottom, then press <b>Create the Retro TV library</b> below — the plugin creates the library for you (mixed movies + TV) and the catalog build puts the Retro TV icon on it. No manual library step.</div>
-                </div>
-
-                <div class="inputContainer">
-                    <button type="button" class="raised button-submit block emby-button" id="btnCreateLibrary">Create the Retro TV library</button>
-                    <div class="fieldDescription" id="retroTvLibraryResult">Creates a Jellyfin library from the output folder above, named from the library name below. Only for the on-demand catalog — Live TV does not need a library. The library shows the Retro TV icon automatically (the catalog build writes it into the folder).</div>
+                    <div class="fieldDescription">Where .strm / .nfo / poster files and catalog.json go for the optional on-demand library. Leave blank if you only want Live TV — the channels do not need it.</div>
                 </div>
 
                 <div class="inputContainer">
@@ -96,18 +91,18 @@
                 <div class="inputContainer">
                     <label class="inputLabel inputLabelUnfocused" for="selGuideTheme">Guide theme</label>
                     <select id="selGuideTheme" name="selGuideTheme" is="emby-select"></select>
-                    <div class="fieldDescription"><span id="retroTvThemeSwatch"></span><span id="retroTvThemeDescription"></span> The theme applies to the guide page (Stage 2) and this page's accents. No restart needed.</div>
+                    <div class="fieldDescription"><span id="retroTvThemeSwatch"></span><span id="retroTvThemeDescription"></span> The theme applies to the guide page and this page's accents. No restart needed.</div>
                 </div>
                 <div class="inputContainer">
                     <button type="button" class="raised button-submit block emby-button" id="btnApplyTheme">Apply this theme to Jellyfin's Live TV guide</button>
                     <div class="fieldDescription" id="retroTvBrandingResult">Writes the selected theme into Dashboard → General → Custom CSS (Branding) so Jellyfin's own guide shows channel names and the theme. Your existing CSS is kept. No restart needed — takes effect on next page load.</div>
                 </div>
 
-                <h2>Weather channel (Stage 2)</h2>
+                <h2>Weather channel</h2>
                 <div class="inputContainer">
                     <label class="inputLabel inputLabelUnfocused" for="txtWeatherZip">Weather zip code</label>
                     <input id="txtWeatherZip" name="txtWeatherZip" type="text" is="emby-input" />
-                    <div class="fieldDescription">Default 05773 (Wallingford, VT). Change it, press "Resolve zip", and check the place name below before saving.</div>
+                    <div class="fieldDescription">Enter your zip code, press "Resolve zip", and check the place name below before saving. Blank until you set it — the weather channel has no location until then.</div>
                 </div>
                 <div class="inputContainer">
                     <button type="button" class="raised button-submit block emby-button" id="btnGeocode">Resolve zip</button>
@@ -273,7 +268,7 @@
                 document.querySelector("#txtRequestsPerSecond").value = cfgGet("RequestsPerSecond") || 1;
                 document.querySelector("#selMp4Preference").value = cfgGet("Mp4Preference") || "full";
                 document.querySelector("#chkIncludeUserUploaded").checked = cfgGet("IncludeUserUploadedTier") !== false;
-                document.querySelector("#txtWeatherZip").value = cfgGet("WeatherZipCode") || "05773";
+                document.querySelector("#txtWeatherZip").value = cfgGet("WeatherZipCode") || "";
                 document.querySelector("#txtFfmpegPath").value = cfgGet("FfmpegPath") || "";
                 document.querySelector("#txtWeatherFontPath").value = cfgGet("WeatherFontPath") || "";
                 var base = window.location.origin;
@@ -349,35 +344,6 @@
             });
         });
 
-        document.querySelector("#btnCreateLibrary").addEventListener("click", function () {
-            var folder = (document.querySelector("#txtOutputFolder").value || "").trim();
-            var name = (document.querySelector("#txtLibraryName").value || "Retro TV").trim();
-            var el = document.querySelector("#retroTvLibraryResult");
-            if (!folder) {
-                el.textContent = "Set the output folder above first, then press this button again.";
-                return;
-            }
-            el.textContent = "Checking for a library named " + name + "...";
-            ApiClient.ajax({ type: "GET", url: "Library/VirtualFolders" }).then(function (folders) {
-                var existing = (folders || []).filter(function (f) {
-                    var n = f.Name || f.name || "";
-                    return n.toLowerCase() === name.toLowerCase();
-                })[0];
-                if (existing) {
-                    var locs = existing.Locations || existing.locations || [];
-                    el.textContent = "A library named " + name + " already exists" + (locs.length ? " (" + locs.join(", ") + ")" : "") + ". Nothing created.";
-                    return;
-                }
-                el.textContent = "Creating the " + name + " library from " + folder + "...";
-                var url = "Library/VirtualFolders?name=" + encodeURIComponent(name) + "&collectionType=mixed&paths=" + encodeURIComponent(folder) + "&refreshLibrary=true";
-                return ApiClient.ajax({ type: "POST", url: url, data: JSON.stringify({ libraryOptions: {} }), contentType: "application/json" }).then(function () {
-                    el.textContent = "Library " + name + " created. It scans the folder now and shows the Retro TV icon automatically. Remember to press Save at the bottom so the output folder sticks for the catalog build.";
-                });
-            }).catch(function (err) {
-                el.textContent = "Could not create the library: " + (err && err.statusText ? err.statusText : err) + ". You can still add it by hand in Dashboard → Libraries.";
-            });
-        });
-
         document.querySelector("#retroTvConfigForm").addEventListener("submit", function (e) {
             e.preventDefault();
             Dashboard.showLoadingMsg();
@@ -387,7 +353,7 @@
             cfgSet("Mp4Preference", document.querySelector("#selMp4Preference").value);
             cfgSet("IncludeUserUploadedTier", document.querySelector("#chkIncludeUserUploaded").checked);
             cfgSet("ActiveGuideTheme", document.querySelector("#selGuideTheme").value);
-            cfgSet("WeatherZipCode", document.querySelector("#txtWeatherZip").value.trim() || "05773");
+            cfgSet("WeatherZipCode", document.querySelector("#txtWeatherZip").value.trim() || "");
             cfgSet("FfmpegPath", document.querySelector("#txtFfmpegPath").value.trim());
             cfgSet("WeatherFontPath", document.querySelector("#txtWeatherFontPath").value.trim());
             cfgSet("AutoBuildEnabled", document.querySelector("#chkAutoBuild").checked);

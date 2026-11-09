@@ -11,7 +11,7 @@ namespace Jellyfin.Plugin.RetroTv.Guide.Channels;
 
 /// <summary>
 /// One channel in the Retro TV lineup. The lineup follows the BackWhen TV
-/// shape Michael sent (2026-11-08): groups in order, one continuous channel
+/// shape: groups in order, one continuous channel
 /// numbering starting at 4, kids first, single-show channels where the
 /// catalog has the depth. Only channels with at least one pool item are
 /// served (a defined channel with no items is inactive, never an empty

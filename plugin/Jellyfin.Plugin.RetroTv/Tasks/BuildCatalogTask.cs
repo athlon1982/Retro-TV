@@ -74,7 +74,7 @@ public class BuildCatalogTask : IScheduledTask
         var config = plugin.Configuration;
         if (string.IsNullOrWhiteSpace(config.OutputFolder))
         {
-            _logger.LogWarning("[RetroTv] OutputFolder is not set. Open the Retro TV plugin settings and choose the output folder (on Dayz: F:\\IA-Channels\\), then run this task again.");
+            _logger.LogWarning("[RetroTv] OutputFolder is not set. Open the Retro TV plugin settings and choose the output folder, then run this task again.");
             return;
         }
 

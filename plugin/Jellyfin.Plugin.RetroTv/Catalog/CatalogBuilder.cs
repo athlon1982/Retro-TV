@@ -68,7 +68,7 @@ public class RetroTvCatalogBuilder
         var outputDir = config.OutputFolder;
         if (string.IsNullOrWhiteSpace(outputDir))
         {
-            throw new InvalidOperationException("OutputFolder is not set. Open the Retro TV plugin settings and choose the output folder (on Dayz: F:\\IA-Channels\\).");
+            throw new InvalidOperationException("OutputFolder is not set. Open the Retro TV plugin settings and choose the output folder.");
         }
 
         _ia.RequestsPerSecond = config.RequestsPerSecond;

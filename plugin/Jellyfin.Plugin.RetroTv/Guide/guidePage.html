@@ -310,7 +310,7 @@ async function loadWeather(){
     const r = await fetch('/RetroTv/Guide/Weather');
     if (!r.ok) return;
     const d = await r.json();
-    const place = d.placeName || d.place || 'Wallingford, VT';
+    const place = d.placeName || d.place || 'Unknown location';
     const temp = (d.temperatureF !== undefined && d.temperatureF !== null) ? Math.round(d.temperatureF) + '°F' : '';
     const cond = d.condition || '';
     document.getElementById('weather').textContent = '⛅ ' + place + (temp ? ': ' + temp : '') + (cond ? ', ' + cond : '');

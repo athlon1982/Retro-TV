@@ -11,7 +11,7 @@ namespace Jellyfin.Plugin.RetroTv;
 /// </summary>
 public class PluginConfiguration : BasePluginConfiguration
 {
-    /// <summary>Where .strm/.nfo/poster files and catalog.json go. Empty = not configured yet (the task refuses to run until it is set). On Dayz this is F:\IA-Channels\.</summary>
+    /// <summary>Where .strm/.nfo/poster files and catalog.json go. Empty = not configured yet (the task refuses to run until it is set). Leave blank if you only want Live TV — the channels do not need it.</summary>
     public string OutputFolder { get; set; } = string.Empty;
 
     /// <summary>Name written into catalog.json; the Jellyfin library keeps this name.</summary>
@@ -23,7 +23,7 @@ public class PluginConfiguration : BasePluginConfiguration
     /// <summary>MP4 derivative preference: "full" (full MP4 first, 512kb fallback). Same scoring as the Node builder.</summary>
     public string Mp4Preference { get; set; } = "full";
 
-    /// <summary>Michael's "don't leave anything out": true includes the user-uploaded tier (rights unverified, clearly marked). False drops the whole tier; the pd tier is untouched.</summary>
+    /// <summary>True includes the user-uploaded tier (rights unverified, clearly marked). False drops the whole tier; the pd tier is untouched.</summary>
     public bool IncludeUserUploadedTier { get; set; } = true;
 
     /// <summary>Folder definitions as JSON: [{ name, tier ("pd"|"user-uploaded"), query (IA Lucene), limit }]. Seeded from config.example.json.</summary>
@@ -41,8 +41,8 @@ public class PluginConfiguration : BasePluginConfiguration
     /// <summary>Active guide theme id (see Guide/Themes). Default: woodgrain-78.</summary>
     public string ActiveGuideTheme { get; set; } = "woodgrain-78";
 
-    /// <summary>Weather channel zip code. Default 05773 = Wallingford, VT (verified 2026-11-08).</summary>
-    public string WeatherZipCode { get; set; } = "05773";
+    /// <summary>Weather channel zip code. Blank until you enter your own and press Resolve zip.</summary>
+    public string WeatherZipCode { get; set; } = string.Empty;
 
     /// <summary>Cached geocoded latitude for WeatherZipCode. Resolved once on save; null until the first geocode.</summary>
     public double? WeatherLatitude { get; set; }
@@ -56,13 +56,13 @@ public class PluginConfiguration : BasePluginConfiguration
     /// <summary>Daily scheduled catalog build on/off.</summary>
     public bool AutoBuildEnabled { get; set; } = true;
 
-    /// <summary>Stage 2 master switch. Live channels ship in 0.2.0.0, so new installs get them on; an admin can still turn them off.</summary>
+    /// <summary>Live channels master switch. New installs get them on; an admin can still turn them off.</summary>
     public bool ChannelsEnabled { get; set; } = true;
 
     /// <summary>Old-school commercial breaks between programmes: at most once per hour per channel, 1 spot of 30-60 s, at programme boundaries. Default ON.</summary>
     public bool CommercialBreaksEnabled { get; set; } = true;
 
-    /// <summary>ffmpeg binary path for the live channel streams. Empty = "ffmpeg" on the PATH. On Dayz this is F:\Jellyfin\Server\ffmpeg.exe (Jellyfin's bundled ffmpeg 8.1.3).</summary>
+    /// <summary>ffmpeg binary path for the live channel streams. Empty = "ffmpeg" on the PATH. (Jellyfin's bundled ffmpeg).</summary>
     public string FfmpegPath { get; set; } = string.Empty;
 
     /// <summary>Font file for the weather channel slate (ffmpeg drawtext). Empty = auto-detect (DejaVu Sans on Linux, Arial on Windows).</summary>

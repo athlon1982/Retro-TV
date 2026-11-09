@@ -172,7 +172,7 @@ public class WeatherChannel
     public List<string> BuildSlateLines(string segmentIdentifier)
     {
         var forecast = LastForecast;
-        var place = Plugin.Instance?.Configuration.WeatherPlaceName ?? "Wallingford, VT";
+        var place = Plugin.Instance?.Configuration.WeatherPlaceName ?? "Unknown location";
         var lines = new List<string> { "RETRO TV  •  WEATHER  •  " + place.ToUpperInvariant() };
         if (forecast is null)
         {
