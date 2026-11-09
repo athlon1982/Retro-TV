@@ -12,7 +12,7 @@
       {
         "changelog": "Channel guide \u2014 deterministic 48 h schedules, BackWhen-shaped lineup, themeable guide page, M3U + XMLTV, live ffmpeg streams, weather channel, folder.jpg write.",
         "checksum": "aa44c4a64bfaa210ce2da14b8be61448",
-        "sourceUrl": "https://github.com/athlon1982/Retro-TV/releases/download/v0.2.0.0/retro-tv_0.2.0.0.zip",
+        "sourceUrl": "https://github.com/athlon1982/Retro-TV/releases/download/v0.3.0.0/retro-tv_0.3.0.0.zip",
         "targetAbi": "12.0.0.0",
         "timestamp": "2026-11-08T00:00:00Z",
         "version": "0.2.0.0"
