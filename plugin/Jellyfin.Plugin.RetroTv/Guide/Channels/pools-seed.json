@@ -1,0 +1,3366 @@
+{
+  "library": "Retro TV",
+  "generated_at": "2026-11-08T23:08:23.537Z",
+  "target_per_channel": 25,
+  "counts": {
+    "channels": 7,
+    "items": 175,
+    "by_channel": {
+      "sat-morning-cartoons": 25,
+      "classic-tv": 25,
+      "drive-in-movies": 25,
+      "prelinger-theater": 25,
+      "ad-break": 25,
+      "creature-features": 25,
+      "vhs-vault": 25
+    }
+  },
+  "channels": [
+    {
+      "id": "retrotv.sat-morning-cartoons",
+      "slug": "sat-morning-cartoons",
+      "name": "Saturday Morning Cartoons",
+      "tier": "pd",
+      "query": "collection:animationandcartoons AND licenseurl:*publicdomain* AND mediatype:(movies)",
+      "items": [
+        {
+          "identifier": "all-new-popeye-and-friends",
+          "title": "All New Popeye & Friends",
+          "year": null,
+          "runtime_seconds": 7193,
+          "licenseurl": "http://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vintage_cartoons",
+            "animationandcartoons"
+          ],
+          "mp4_url": "https://archive.org/download/all-new-popeye-and-friends/allnewpopeyeandfriends.mp4",
+          "poster_url": "https://archive.org/download/all-new-popeye-and-friends/__ia_thumb.jpg",
+          "description": "Join the fun and laughter with all your cartoon favourites featuring Popeye, Krazy Kat, Cool McCool, Barney Google &amp; Snuffy Smith, and Beetle Bailey. Over 1 hour of animated episodes with a boatload of action, adventure, laughter, fun and excitement that you'll enjoy time and time again for the family to enjoy with all the humour as you laugh along the way for some comic slapstick.",
+          "head_status": 206
+        },
+        {
+          "identifier": "the_conceited_general",
+          "title": "The Conceited General (骄傲的将军)",
+          "year": 1956,
+          "runtime_seconds": 1418,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "more_animation",
+            "animationandcartoons"
+          ],
+          "mp4_url": "https://archive.org/download/the_conceited_general/the_conceited_general_512kb.mp4",
+          "poster_url": "https://archive.org/download/the_conceited_general/__ia_thumb.jpg",
+          "description": "A successful general returns home from battle to live in luxury. He drinks, stops practicing his skills and leaves his weapons to rust. He is arrogant and self-assured. When the enemy once again attacks he finds himself unable to defend himself or the country. Subtitles: VobSub (Chinese Simplified & Traditional) English (by Philip Jägenstedt)",
+          "head_status": 206
+        },
+        {
+          "identifier": "supernatural-ashfurxscourge-map.",
+          "title": ".:Supernatural :AshfurXScourge: MAP:.",
+          "year": 2015,
+          "runtime_seconds": 187,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "warriors-project-hoard",
+            "multi-animator-projects",
+            "animationandcartoons"
+          ],
+          "mp4_url": "https://archive.org/download/supernatural-ashfurxscourge-map./youtube_Zf0vSOvFqTA_1920x1080_h264.mp4",
+          "poster_url": "https://archive.org/download/supernatural-ashfurxscourge-map./__ia_thumb.jpg",
+          "description": "Enjoy! MAP Parts (Intro) Eucalyptus splash (1) BogiCat (2) Venomlion3 (3) kasaineko (4) Eucalyptus splash (5) RainSckiller (6) SimplyIdyllic (7) SimplyIdyllic (8) DarkMoon RED (9) ridomesu (10) megkingo (11) Coco-smoothie (12) hallow chan (13) DarkMoon RED (14) Dragon Claw (15) HotfireZaila (16) VantasLupus (17) Sugar Cloud (18) Sugar Cloud (19) Sweeney Trash (20) Hazelstiltskin (21) Missing (22) AppletailTV (23) ↯CryTer987↯ (24) Swiftfire Cat (25) mrKarafirefox (26) amiyachan (27) Kura Kur",
+          "head_status": 206
+        },
+        {
+          "identifier": "this-is-gospel-full-warriors-map",
+          "title": "This is Gospel || Full Warriors MAP ||",
+          "year": null,
+          "runtime_seconds": 189,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "warriors-project-hoard",
+            "multi-animator-projects",
+            "animationandcartoons"
+          ],
+          "mp4_url": "https://archive.org/download/this-is-gospel-full-warriors-map/youtube_tjCSsYkNovA_1280x720_h264.mp4",
+          "poster_url": "https://archive.org/download/this-is-gospel-full-warriors-map/__ia_thumb.jpg",
+          "description": "HOLY SHAZAM BATMAM IT ACTUALLY WAS COMPLETED WOWEEEEEEE Thanks to all the amazing animators who made this possible! WOW. This is real NOICE",
+          "head_status": 206
+        },
+        {
+          "identifier": "Betty_Boop_Is_My_Palm_Read_1932",
+          "title": "Betty Boop: Is My Palm Read",
+          "year": 1932,
+          "runtime_seconds": 395,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "classic_cartoons",
+            "animationandcartoons"
+          ],
+          "mp4_url": "https://archive.org/download/Betty_Boop_Is_My_Palm_Read_1932/Betty_Boop_Is_My_Palm_Read_1932_512kb.mp4",
+          "poster_url": "https://archive.org/download/Betty_Boop_Is_My_Palm_Read_1932/__ia_thumb.jpg",
+          "description": "From The Public Domain Movie Database: A fortune teller tries to work his magic in order to get up close & personal with Betty. He shows her the days of her youth in his crystal ball as well as her being stranded on a deserted island. Then he shows himself rescuing her from the island, but also inadvertently releases an unsavory group of ghosts who chase the pair through a jungle that also magically appeared. The pair loses the ghosts using the hollow-log-over-the-cliff trick.",
+          "head_status": 206
+        },
+        {
+          "identifier": "TakeHeedMrTojo",
+          "title": "Take Heed Mr. Tojo",
+          "year": 1943,
+          "runtime_seconds": 435,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "more_animation",
+            "animationandcartoons"
+          ],
+          "mp4_url": "https://archive.org/download/TakeHeedMrTojo/TakeHeedMrTojo_512kb.mp4",
+          "poster_url": "https://archive.org/download/TakeHeedMrTojo/__ia_thumb.jpg",
+          "description": "The first of the Mr. Hook cartoon series, his main purpose was to sell war bonds. Hook is set a decade in the future, and he is telling his young son about his exploits during the war and how war bonds helped him defeat an evil Japanese pilot who was trying to attack the fleet.",
+          "head_status": 206
+        },
+        {
+          "identifier": "fright_to_the_finish",
+          "title": "Fright to the Finish",
+          "year": null,
+          "runtime_seconds": 380,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "more_animation",
+            "animationandcartoons"
+          ],
+          "mp4_url": "https://archive.org/download/fright_to_the_finish/fright_to_the_finish_512kb.mp4",
+          "poster_url": "https://archive.org/download/fright_to_the_finish/__ia_thumb.jpg",
+          "description": "You can find more information regarding this film on its IMDb page .",
+          "head_status": 206
+        },
+        {
+          "identifier": "1953publicdomainanimation",
+          "title": "1953",
+          "year": null,
+          "runtime_seconds": 929,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vintage_cartoons",
+            "animationandcartoons"
+          ],
+          "mp4_url": "https://archive.org/download/1953publicdomainanimation/08.1953%20-%20A%20is%20for%20Atom.mp4",
+          "poster_url": "https://archive.org/download/1953publicdomainanimation/__ia_thumb.jpg",
+          "description": "Public domain cartoons of 1953. Work in progress. Corrections on copyright status welcome.",
+          "head_status": 206
+        },
+        {
+          "identifier": "1936publicdomainanimation",
+          "title": "1936",
+          "year": null,
+          "runtime_seconds": 548,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vintage_cartoons",
+            "animationandcartoons"
+          ],
+          "mp4_url": "https://archive.org/download/1936publicdomainanimation/1936.01.17%20-%20Somewhere%20in%20Dreamland.mp4",
+          "poster_url": "https://archive.org/download/1936publicdomainanimation/__ia_thumb.jpg",
+          "description": "Public domain cartoons of 1936. Work in progress. Corrections on copyright status welcome.",
+          "head_status": 206
+        },
+        {
+          "identifier": "TinSoldier",
+          "title": "THE BRAVE TIN SOLDIER",
+          "year": null,
+          "runtime_seconds": 434,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "more_animation",
+            "animationandcartoons"
+          ],
+          "mp4_url": "https://archive.org/download/TinSoldier/SOLDIER_512kb.mp4",
+          "poster_url": "https://archive.org/download/TinSoldier/__ia_thumb.jpg",
+          "description": "This little gem was found on the Internet archive, 320 x 240 pixels sadly with sound pops and disjointed sound. The DivX encoded file has had the sound re-engineered (mp3) and encoded with DivX 6 (Home entertainment). Hope it will appeal. I higher resolution would have been nice.",
+          "head_status": 206
+        },
+        {
+          "identifier": "highwayman-complete-vision-of-shadows-map",
+          "title": "Highwayman // COMPLETE VISION OF SHADOWS MAP",
+          "year": null,
+          "runtime_seconds": 254,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "warriors-project-hoard",
+            "multi-animator-projects",
+            "animationandcartoons"
+          ],
+          "mp4_url": "https://archive.org/download/highwayman-complete-vision-of-shadows-map/youtube_9LMH7WmYEO0_1920x1080_h264.mp4",
+          "poster_url": "https://archive.org/download/highwayman-complete-vision-of-shadows-map/__ia_thumb.jpg",
+          "description": "Centered around the lake, the spirits of Darktail, Needletail, and Onestar reflect on their life - and death - in those dark waters, and how it connects them all. After two years of hard work, Highwayman is finished! I think this is probably my favorite MAP I've ever put together. Every part turned out just beautifully, and all the colors and themes were used so well to tie them together. Despite their many flaws I am a big fan of the Vision of Shadows books, especially the first three with thes",
+          "head_status": 206
+        },
+        {
+          "identifier": "august-moon-m.a.p-complete",
+          "title": "August Moon M.A.P |Complete|",
+          "year": 2015,
+          "runtime_seconds": 102,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "warriors-project-hoard",
+            "multi-animator-projects",
+            "animationandcartoons"
+          ],
+          "mp4_url": "https://archive.org/download/august-moon-m.a.p-complete/youtube_k57EqhSdMi8_1920x1080_h264.mp4",
+          "poster_url": "https://archive.org/download/august-moon-m.a.p-complete/__ia_thumb.jpg",
+          "description": "Ah finally done! Well this was suppossed to be an 1 week map, but it ended up in months, though it ended up fantastic, i really really like the results, Thank you all for sending in your parts! [I rerendered this because it became blurry and low quality, hope this one is better] Animators in order of appearance: Intro. amanska199 1. Me/Sabina-PonyArt 2. Fireworkcat25 3. Animation Duck 4. Silvertwig 5. Soto Senpaii2222 6. Me 7. terrou fluffy 8. Terenry RM 9. DoctorTrash 10. Me 11. RaliaDiChacha 1",
+          "head_status": 206
+        },
+        {
+          "identifier": "in_the_bag",
+          "title": "In The Bag",
+          "year": null,
+          "runtime_seconds": 429,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "more_animation",
+            "animationandcartoons"
+          ],
+          "mp4_url": "https://archive.org/download/in_the_bag/in_the_bag_512kb.mp4",
+          "poster_url": "https://archive.org/download/in_the_bag/__ia_thumb.jpg",
+          "description": "You can find more information regarding this film on its IMDb page .",
+          "head_status": 206
+        },
+        {
+          "identifier": "bb_stop_that_noise",
+          "title": "Betty Boop: Stop That Noise",
+          "year": null,
+          "runtime_seconds": 542,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "classic_cartoons",
+            "animationandcartoons"
+          ],
+          "mp4_url": "https://archive.org/download/bb_stop_that_noise/bb_stop_that_noise_512kb.mp4",
+          "poster_url": "https://archive.org/download/bb_stop_that_noise/__ia_thumb.jpg",
+          "description": "",
+          "head_status": 206
+        },
+        {
+          "identifier": "arctic_giant_ipod",
+          "title": "Arctic Giant",
+          "year": 1942,
+          "runtime_seconds": 512,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "more_animation",
+            "animationandcartoons"
+          ],
+          "mp4_url": "https://archive.org/download/arctic_giant_ipod/arctic_giant_512kb.mp4",
+          "poster_url": "https://archive.org/download/arctic_giant_ipod/__ia_thumb.jpg",
+          "description": "Superman must stop a rampaging dinosaur.",
+          "head_status": 206
+        },
+        {
+          "identifier": "bb_poor_cinderella",
+          "title": "Betty Boop: Poor Cinderella (1934)",
+          "year": null,
+          "runtime_seconds": 621,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "classic_cartoons",
+            "animationandcartoons"
+          ],
+          "mp4_url": "https://archive.org/download/bb_poor_cinderella/bb_poor_cinderella_512kb.mp4",
+          "poster_url": "https://archive.org/download/bb_poor_cinderella/__ia_thumb.jpg",
+          "description": "Gorgeous Fleischer Studios adaptation of the classic fairy tale, featuring Betty Boop's only appearance in full color. Surprise - she's a redhead!",
+          "head_status": 206
+        },
+        {
+          "identifier": "caught-like-a-fly-warriors-pmv-collab",
+          "title": "Caught Like a Fly Warriors PMV Collab",
+          "year": null,
+          "runtime_seconds": 182,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "warriors-project-hoard",
+            "multi-animator-projects",
+            "animationandcartoons"
+          ],
+          "mp4_url": "https://archive.org/download/caught-like-a-fly-warriors-pmv-collab/youtube_V8bUz2o3Q1A_1920x1080_h264.mp4",
+          "poster_url": "https://archive.org/download/caught-like-a-fly-warriors-pmv-collab/__ia_thumb.jpg",
+          "description": "РУССКОЕ ОПИСАНИЕ ЙОУ Прииив Это, собственно, одно из первых русских видео по Котам-воителям. Создано при поддержке самого большого сообщества по КВ в ВК -- https://vk.com/cats___warriors Список участников: Qivi - / @Анастасия-ч6т3ф ScourgeRussia - / @blackscour http://scourgebih.deviantart.com/ Mihoku-san - / @mihamihoku2731 http://mihoku-san.deviantart.com/ BrightBesh, у которой я не смогла найти аккаунт Kefi, тоже самое, что и BrightBesh Mix_7 - / @mix7 Dark Universe - / @arcee1600 http://dark",
+          "head_status": 206
+        },
+        {
+          "identifier": "cant-help-falling-in-love-complete-warrior-cats-shipping-map-tw-mild-blood-outro-3-part-6",
+          "title": "Cant help Falling in love - complete warrior cats shipping map - TW: Mild blood (Outro 3 + Part 6)",
+          "year": null,
+          "runtime_seconds": 181,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "warriors-project-hoard",
+            "multi-animator-projects",
+            "animationandcartoons"
+          ],
+          "mp4_url": "https://archive.org/download/cant-help-falling-in-love-complete-warrior-cats-shipping-map-tw-mild-blood-outro-3-part-6/youtube_yCFKKcG79yw_1920x1080_h264.mp4",
+          "poster_url": "https://archive.org/download/cant-help-falling-in-love-complete-warrior-cats-shipping-map-tw-mild-blood-outro-3-part-6/__ia_thumb.jpg",
+          "description": "Reupload cuz I accidentally made the premiere 3am oops 😭 ​⁠​⁠ ‪@Your_local_galaxy_.2‬ ‪@Toriheh‬ ​⁠ ‪@Wolfstudio1010‬ ​⁠ ‪@Raven_Is_Baby‬ ​⁠ ‪@RavenSpotsStudios‬ ​⁠ ‪@FeatherwingEdits‬ ​⁠ ‪@GracieMeow‬ ​⁠ ‪@Mini..Mushroom‬ ​⁠ ‪@K_ATZ‬ ​⁠ ‪@Mossyspring‬ ​⁠ ‪@Lylaanimations2.0‬ ​⁠ ‪@SojczePioroXPatyk‬ ​⁠ ‪@Ahuman606‬ ​⁠ ‪@caelanasauruspark4921‬ ​⁠ ‪@PineFeathers‬ ​⁠ ‪@AnciaOfficial‬ ​⁠ ‪@strawberrychapchap22‬ ​⁠ ‪@Wrenthecreature‬ ​⁠ ‪@mmsplayspace‬ ​⁠ ‪@RainwhiskerLover‬ ​⁠ ‪@StarSneezle‬",
+          "head_status": 206
+        },
+        {
+          "identifier": "oa-silent-nighto-a-storyboarded-mapleshade-mini-map",
+          "title": "•A SILENT NIGHT• ~A storyboarded MapleShade Mini Map~",
+          "year": null,
+          "runtime_seconds": 63,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "warriors-project-hoard",
+            "multi-animator-projects",
+            "animationandcartoons"
+          ],
+          "mp4_url": "https://archive.org/download/oa-silent-nighto-a-storyboarded-mapleshade-mini-map/youtube_D-fHoGD3rZ8_1920x1080_h264.mp4",
+          "poster_url": "https://archive.org/download/oa-silent-nighto-a-storyboarded-mapleshade-mini-map/__ia_thumb.jpg",
+          "description": "HOLLYYY MOLYYY IT IS DONE. AFTER ALMOST THREE YEARS. FIRSTLY, , I NEED TO THANK EVERY ONE OF YOU, FROM THE PARTICIPANTS, TO THE BACKUPS, AND TO ANYONE WHO HAS BEEN INTERESTED, THANK YOU FOR BEING SO PATIENT WITH ME! {PART LIST} (Intro): ‪@AkelaAnimation‬ Part 1: ‪@Scp_arts‬ Part 2: ‪@SaillandsDogPals‬ Part 3: ‪@Rain_fawn‬ Part 4: ‪@Salen-G‬ Part 5: ‪@SaillandsDogPals‬ Part 6: ‪@Lari_crescent_moon‬ Part 7: ‪@mistyskyes‬ Part 8: ‪@Skelghouls‬ Part 9: ‪@SaillandsDogPals‬ Part 10: ‪@mistyskyes‬ Part",
+          "head_status": 206
+        },
+        {
+          "identifier": "lionblaze-catch-fire-completed-map-flashing-warning",
+          "title": "Lionblaze: Catch Fire // Completed MAP (flashing warning)",
+          "year": null,
+          "runtime_seconds": 350,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "warriors-project-hoard",
+            "multi-animator-projects",
+            "animationandcartoons"
+          ],
+          "mp4_url": "https://archive.org/download/lionblaze-catch-fire-completed-map-flashing-warning/youtube_x7jDqMBqTEM_1920x1080_h264.mp4",
+          "poster_url": "https://archive.org/download/lionblaze-catch-fire-completed-map-flashing-warning/__ia_thumb.jpg",
+          "description": "No copyright infringement intended This turned out absolutely amazing. It took over a year to complete. Was it worth it? As much as I hate waiting excessive periods of time for things, yeah. I'd say it was. Thank you so much to everyone who participated!",
+          "head_status": 206
+        },
+        {
+          "identifier": "popeye-friends-in-the-wild-west-1989-parkfield-publishing-vhsrip",
+          "title": "Popeye & Friends in the Wild West (1989, Parkfield Publishing - VHSrip)",
+          "year": 1989,
+          "runtime_seconds": 3514,
+          "licenseurl": "http://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vintage_cartoons",
+            "animationandcartoons"
+          ],
+          "mp4_url": "https://archive.org/download/popeye-friends-in-the-wild-west-1989-parkfield-publishing-vhsrip/Popeye%20%26%20Friends%20in%20the%20Wild%20West%20(1989%2C%20Parkfield%20Publishing%20-%20VHSrip).mp4",
+          "poster_url": "https://archive.org/download/popeye-friends-in-the-wild-west-1989-parkfield-publishing-vhsrip/__ia_thumb.jpg",
+          "description": "Join in the fun with Popeye and his friends, Olive Oyl, Swee Pea, Brutus, Krazy Kat, Beetle Bailey and many more in over 1 hour of episodes.",
+          "head_status": 206
+        },
+        {
+          "identifier": "bb_morning_noon_and_night",
+          "title": "Betty Boop: Morning, Noon And Night",
+          "year": null,
+          "runtime_seconds": 452,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "classic_cartoons",
+            "animationandcartoons"
+          ],
+          "mp4_url": "https://archive.org/download/bb_morning_noon_and_night/bb_morning_noon_and_night_512kb.mp4",
+          "poster_url": "https://archive.org/download/bb_morning_noon_and_night/__ia_thumb.jpg",
+          "description": "",
+          "head_status": 206
+        },
+        {
+          "identifier": "ashfur-hawkfrost-maison-des-lunes-complete-map",
+          "title": "Ashfur & Hawkfrost - Maison Des Lunes (COMPLETE MAP)",
+          "year": 2015,
+          "runtime_seconds": 185,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "warriors-project-hoard",
+            "multi-animator-projects",
+            "animationandcartoons"
+          ],
+          "mp4_url": "https://archive.org/download/ashfur-hawkfrost-maison-des-lunes-complete-map/youtube_cfBf-piGioE_1920x1080_h264.mp4",
+          "poster_url": "https://archive.org/download/ashfur-hawkfrost-maison-des-lunes-complete-map/__ia_thumb.jpg",
+          "description": "AAAA IT'S FINALLY DONE! In this, Ashfur and his former apprentice Birchfall meet with Hawkfrost beside the lake. Ashfur is not too pleased that Squirrelflight doesn't want to be his mate, so he and Hawkfrost create a revenge plan against her father, Firestar. The song is Maison Des Lunes from Beauty &amp; the Beast. Ashfur = Gaston Birchfall = LeFou Hawkfrost = D'Arque Squirrelflight = Belle Firestar = Maurice Thank you, everyone who participated! (All names are in the video.)",
+          "head_status": 206
+        },
+        {
+          "identifier": "buy-the-stars-hollyleaf-ivypool-warriors-map_",
+          "title": "☆ Buy The Stars | Hollyleaf & Ivypool | Warriors MAP☆",
+          "year": 2015,
+          "runtime_seconds": 289,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "warriors-project-hoard",
+            "multi-animator-projects",
+            "animationandcartoons"
+          ],
+          "mp4_url": "https://archive.org/download/buy-the-stars-hollyleaf-ivypool-warriors-map_/%E2%98%86Buy%20the%20Stars%20_%20Hollyleaf%20%26%20Ivypool%20_%20Warriors%20MAP%E2%98%86.mp4",
+          "poster_url": "https://archive.org/download/buy-the-stars-hollyleaf-ivypool-warriors-map_/__ia_thumb.jpg",
+          "description": "The lives and cultures of the clans are almost suffocatingly drenched in codes and prophecies passed on by the clan's Warrior Ancestors in Star Clan. “Buy the Stars” examines the indirect effect that prophecies had on the two “forgotten” sisters during the events that span between The Power of Three until Omen of the Stars. While destiny seems to have done them an injustice it has has set two cats on similar and unavoidable paths of their own. ----------------------------------------------------",
+          "head_status": 206
+        },
+        {
+          "identifier": "TightRopeTricks1933",
+          "title": "Tight Rope Tricks (1933)",
+          "year": null,
+          "runtime_seconds": 375,
+          "licenseurl": "http://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vintage_cartoons",
+            "animationandcartoons"
+          ],
+          "mp4_url": "https://archive.org/download/TightRopeTricks1933/TomAndJerry1933TightRopeTricksrareCopyBoopboopaddoopStarringMargieHines.mp4",
+          "poster_url": "https://archive.org/download/TightRopeTricks1933/__ia_thumb.jpg",
+          "description": "Tom &amp; Jerry Cartoon aka \"Dick &amp; Larry\" VB Studios Cast: Margie Hines (Original/1st voice actress for Betty Boop) as Tight Rope Performer",
+          "head_status": 206
+        }
+      ],
+      "cycle_seconds": 20159
+    },
+    {
+      "id": "retrotv.classic-tv",
+      "slug": "classic-tv",
+      "name": "Classic TV",
+      "tier": "pd",
+      "query": "collection:classic_tv AND licenseurl:*publicdomain* AND mediatype:(movies)",
+      "items": [
+        {
+          "identifier": "The_Trouble_With_Father",
+          "title": "The Trouble with Father",
+          "year": null,
+          "runtime_seconds": 1751,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_1950s",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/The_Trouble_With_Father/Many_Happy_Returns.mp4",
+          "poster_url": "https://archive.org/download/The_Trouble_With_Father/__ia_thumb.jpg",
+          "description": "An episode of the popular fifties television series \"The Trouble with Father\" called \"Many Happy Returns\". As with most shows by Roland Reed Productions, this show was filmed on 35mm film and aired without a laugh-track. This show aired from 1950 to 1955.",
+          "head_status": 206
+        },
+        {
+          "identifier": "Yet_More_Lucy",
+          "title": "What's My Line with Lucille Ball",
+          "year": 1954,
+          "runtime_seconds": 1774,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_1950s",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/Yet_More_Lucy/WhatsMyLine21February1954.mp4",
+          "poster_url": "https://archive.org/download/Yet_More_Lucy/__ia_thumb.jpg",
+          "description": "Episode of the popular game show \"What's My Line\" with guest Lucille Ball. This is classic TV! Complete with Original commercials.",
+          "head_status": 206
+        },
+        {
+          "identifier": "farscape-s-01-e-02-i-e.-t.-april-30-1999-australia-and-united-states_202602",
+          "title": "Farscape S01E02 I, E.T.",
+          "year": null,
+          "runtime_seconds": 2886,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_1990s",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/farscape-s-01-e-02-i-e.-t.-april-30-1999-australia-and-united-states_202602/Farscape%20S01E02%20I%2C%20E.T.%20(April%2030%2C%201999%2C%20Australia%20and%20United%20States).mp4",
+          "poster_url": "https://archive.org/download/farscape-s-01-e-02-i-e.-t.-april-30-1999-australia-and-united-states_202602/__ia_thumb.jpg",
+          "description": "Here is the 2nd Episode of the Australian/American Science Fiction TV Show: Farscape from the 1st season of I, E.T. that aired on Sci-Fi Channel in the United States and Nine Network of Channel 9 in Australia, our release date is April 30, 1999. A Peacekeeper beacon goes off and Moya has to land on an alien planet to prevent its signal being intercepted and Moya being discovered. Crichton, D'Argo and Aeryn leave Moya and explore the planet in search of a substance that can be used to numb Moya's",
+          "head_status": 206
+        },
+        {
+          "identifier": "s01e16_Back_To_Californy",
+          "title": "s01e16_Back_To_Californy",
+          "year": null,
+          "runtime_seconds": 1496,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_1960s",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/s01e16_Back_To_Californy/s01e16_Back_To_Californy.mp4",
+          "poster_url": "https://archive.org/download/s01e16_Back_To_Californy/__ia_thumb.jpg",
+          "description": "Beverly hillbillies",
+          "head_status": 206
+        },
+        {
+          "identifier": "ColgateComedyHourMartinAndLewisLastAppearance",
+          "title": "Colgate Comedy Hour: Martin and Lewis Last Appearance",
+          "year": null,
+          "runtime_seconds": 3151,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_1950s",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/ColgateComedyHourMartinAndLewisLastAppearance/ColgateComedyHour-lastMartinAndLewis.mp4",
+          "poster_url": "https://archive.org/download/ColgateComedyHourMartinAndLewisLastAppearance/__ia_thumb.jpg",
+          "description": "Final episode of Colgate Comedy Hour hosted by Martin and Lewis, features a very politically incorrect parody of Japanese movies. Washed out which can make some of the subtitles hard to read. Season 6, Episode 7 (1955)",
+          "head_status": 206
+        },
+        {
+          "identifier": "Car_Commericals_1961-1965",
+          "title": "Car Commericals 1961-1965",
+          "year": null,
+          "runtime_seconds": 117,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_commercials",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/Car_Commericals_1961-1965/Commercial_-_1961_Chevrolet_512kb.mp4",
+          "poster_url": "https://archive.org/download/Car_Commericals_1961-1965/__ia_thumb.jpg",
+          "description": "Classic Car Commericals 1961-1965",
+          "head_status": 206
+        },
+        {
+          "identifier": "y-2-mate.is-laverne-shirley-s-08-e-14-the-rock-and-roll-show-g-zu-j-6ug-nu-480p-1656245640613",
+          "title": "Laverne & Shirley - The Rock and Roll Show (Season 8 Episode 14)",
+          "year": null,
+          "runtime_seconds": 1459,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_1980s",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/y-2-mate.is-laverne-shirley-s-08-e-14-the-rock-and-roll-show-g-zu-j-6ug-nu-480p-1656245640613/Y2Mate.is%20-%20Laverne%20%26%20Shirley%20S08E14%20The%20Rock%20and%20Roll%20Show-g_zuJ6ug_NU-480p-1656245640613.mp4",
+          "poster_url": "https://archive.org/download/y-2-mate.is-laverne-shirley-s-08-e-14-the-rock-and-roll-show-g-zu-j-6ug-nu-480p-1656245640613/__ia_thumb.jpg",
+          "description": "Laverne talks her wacky friend Chuck into forming his own band after he plays Beethoven on his harmonica. Laverne is also on a special diet for her ulcer and back at the flat Carmine is trying to stop Laverne from eating all the wrong foods. Chuck shows Laverne his new band, a bunch of geeky looking guys enter and proceed to put Laverne to sleep with their classical playing. Laverne tells Chuck he has to play rock music if he wants to make big money. The guys trust Laverne so much that they’ve q",
+          "head_status": 206
+        },
+        {
+          "identifier": "153-aktenzeichen-xy-25-02-1983",
+          "title": "Aktenzeichen XY ungelöst - Folge 128 bis 158",
+          "year": null,
+          "runtime_seconds": 3523,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_1980s",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/153-aktenzeichen-xy-25-02-1983/128%20-%20Aktenzeichen%20XY%20vom%205%209%201980.mp4",
+          "poster_url": "https://archive.org/download/153-aktenzeichen-xy-25-02-1983/__ia_thumb.jpg",
+          "description": "German true crime show \"Aktenzeichen XY ungelöst\" fron the early 1980s.",
+          "head_status": 206
+        },
+        {
+          "identifier": "candle-cove-welcome-to-our-ship-1971",
+          "title": "Candle Cove (s01e01 VHS Tape) - Welcome to Our Happy Ship (1971)",
+          "year": null,
+          "runtime_seconds": 589,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_1970s",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/candle-cove-welcome-to-our-ship-1971/Candle%20Cove%20-%20Welcome%20to%20Our%20Happy%20Ship%20(Season%201%20Pilot).mp4",
+          "poster_url": "https://archive.org/download/candle-cove-welcome-to-our-ship-1971/__ia_thumb.jpg",
+          "description": "The first pilot episode in the show Candle Cove, a children's show which aired on a small uhf television station in Ashland, KY about 71 or 72. I contacted the old owners of the station and they loaned me the tape and asked me to digitize the episodes for them and said I could do whatever I wanted with them. The station Candle Cove was broadcast from is down 13th St going west out of Ashland, KY, on the left side of the street between the Papa John's and Winslow. --------------------------------",
+          "head_status": 206
+        },
+        {
+          "identifier": "ShotgunsladeAflowerforjenny",
+          "title": "Shotgun Slade - A Flower for Jenny",
+          "year": 1960,
+          "runtime_seconds": 1555,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_1960s",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/ShotgunsladeAflowerforjenny/shotgunslade_aflowerforjenny.mp4",
+          "poster_url": "https://archive.org/download/ShotgunsladeAflowerforjenny/__ia_thumb.jpg",
+          "description": "An accomplished singer hires Slade to be her bodyguard when she begins receiving mysterious gifts and death threats from a man who calls himself her 'Ultimate Admirer'. www.westernmania.com",
+          "head_status": 206
+        },
+        {
+          "identifier": "AdventuresOfRobinHoodep2TheMoneylender",
+          "title": "Adventures Of Robin Hood (HQ) ep 2 The Moneylender",
+          "year": 2015,
+          "runtime_seconds": 1553,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_1950s",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/AdventuresOfRobinHoodep2TheMoneylender/Adventures%20of%20Robin%20Hood%20(ep%202%20the%20Moneylender).mp4",
+          "poster_url": "https://archive.org/download/AdventuresOfRobinHoodep2TheMoneylender/__ia_thumb.jpg",
+          "description": "Television series that ran from 1955-1960 for a total of 144 episodes. Stars Richard Greene, Archie Duncan, Alexander Gauge, Alan Wheatley, Bernadette O’Farrell and Patricia Driscoll.",
+          "head_status": 206
+        },
+        {
+          "identifier": "wishbonefullseriesremastered",
+          "title": "Wishbone (TV Series 1995–1998) REMASTERED",
+          "year": 1995,
+          "runtime_seconds": 5698,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_1990s",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/wishbonefullseriesremastered/Dog%20Days%20Of%20The%20West%20(1998).mp4",
+          "poster_url": "https://archive.org/download/wishbonefullseriesremastered/__ia_thumb.jpg",
+          "description": "Notice: Archive.org has a bug where files and folders with ampersands (&amp;) in them can't be deleted, and it's inhibiting my ability to get everything organized properly. I'm going to reach out on their support forum to get these problematic files removed. Episode/Movie files are available at this time, though, if you don't mind navigating around a little mess. You'll know the cleanup effort is done when this message is gone. Wishbone (TV Series 1995–1998) REMASTERED Before you download: Downl",
+          "head_status": 206
+        },
+        {
+          "identifier": "v-the-series-1984-85-s-01e-18-secret-underground",
+          "title": "V The Series (1984-85) S01e18 Secret Underground",
+          "year": null,
+          "runtime_seconds": 2759,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_1980s",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/v-the-series-1984-85-s-01e-18-secret-underground/V%20The%20Series%20(1984-85)%20s01e18%20Secret%20Underground%20hevc.mp4",
+          "poster_url": "https://archive.org/download/v-the-series-1984-85-s-01e-18-secret-underground/__ia_thumb.jpg",
+          "description": "Julie and Donovan sneak aboard the Mother Ship to look for a hidden list naming all the Resistance leaders.",
+          "head_status": 206
+        },
+        {
+          "identifier": "Quatermass_II_Episode_2of6_1955",
+          "title": "Quatermass II Episode 2 of 6",
+          "year": null,
+          "runtime_seconds": 1788,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_1950s",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/Quatermass_II_Episode_2of6_1955/Quatermass_II_Episode_2.mp4",
+          "poster_url": "https://archive.org/download/Quatermass_II_Episode_2of6_1955/__ia_thumb.jpg",
+          "description": "Quatermass II Episode 2 of 6 6 part BBC Sci Fi Live TV series from 1955",
+          "head_status": 206
+        },
+        {
+          "identifier": "v-the-series-1984-85-s-01e-04-the-deception",
+          "title": "V The Series (1984-85) s01e04 The Deception",
+          "year": null,
+          "runtime_seconds": 2784,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_1980s",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/v-the-series-1984-85-s-01e-04-the-deception/V%20The%20Series%20(1984-85)%20s01e04%20The%20Deception%20HEVC.mp4",
+          "poster_url": "https://archive.org/download/v-the-series-1984-85-s-01e-04-the-deception/__ia_thumb.jpg",
+          "description": "While the Resistance seeks to help Elizabeth escape from Los Angeles, Diana captures Mike Donovan in an elaborate scheme to learn Elizabeth's whereabouts.",
+          "head_status": 206
+        },
+        {
+          "identifier": "Wall_1950s-game-show",
+          "title": "1950's Television: \"You Bet Your Life with Groucho Marx\" - Secret Word ''Wall''",
+          "year": null,
+          "runtime_seconds": 1770,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_1950s",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/Wall_1950s-game-show/Secret_Word_wall.mp4",
+          "poster_url": "https://archive.org/download/Wall_1950s-game-show/__ia_thumb.jpg",
+          "description": "Another episode of the classic 1950's television series \"You Bet Your Life\", starring Groucho Marx. The series aired on NBC-TV from October 5, 1950 to September 21, 1961, for a total of 429 episodes. It was a comedic quiz show. The ''secret word'' in this episode is \"WALL\". The episode also features original commercials for DeSoto.",
+          "head_status": 206
+        },
+        {
+          "identifier": "YTR1935",
+          "title": "A Year To Remeber - 1935",
+          "year": null,
+          "runtime_seconds": 1473,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "TheVideoCellarCollection",
+            "classic_tv",
+            "feature_films",
+            "moviesandfilms",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/YTR1935/Year_To_Remeber_1935.mp4",
+          "poster_url": "https://archive.org/download/YTR1935/__ia_thumb.jpg",
+          "description": "This is an episode from an early Australian documentary series produced by the Cinesound Movietone News Company in the late fifties. About 20 episodes were made covering the early 30s until the early 50s. In this episode, you will see The King, The Prime Minister, The Queen of Tonga, Aboriginals demonstrating boomerangs, Mexicans demonstrating precision knive throughing, A massive Boy Scout meeting, The winner of the Archibald prize, a man who lost both arms, some babies, German Sheperds, Sharks",
+          "head_status": 206
+        },
+        {
+          "identifier": "WhatsMyLinePremiereTelecast1950",
+          "title": "What's My Line? Premiere Telecast (1950)",
+          "year": 1950,
+          "runtime_seconds": 1710,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_1950s",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/WhatsMyLinePremiereTelecast1950/WhatsMyLinePremiere.mp4",
+          "poster_url": "https://archive.org/download/WhatsMyLinePremiereTelecast1950/__ia_thumb.jpg",
+          "description": "Firstly, I apologize for the sub-par quality of this episode, I tranferred it from an old VHS recording I had and put in on my PC. Other episodes I have vary in quality. This episode features on the panel: former New Jersey governor Harold Hoffman, columnist Dorothy Kilgallen, poet Louis Untermeyer, and psychiatrist Richard Hoffman. Broadcast Information: February 2, 1950, 8PM ET, CBS Host: John Charles Daly",
+          "head_status": 206
+        },
+        {
+          "identifier": "Your_Hit_Parade_5",
+          "title": "'Your Hit Parade' - 2 May 1953",
+          "year": 1953,
+          "runtime_seconds": 1778,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_1950s",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/Your_Hit_Parade_5/YHP1953May2.mp4",
+          "poster_url": "https://archive.org/download/Your_Hit_Parade_5/__ia_thumb.jpg",
+          "description": "Episode of \"Your Hit Parade\" from 2 May 1953, containing original commercials for Lucky Strike Cigarettes. If you like \"soundies\", then you'll like this.",
+          "head_status": 206
+        },
+        {
+          "identifier": "1950sTvmartinKanePrivateEyehotelConGame1951",
+          "title": "Crime Television: 'Martin Kane, Private Eye' (Hotel Con Game, 1951)",
+          "year": 1951,
+          "runtime_seconds": 1647,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_1950s",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/1950sTvmartinKanePrivateEyehotelConGame1951/Hotel_Con-Game.mp4",
+          "poster_url": "https://archive.org/download/1950sTvmartinKanePrivateEyehotelConGame1951/__ia_thumb.jpg",
+          "description": "An episode of the 1950's crime television series \"Martin Kane, Private Eye\". This episode is called \"Hotel Con Game\". With original advertising for Pipe Tobacco (Note: this kind of product-placement was fairly rare on prime-time TV, despite what hopeless TV critics may say).",
+          "head_status": 206
+        },
+        {
+          "identifier": "1951TVclips-VideoByMatthewPaulArgall",
+          "title": "Excerpts from 1951 Television",
+          "year": 2014,
+          "runtime_seconds": 1748,
+          "licenseurl": "http://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_1950s",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/1951TVclips-VideoByMatthewPaulArgall/1951TVclips.mp4",
+          "poster_url": "https://archive.org/download/1951TVclips-VideoByMatthewPaulArgall/__ia_thumb.jpg",
+          "description": "I don't know if this video is legal or not, but here's a collection of excerpts from public domain United States television programming from 1951. I give a (lousy) introduction at the start. Some of these clips are very pleasant and charmingly dated, while others make it clear that there is a reason times have changed. Represented are clips of shows from CBS, ABC, NBC, DuMont, and first-run syndication. Just remember, most of these shows aired live.",
+          "head_status": 206
+        },
+        {
+          "identifier": "enter_the_lone_ranger",
+          "title": "Enter the Lone Ranger",
+          "year": 1949,
+          "runtime_seconds": 4129,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_1940s",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/enter_the_lone_ranger/enter_the_lone_ranger.mp4",
+          "poster_url": "https://archive.org/download/enter_the_lone_ranger/__ia_thumb.jpg",
+          "description": "Pilot for the Lone Ranger TV Series. September 15th 1949.",
+          "head_status": 206
+        },
+        {
+          "identifier": "Trouble_with_Father_In_a_Pickle",
+          "title": "Trouble with Father: In a Pickle",
+          "year": 1951,
+          "runtime_seconds": 1564,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_1950s",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/Trouble_with_Father_In_a_Pickle/In_a_Pickle.mp4",
+          "poster_url": "https://archive.org/download/Trouble_with_Father_In_a_Pickle/__ia_thumb.jpg",
+          "description": "Who makes the best pickles? Originally aired Nov. 30, 1951 (season 2, episode 7). Don't bother downloading the h.264 file; the Cinepack file from which it is derived is smaller.",
+          "head_status": 206
+        },
+        {
+          "identifier": "306-v-20",
+          "title": "VISION USA, NO 20",
+          "year": null,
+          "runtime_seconds": 1502,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_1970s",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/306-v-20/306-v-20.mp4",
+          "poster_url": "https://archive.org/download/306-v-20/__ia_thumb.jpg",
+          "description": "INCLUDES THE FOLLOWING STORIES ABOUT PEOPLE AND EVENTS IN THE U.S. - PEWTERSMITH - DON MILLER, SCANNING ELECTRON MICROSCOPE, WATERMEN OF CHESAPEAKE BAY, QUARTZ WATCHES, BARBARA MORGAN - PHOTOGRAPHER, AND PEDICAR. Description courtesy of the National Archives. National Archives Identifier: 58989",
+          "head_status": 206
+        },
+        {
+          "identifier": "OSB-11_The_Devils_Laughter",
+          "title": "The Devil's Laughter",
+          "year": null,
+          "runtime_seconds": 1492,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_1950s",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/OSB-11_The_Devils_Laughter/OSB-11_The_Devils_Laughter.mp4",
+          "poster_url": "https://archive.org/download/OSB-11_The_Devils_Laughter/__ia_thumb.jpg",
+          "description": "One Step Beyond: The Devil's Laughter Season 1 Episode 11 First Aired 3/31/1959",
+          "head_status": 206
+        }
+      ],
+      "cycle_seconds": 51696
+    },
+    {
+      "id": "retrotv.drive-in-movies",
+      "slug": "drive-in-movies",
+      "name": "Drive-In Movies",
+      "tier": "pd",
+      "query": "collection:feature_films AND licenseurl:*publicdomain* AND mediatype:(movies)",
+      "items": [
+        {
+          "identifier": "TheManInGrey",
+          "title": "The Man in Grey",
+          "year": null,
+          "runtime_seconds": 6669,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "feature_films_picfixer",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/TheManInGrey/The%20Man%20in%20Grey.mp4",
+          "poster_url": "https://archive.org/download/TheManInGrey/__ia_thumb.jpg",
+          "description": "“The first and the best” “He whips to glory” “High drama and escapism” “One of the greatest melodramas of all time” (IMDB reviews quotes). A superb romantic melodrama with an excellent cast which includes James Mason in one of his most villainous roles. Good period-piece production. An adaptation of the novel by Lady Eleanor Smith. A true classic. Highly recommended. IMDB rating 6.7. Directed by Leslie Arliss. Released in 1943. Complete print (original full-length UK release)",
+          "head_status": 206
+        },
+        {
+          "identifier": "UnknownWorld_201503",
+          "title": "Unknown World",
+          "year": 1951,
+          "runtime_seconds": 4439,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "film_scifi",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/UnknownWorld_201503/Unknown%20World.mp4",
+          "poster_url": "https://archive.org/download/UnknownWorld_201503/__ia_thumb.jpg",
+          "description": "Unknown World an independent , black and white science fiction film from 1951 directed by Terry Morse and starring Victor Killian, Marilyn Nash , Jim Bannon and Otto Waldis . It was produced by Jack Rabin and Irving Block and released by Robert L. Lippert, the same trio involved in 1957's Regalscope production, Kronos . Terry Morse was the B movie director who completed the Americanized Gorija as Godzilla, King of the Monsters . Victor Killian, who plays the leading character of Dr. Jeremiah Mor",
+          "head_status": 206
+        },
+        {
+          "identifier": "the-cleaning-day-1937",
+          "title": "The Cleaning Day (1937)",
+          "year": 1937,
+          "runtime_seconds": 352,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "feature_films_unsorted",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/the-cleaning-day-1937/The%20Cleaning%20Day%20(1937).mp4",
+          "poster_url": "https://archive.org/download/the-cleaning-day-1937/__ia_thumb.jpg",
+          "description": "Kiko the Kangaroo has problems with his house cleaning when Ozzie the Ostrich keeps getting in his way... Watch on RetroFlix: https://retroflix.org/the-cleaning-day-1937/",
+          "head_status": 206
+        },
+        {
+          "identifier": "the-witches-mountain-1973",
+          "title": "The Witches Mountain (1973)",
+          "year": null,
+          "runtime_seconds": 4987,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "feature_films_unsorted",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/the-witches-mountain-1973/The%20Witches%20Mountain%20(1973).mp4",
+          "poster_url": "https://archive.org/download/the-witches-mountain-1973/__ia_thumb.jpg",
+          "description": "A young couple traveling through the Pyrenees stays overnight at an ancient Spanish castle, only to discover that it is the headquarters for a coven of witches. Watch on RetroFlix: https://retroflix.org/the-witches-mountain-1973/",
+          "head_status": 206
+        },
+        {
+          "identifier": "the-golem-how-he-came-into-the-world-1920",
+          "title": "The Golem꞉ How He Came Into The World (1920)",
+          "year": null,
+          "runtime_seconds": 4572,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "silent_films",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/the-golem-how-he-came-into-the-world-1920/The%20Golem%EA%9E%89%20How%20He%20Came%20into%20the%20World%20(1920).mp4",
+          "poster_url": "https://archive.org/download/the-golem-how-he-came-into-the-world-1920/__ia_thumb.jpg",
+          "description": "I've been researching newly public domain films from 1929 and earlier, so I'm uploading the best possible copies that I can find. One of the first great examples of German Expressionism, The Golem: How He Came into the World is a silent horror film that follows a Jewish rabbi as he creates a seemingly indestructible creature to defend his people against discrimination and destruction. Unfortunately, after his people are saved, the Golem turns its violence against his creator. It was a massive su",
+          "head_status": 206
+        },
+        {
+          "identifier": "uncle-joey-comes-to-town-1941",
+          "title": "Uncle Joey Comes to Town (1941)",
+          "year": 1941,
+          "runtime_seconds": 369,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "feature_films_unsorted",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/uncle-joey-comes-to-town-1941/Uncle%20Joey%20Comes%20to%20Town%20(1941).mp4",
+          "poster_url": "https://archive.org/download/uncle-joey-comes-to-town-1941/__ia_thumb.jpg",
+          "description": "The spry, fun-loving, genial and enterprising Uncle Joey Mouse comes to the big city to visit his nephews who live in the basement of a large mansion. The butler sets the dining table elaborately for a meal, but the mice have other ideas; they scurry up on the table and, using the tableware and food for equipment, start a baseball game. Watch on RetroFlix: https://retroflix.org/uncle-joey-comes-to-town-1941/",
+          "head_status": 206
+        },
+        {
+          "identifier": "ren-gui-she-hu-da-jue-dou-1978",
+          "title": "Ren gui she hu da jue dou (1978)",
+          "year": null,
+          "runtime_seconds": 5346,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "feature_films_unsorted",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/ren-gui-she-hu-da-jue-dou-1978/Ren%20gui%20she%20hu%20da%20jue%20dou%20(1978).mp4",
+          "poster_url": "https://archive.org/download/ren-gui-she-hu-da-jue-dou-1978/__ia_thumb.jpg",
+          "description": "Carter Wong stars in this Hong Kong classic as a powerful martial artist who must protect an old man and his daughter from a snake god who possesses deadly kung fu skills. Watch on RetroFlix: https://retroflix.org/ren-gui-she-hu-da-jue-dou-1978/",
+          "head_status": 206
+        },
+        {
+          "identifier": "king-looney-xiv-1935",
+          "title": "King Looney XIV (1935)",
+          "year": 1935,
+          "runtime_seconds": 308,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "feature_films_unsorted",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/king-looney-xiv-1935/King%20Looney%20XIV%20(1935).mp4",
+          "poster_url": "https://archive.org/download/king-looney-xiv-1935/__ia_thumb.jpg",
+          "description": "King Looney XIV is a Terrytoons cartoon directed by Frank Moser, Paul Terry. Watch on RetroFlix: https://retroflix.org/king-looney-xiv-1935/",
+          "head_status": 206
+        },
+        {
+          "identifier": "rog56_mail_507",
+          "title": "507",
+          "year": null,
+          "runtime_seconds": 5167,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "feature_films_unsorted",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/rog56_mail_507/507.mp4",
+          "poster_url": "https://archive.org/download/rog56_mail_507/__ia_thumb.jpg",
+          "description": "507",
+          "head_status": 206
+        },
+        {
+          "identifier": "time-without-pity-1957_202506",
+          "title": "Time Without Pity (1957)",
+          "year": null,
+          "runtime_seconds": 5305,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "feature_films_unsorted",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/time-without-pity-1957_202506/Time%20Without%20Pity%20(1957).mp4",
+          "poster_url": "https://archive.org/download/time-without-pity-1957_202506/__ia_thumb.jpg",
+          "description": "Alec Graham is sentenced to death for the murder of his girlfriend Jennie, with whom he spent a weekend at the English country home of the parents of his friend Brian Stanford. Alec’s father, David Graham, a not-so-successful writer and alcoholic who has neglected his son in the past, flies in from Canada to visit his son on death row. David then goes on a quest to try and clear his son’s name while battling “the bottle.” Watch on RetroFlix: https://retroflix.org/time-without-pity-1957/",
+          "head_status": 206
+        },
+        {
+          "identifier": "tiger-bay-1959_202506",
+          "title": "Tiger Bay (1959)",
+          "year": null,
+          "runtime_seconds": 6396,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "feature_films_unsorted",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/tiger-bay-1959_202506/Tiger%20Bay%20(1959).mp4",
+          "poster_url": "https://archive.org/download/tiger-bay-1959_202506/__ia_thumb.jpg",
+          "description": "In Tiger Bay, the docklands of Cardiff, rough-and-tumble street urchin Gillie witnesses the brutal killing of a young woman at the hands of visiting Polish sailor Korchinsky. Instead of reporting the crime to the authorities, Gillie merely pockets a prize for herself — Korchinsky's shiny black revolver — and flees the scene. When Detective Graham discovers that Gillie has the murder weapon, the fiery young girl weaves a web of lies to throw him off course. Watch on RetroFlix: https://retroflix.o",
+          "head_status": 206
+        },
+        {
+          "identifier": "tightrope-tricks-1933",
+          "title": "Tightrope Tricks (1933)",
+          "year": 1933,
+          "runtime_seconds": 409,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "feature_films_unsorted",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/tightrope-tricks-1933/Tightrope%20Tricks%20(1933).mp4",
+          "poster_url": "https://archive.org/download/tightrope-tricks-1933/__ia_thumb.jpg",
+          "description": "Tightrope Tricks is a Tom and Jerry cartoon directed by John Foster, George Rufle. Watch on RetroFlix: https://retroflix.org/tightrope-tricks-1933/",
+          "head_status": 206
+        },
+        {
+          "identifier": "war-babies-1932",
+          "title": "War Babies (1932)",
+          "year": null,
+          "runtime_seconds": 553,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "feature_films_unsorted",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/war-babies-1932/War%20Babies%20(1932).mp4",
+          "poster_url": "https://archive.org/download/war-babies-1932/__ia_thumb.jpg",
+          "description": "A group of soldiers in a café watch a dancer as she entertains them, but later two of them become rivals over her. Watch on RetroFlix: https://retroflix.org/war-babies-1932/",
+          "head_status": 206
+        },
+        {
+          "identifier": "war-comes-to-america-1945",
+          "title": "War Comes to America (1945)",
+          "year": null,
+          "runtime_seconds": 3730,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "feature_films_unsorted",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/war-comes-to-america-1945/War%20Comes%20to%20America%20(1945).mp4",
+          "poster_url": "https://archive.org/download/war-comes-to-america-1945/__ia_thumb.jpg",
+          "description": "The seventh and final film of Frank Capra's Why We Fight World War II propaganda film series. This entry attempts to describe the factors leading up to America's entry into the Second World War. Watch on RetroFlix: https://retroflix.org/war-comes-to-america-1945/",
+          "head_status": 206
+        },
+        {
+          "identifier": "we-aim-to-please-1934",
+          "title": "We Aim to Please (1934)",
+          "year": 1934,
+          "runtime_seconds": 403,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "feature_films_unsorted",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/we-aim-to-please-1934/We%20Aim%20to%20Please%20(1934).mp4",
+          "poster_url": "https://archive.org/download/we-aim-to-please-1934/__ia_thumb.jpg",
+          "description": "Popeye and Olive open a diner, singing the title song. Alas, their first two customers are Wimpy (who actually gets them to fall for the \"gladly pay you Tuesday\" schtick) and Bluto, who orders 6 sandwiches and refuses to pay for them. This leads, of course, to a fight, which Popeye needs his spinach to win. Watch on RetroFlix: https://retroflix.org/we-aim-to-please-1934/",
+          "head_status": 206
+        },
+        {
+          "identifier": "water-rustlers-1939",
+          "title": "Water Rustlers (1939)",
+          "year": null,
+          "runtime_seconds": 3289,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "feature_films_unsorted",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/water-rustlers-1939/Water%20Rustlers%20(1939).mp4",
+          "poster_url": "https://archive.org/download/water-rustlers-1939/__ia_thumb.jpg",
+          "description": "Shirley Martin finds that Weylan has diverted the water from the valley and her cattle are dying. First she and her foreman Bob Lawson go to court. This fails when Weylan's men keep the ranchers from testifying. But Shirley has a second plan to return water to the valley. Watch on RetroFlix: https://retroflix.org/water-rustlers-1939/",
+          "head_status": 206
+        },
+        {
+          "identifier": "lucky-dog-1956",
+          "title": "Lucky Dog (1956)",
+          "year": 1956,
+          "runtime_seconds": 373,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "feature_films_unsorted",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/lucky-dog-1956/Lucky%20Dog%20(1956).mp4",
+          "poster_url": "https://archive.org/download/lucky-dog-1956/__ia_thumb.jpg",
+          "description": "A man transforms himself into a dog to live a dogs life. Watch on RetroFlix: https://retroflix.org/lucky-dog-1956/",
+          "head_status": 206
+        },
+        {
+          "identifier": "impact_201710",
+          "title": "Impact",
+          "year": null,
+          "runtime_seconds": 6661,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "Film_Noir",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/impact_201710/videoplayback.mp4",
+          "poster_url": "https://archive.org/download/impact_201710/__ia_thumb.jpg",
+          "description": "A declared-dead man (Brian Donlevy) hides out with a widow (Ella Raines) after his wife and her lover botch his murder.",
+          "head_status": 206
+        },
+        {
+          "identifier": "those-redheads-from-seattle-1953",
+          "title": "Those Redheads from Seattle (1953)",
+          "year": null,
+          "runtime_seconds": 5435,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "feature_films_unsorted",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/those-redheads-from-seattle-1953/Those%20Redheads%20from%20Seattle%20(1953).mp4",
+          "poster_url": "https://archive.org/download/those-redheads-from-seattle-1953/__ia_thumb.jpg",
+          "description": "A woman takes her four beautiful daughters to Alaska during the Gold Rush to find their fortune. Watch on RetroFlix: https://retroflix.org/those-redheads-from-seattle-1953/",
+          "head_status": 206
+        },
+        {
+          "identifier": "three-brothers-1944",
+          "title": "Three Brothers (1944)",
+          "year": null,
+          "runtime_seconds": 275,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "feature_films_unsorted",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/three-brothers-1944/Three%20Brothers%20(1944).mp4",
+          "poster_url": "https://archive.org/download/three-brothers-1944/__ia_thumb.jpg",
+          "description": "Three Brothers is part of the Private Snafu series of animated shorts produced by Warner Bros. during World War II. Screened for troops in September 1944, the cartoon was directed by Friz Freleng and features the familiar voice of Mel Blanc. Watch on RetroFlix.org: https://retroflix.org/three-brothers-1944/",
+          "head_status": 206
+        },
+        {
+          "identifier": "three-is-a-crowd-1950",
+          "title": "Three Is a Crowd (1950)",
+          "year": 1950,
+          "runtime_seconds": 378,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "feature_films_unsorted",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/three-is-a-crowd-1950/Three%20Is%20a%20Crowd%20(1950).mp4",
+          "poster_url": "https://archive.org/download/three-is-a-crowd-1950/__ia_thumb.jpg",
+          "description": "Little Roquefort is taking a bath while he sings about his sweetheart. Percy shows up and is curious about the picture that Roquefort has. After ridiculing him, his \"evil conscience\" tells him what's going to happen if the mouse and his girlfriend get hitched and have children. Percy tries to keep Roquefort's lady love away, but in the end, he loses... in more ways than one! Watch on RetroFlix: https://retroflix.org/three-is-a-crowd-1950/",
+          "head_status": 206
+        },
+        {
+          "identifier": "theprideandthepassion",
+          "title": "theprideandthepassion",
+          "year": null,
+          "runtime_seconds": 185,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "feature_films_unsorted",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/theprideandthepassion/The_Pride_and_The_Passion1957_-_Original_Trailer.mp4",
+          "poster_url": "https://archive.org/download/theprideandthepassion/__ia_thumb.jpg",
+          "description": "ac",
+          "head_status": 206
+        },
+        {
+          "identifier": "southern-horse-pitality-1935",
+          "title": "Southern Horse-pitality (1935)",
+          "year": 1935,
+          "runtime_seconds": 343,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "feature_films_unsorted",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/southern-horse-pitality-1935/Southern%20Horse-pitality%20(1935).mp4",
+          "poster_url": "https://archive.org/download/southern-horse-pitality-1935/__ia_thumb.jpg",
+          "description": "Southern Horse-pitality is a Terrytoons cartoon directed by Frank Moser, Paul Terry. Watch on RetroFlix: https://retroflix.org/southern-horse-pitality-1935/",
+          "head_status": 206
+        },
+        {
+          "identifier": "what-a-little-sneeze-will-do-1941",
+          "title": "What a Little Sneeze Will Do (1941)",
+          "year": 1941,
+          "runtime_seconds": 354,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "feature_films_unsorted",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/what-a-little-sneeze-will-do-1941/What%20a%20Little%20Sneeze%20Will%20Do%20(1941).mp4",
+          "poster_url": "https://archive.org/download/what-a-little-sneeze-will-do-1941/__ia_thumb.jpg",
+          "description": "A Pete Smith-like narrator introduces us to a pig named Oscar who's overwhelmed with advice and useless elixirs to relieve his cold. This leads to his having a nightmare where he's pursued by giant medicine and pill containers. Watch on RetroFlix: https://retroflix.org/what-a-little-sneeze-will-do-1941/",
+          "head_status": 206
+        },
+        {
+          "identifier": "PschotronicCinema1-FrankensteinsCastleOfFreaks",
+          "title": "Psychotronic Cinema # 1 - Frankenstein's Castle of Freaks",
+          "year": null,
+          "runtime_seconds": 5605,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "film_scifi",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/PschotronicCinema1-FrankensteinsCastleOfFreaks/PC.mp4",
+          "poster_url": "https://archive.org/download/PschotronicCinema1-FrankensteinsCastleOfFreaks/__ia_thumb.jpg",
+          "description": "Psychotronic Cinema is a program made in the spirit of old late night television movie show featuring some of wildest movies ever made. Frankensteins's Castle of Freaks: Count Frankenstein has been conducting experiments in an attempt to bring the dead back to life. When a caveman is discovered near the village and beaten to death by a mob of locals, Frankenstein acquires the caveman's body and brings it back to his lab where his life's work finally comes to fruition. The caveman lives again.",
+          "head_status": 206
+        }
+      ],
+      "cycle_seconds": 71903
+    },
+    {
+      "id": "retrotv.prelinger-theater",
+      "slug": "prelinger-theater",
+      "name": "Prelinger Theater",
+      "tier": "pd",
+      "query": "collection:prelinger AND mediatype:(movies)",
+      "items": [
+        {
+          "identifier": "ToEnrichMank",
+          "title": "To Enrich Mankind",
+          "year": null,
+          "runtime_seconds": 1346,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "prelinger"
+          ],
+          "mp4_url": "https://archive.org/download/ToEnrichMank/ToEnrichMank.mp4",
+          "poster_url": "https://archive.org/download/ToEnrichMank/__ia_thumb.jpg",
+          "description": "A man in white coat talking to Archimedes in room full of stone and bronze busts of famous scientists researchers. We learn about how machines have improved Western civilization.",
+          "head_status": 206
+        },
+        {
+          "identifier": "TraderTh1956",
+          "title": "Trader Thorne",
+          "year": null,
+          "runtime_seconds": 1344,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "prelinger"
+          ],
+          "mp4_url": "https://archive.org/download/TraderTh1956/TraderTh1956.mp4",
+          "poster_url": "https://archive.org/download/TraderTh1956/__ia_thumb.jpg",
+          "description": "Auto dealer sales film explaining why trade-ins are necessary -- because almost all customers already have cars. Director: Jack Tilles. Writer: George Wilcock. Camera: John Niklasch. Sound: Raymond Esh. Art Director: Edward Jewell. Editor: Foster Travis. With Hugh Beaumont (Joe Thorne), Glen Denning (Herb Potter), Frances Helm (Charlotte), Ed Prentiss (Mr. Fuller), Barry Hopkins (Mr. Thaler), Art Van Harvey (Mr. Armstrong), and Hope Summers (Mrs. Armstrong).",
+          "head_status": 206
+        },
+        {
+          "identifier": "HereIsCh1944_2",
+          "title": "Here Is China (Part II)",
+          "year": null,
+          "runtime_seconds": 789,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "prelinger"
+          ],
+          "mp4_url": "https://archive.org/download/HereIsCh1944_2/HereIsCh1944_2.mp4",
+          "poster_url": "https://archive.org/download/HereIsCh1944_2/__ia_thumb.jpg",
+          "description": "Portrait of the Chinese people and how they were affected by Japanese aggression.",
+          "head_status": 206
+        },
+        {
+          "identifier": "easter_island",
+          "title": "Easter Island",
+          "year": null,
+          "runtime_seconds": 651,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "prelinger"
+          ],
+          "mp4_url": "https://archive.org/download/easter_island/easter_island.mp4",
+          "poster_url": "https://archive.org/download/easter_island/__ia_thumb.jpg",
+          "description": "0628 PA8541 Easter Island",
+          "head_status": 206
+        },
+        {
+          "identifier": "Arteries1941",
+          "title": "Arteries of New York City",
+          "year": null,
+          "runtime_seconds": 568,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "prelinger"
+          ],
+          "mp4_url": "https://archive.org/download/Arteries1941/Arteries1941.mp4",
+          "poster_url": "https://archive.org/download/Arteries1941/__ia_thumb.jpg",
+          "description": "Shows transportation corridors leading into and out of New York City, and efforts at transportation and infrastructure planning.",
+          "head_status": 206
+        },
+        {
+          "identifier": "FilmRese1956",
+          "title": "Film Research and Learning",
+          "year": null,
+          "runtime_seconds": 784,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "prelinger"
+          ],
+          "mp4_url": "https://archive.org/download/FilmRese1956/FilmRese1956.mp4",
+          "poster_url": "https://archive.org/download/FilmRese1956/__ia_thumb.jpg",
+          "description": "Presentation of research studies on the value of motion pictures in teaching.",
+          "head_status": 206
+        },
+        {
+          "identifier": "Breakfas1939",
+          "title": "Breakfast Pals",
+          "year": null,
+          "runtime_seconds": 81,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "prelinger"
+          ],
+          "mp4_url": "https://archive.org/download/Breakfas1939/Breakfas1939.mp4",
+          "poster_url": "https://archive.org/download/Breakfas1939/__ia_thumb.jpg",
+          "description": "Snap, Crackle and Pop take on Soggy, Mushy and Toughy.",
+          "head_status": 206
+        },
+        {
+          "identifier": "American1960",
+          "title": "American Maker",
+          "year": null,
+          "runtime_seconds": 813,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "prelinger"
+          ],
+          "mp4_url": "https://archive.org/download/American1960/American1960.mp4",
+          "poster_url": "https://archive.org/download/American1960/__ia_thumb.jpg",
+          "description": "Relates how Americans build, from youth throughout life, by using their ingenuity not only in technological advancement but in everyday efforts by everyone. Promo for 1960 Chevrolets, with excellent footage of Americans at home, work, and leisure, and a short sequence showing futuristic appliances and the manufacturing of telephones and transistor radios (in the United States).",
+          "head_status": 206
+        },
+        {
+          "identifier": "Aluminum1956_2",
+          "title": "Aluminum on the March (Part II)",
+          "year": null,
+          "runtime_seconds": 846,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "prelinger"
+          ],
+          "mp4_url": "https://archive.org/download/Aluminum1956_2/Aluminum1956_2.mp4",
+          "poster_url": "https://archive.org/download/Aluminum1956_2/__ia_thumb.jpg",
+          "description": "How aluminum contributes to everyday living and national defense: appliances, packaging, airplanes, etc. With great stop-motion animation and excellent imagery of aluminum-enabled Fifties America.",
+          "head_status": 206
+        },
+        {
+          "identifier": "sunbeam_commercial_3",
+          "title": "Sunbeam Bread Commercial #3",
+          "year": null,
+          "runtime_seconds": 53,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "prelinger"
+          ],
+          "mp4_url": "https://archive.org/download/sunbeam_commercial_3/sunbeam_commercial_3.mp4",
+          "poster_url": "https://archive.org/download/sunbeam_commercial_3/__ia_thumb.jpg",
+          "description": "0736 PA8910 Sunbeam Bread TV Commercials \"John Engel, 1953-1957\"; was PA-3992",
+          "head_status": 206
+        },
+        {
+          "identifier": "sunbeam_commercial_9",
+          "title": "Sunbeam Bread Commercial #9",
+          "year": null,
+          "runtime_seconds": 64,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "prelinger"
+          ],
+          "mp4_url": "https://archive.org/download/sunbeam_commercial_9/sunbeam_commercial_9.mp4",
+          "poster_url": "https://archive.org/download/sunbeam_commercial_9/__ia_thumb.jpg",
+          "description": "",
+          "head_status": 206
+        },
+        {
+          "identifier": "DontTalk1950",
+          "title": "Don't Talk to Strangers",
+          "year": null,
+          "runtime_seconds": 788,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "prelinger"
+          ],
+          "mp4_url": "https://archive.org/download/DontTalk1950/DontTalk1950.mp4",
+          "poster_url": "https://archive.org/download/DontTalk1950/__ia_thumb.jpg",
+          "description": "Dramatized film warning children of the dangers of strangers.",
+          "head_status": 206
+        },
+        {
+          "identifier": "GoingSte1951",
+          "title": "Going Steady?",
+          "year": null,
+          "runtime_seconds": 637,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "prelinger"
+          ],
+          "mp4_url": "https://archive.org/download/GoingSte1951/GoingSte1951.mp4",
+          "poster_url": "https://archive.org/download/GoingSte1951/__ia_thumb.jpg",
+          "description": "Attempts to provoke teens into discussion on the complex issue of going steady. Provides little support for the practice.",
+          "head_status": 206
+        },
+        {
+          "identifier": "FriscoFa1939",
+          "title": "[Amateur film: \"Frisco Fair / Pacific Northwest\"]",
+          "year": null,
+          "runtime_seconds": 1025,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "prelingerhomemovies",
+            "prelinger",
+            "home_movies",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/FriscoFa1939/FriscoFa1939.mp4",
+          "poster_url": "https://archive.org/download/FriscoFa1939/__ia_thumb.jpg",
+          "description": "Kodachrome home movies from San Francisco's Golden Gate International Exposition (1939-40); views along the coast and highways of California and Oregon.",
+          "head_status": 206
+        },
+        {
+          "identifier": "Jealousy1954",
+          "title": "Jealousy",
+          "year": null,
+          "runtime_seconds": 950,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "prelinger"
+          ],
+          "mp4_url": "https://archive.org/download/Jealousy1954/Jealousy1954.mp4",
+          "poster_url": "https://archive.org/download/Jealousy1954/__ia_thumb.jpg",
+          "description": "Dramatizes the origin and nature of a wife's jealousy.",
+          "head_status": 206
+        },
+        {
+          "identifier": "Psycholo1968_2",
+          "title": "Psychological Operations in Support of Internal Defense and Development Assistance Programs (Part II)",
+          "year": null,
+          "runtime_seconds": 744,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "prelinger"
+          ],
+          "mp4_url": "https://archive.org/download/Psycholo1968_2/Psycholo1968_2.mp4",
+          "poster_url": "https://archive.org/download/Psycholo1968_2/__ia_thumb.jpg",
+          "description": "Military training film showing psychological operations in \"Hostland,\" a mythical (probably Latin American) country, designed to aid the host government in gaining the support of the population.",
+          "head_status": 206
+        },
+        {
+          "identifier": "Tobaccoa1954",
+          "title": "Tobacco and the Human Body",
+          "year": null,
+          "runtime_seconds": 893,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "prelinger"
+          ],
+          "mp4_url": "https://archive.org/download/Tobaccoa1954/Tobaccoa1954.mp4",
+          "poster_url": "https://archive.org/download/Tobaccoa1954/__ia_thumb.jpg",
+          "description": "Early film on tobacco's physical effects.",
+          "head_status": 206
+        },
+        {
+          "identifier": "AgeofTur1953",
+          "title": "Age of Turmoil",
+          "year": null,
+          "runtime_seconds": 1147,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "prelinger"
+          ],
+          "mp4_url": "https://archive.org/download/AgeofTur1953/AgeofTur1953.mp4",
+          "poster_url": "https://archive.org/download/AgeofTur1953/__ia_thumb.jpg",
+          "description": "An afternoon and evening in the complicated lives of six teenagers.",
+          "head_status": 206
+        },
+        {
+          "identifier": "reasons_why_1",
+          "title": "Reasons Why, The (Part I)",
+          "year": null,
+          "runtime_seconds": 544,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "prelinger"
+          ],
+          "mp4_url": "https://archive.org/download/reasons_why_1/reasons_why_1.mp4",
+          "poster_url": "https://archive.org/download/reasons_why_1/__ia_thumb.jpg",
+          "description": "Television manufacturing at RCA's New Jersey plant. Includes scenes of design, engineering and quality control. Great scenes of TVs with flickering test patterns.",
+          "head_status": 206
+        },
+        {
+          "identifier": "SubjectN1951",
+          "title": "Subject: Narcotics",
+          "year": null,
+          "runtime_seconds": 1262,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "prelinger"
+          ],
+          "mp4_url": "https://archive.org/download/SubjectN1951/SubjectN1951.mp4",
+          "poster_url": "https://archive.org/download/SubjectN1951/__ia_thumb.jpg",
+          "description": "Produced for police orientation and training, this film presents drug addiction not simply as a crime but as a deepseated social problem. With dramatized sequences of addicts in shooting galleries and excellent footage of pre-renewal downtown Los Angeles, a neighborhood now lost. Produced and directed by renowned filmmakers Denis and Terry Sanders, who wrote this film with Jay Sandrich.",
+          "head_status": 206
+        },
+        {
+          "identifier": "InMyMerr1932",
+          "title": "In My Merry Oldsmobile",
+          "year": null,
+          "runtime_seconds": 388,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "prelinger"
+          ],
+          "mp4_url": "https://archive.org/download/InMyMerr1932/InMyMerr1932.mp4",
+          "poster_url": "https://archive.org/download/InMyMerr1932/__ia_thumb.jpg",
+          "description": "Surprisingly licentious advertising cartoon produced by the Fleischer brothers.",
+          "head_status": 206
+        },
+        {
+          "identifier": "WhiteWon1958",
+          "title": "White Wonder",
+          "year": null,
+          "runtime_seconds": 1658,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "prelinger"
+          ],
+          "mp4_url": "https://archive.org/download/WhiteWon1958/WhiteWon1958.mp4",
+          "poster_url": "https://archive.org/download/WhiteWon1958/__ia_thumb.jpg",
+          "description": "Salt, its extraction and uses in national defense, industry, agriculture, and the home. A feast of late-1950s imagery of everyday life, culture and industry.",
+          "head_status": 206
+        },
+        {
+          "identifier": "ulcer_at_work",
+          "title": "Ulcer at Work",
+          "year": null,
+          "runtime_seconds": 1718,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "prelinger"
+          ],
+          "mp4_url": "https://archive.org/download/ulcer_at_work/ulcer_at_work.mp4",
+          "poster_url": "https://archive.org/download/ulcer_at_work/__ia_thumb.jpg",
+          "description": "Excellent noir-type film about pressures facing a white-collar worker whose ulcer drives him to psychological extremes. \"Ulcer at Work\" portrays the struggles of Steve Hull, a hardworking man dealing with the pressures of ambition and workplace stress, which lead to the development of a peptic ulcer. The film highlights how his emotional state and attitude towards work and relationships contribute to his condition. Through medical advice and introspection, Steve learns to manage his stress, impr",
+          "head_status": 206
+        },
+        {
+          "identifier": "OpenRoadB",
+          "title": "Open Road B",
+          "year": 1951,
+          "runtime_seconds": 872,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "prelinger",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/OpenRoadB/OpenRoadB.mp4",
+          "poster_url": "https://archive.org/download/OpenRoadB/__ia_thumb.jpg",
+          "description": "Educational film about how steel is used to make highways, including problems that occur with time and use.",
+          "head_status": 206
+        },
+        {
+          "identifier": "BetterUs1950",
+          "title": "Better Use of Leisure Time",
+          "year": null,
+          "runtime_seconds": 632,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "prelinger"
+          ],
+          "mp4_url": "https://archive.org/download/BetterUs1950/BetterUs1950.mp4",
+          "poster_url": "https://archive.org/download/BetterUs1950/__ia_thumb.jpg",
+          "description": "How to make the most of your free time.",
+          "head_status": 206
+        }
+      ],
+      "cycle_seconds": 20597
+    },
+    {
+      "id": "retrotv.ad-break",
+      "slug": "ad-break",
+      "name": "Ad Break",
+      "tier": "pd",
+      "query": "collection:classic_tv_commercials AND licenseurl:*publicdomain* AND mediatype:(movies)",
+      "items": [
+        {
+          "identifier": "ShastaSodaCommercial-Frankenstein",
+          "title": "Shasta soda commercial - Frankenstein",
+          "year": null,
+          "runtime_seconds": 56,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_commercials",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/ShastaSodaCommercial-Frankenstein/Commercial-ShastaFrankenstein_512kb.mp4",
+          "poster_url": "https://archive.org/download/ShastaSodaCommercial-Frankenstein/__ia_thumb.jpg",
+          "description": "Soda commercial featuring everyone's favorite famous monster!",
+          "head_status": 206
+        },
+        {
+          "identifier": "TheHornBlowsAtMidnightOnOmnibus",
+          "title": "The Horn Blows at Midnight on Omnibus",
+          "year": 1953,
+          "runtime_seconds": 3432,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vinnierattolle",
+            "classic_tv_commercials",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/TheHornBlowsAtMidnightOnOmnibus/Horn%20Blows%20at%20Midnight%20on%20Omnibus.mp4",
+          "poster_url": "https://archive.org/download/TheHornBlowsAtMidnightOnOmnibus/__ia_thumb.jpg",
+          "description": "In 1945, Jack Benny starred in his last major motion picture, \"The Horn Blows at Midnight,\" as a band member who dreams he's an angel sent to destroy the Earth. The film did respectable business but wasn't an overwhelming success (doubtlessly due to the timing, coming at the end of WW2) and Benny soon began joking about what a dismal failure the film was... which quickly became a running gag on his TV and radio shows, leading people to believe the movie actually was an epic bomb. In 1949, the fi",
+          "head_status": 206
+        },
+        {
+          "identifier": "UpToTheMinuteCinematographicTechnologyNewSlateFilms",
+          "title": "Up To The Minute Cinematographic Technology – New Slate Films",
+          "year": null,
+          "runtime_seconds": 60,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_commercials",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/UpToTheMinuteCinematographicTechnologyNewSlateFilms/Up%20To%20The%20Minute%20Cinematographic%20Technology%20%E2%80%93%20New%20Slate%20Films.mp4",
+          "poster_url": "https://archive.org/download/UpToTheMinuteCinematographicTechnologyNewSlateFilms/__ia_thumb.jpg",
+          "description": "http://newslatefilms.com/ - One of the up and coming video production companies in Chicago is New Slate Films, started by Saj Adibs in 2009. From primarily producing videos for small businesses and start-ups in and around the Chicago area, their clientele has grown to include Fortune 500 companies around the country. Companies New Slate Films provides a complete video marketing service in Chicago from pre-production, shooting and editing and they also do animation videos. Their portfolio include",
+          "head_status": 206
+        },
+        {
+          "identifier": "Video-Ranger-Ring-3",
+          "title": "Another classic commercial for the ''Video Ranger ring''",
+          "year": 1950,
+          "runtime_seconds": 89,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_commercials",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/Video-Ranger-Ring-3/Video-Ranger-Ring2.mp4",
+          "poster_url": "https://archive.org/download/Video-Ranger-Ring-3/__ia_thumb.jpg",
+          "description": "Another classic commercial for the ''Video Ranger Ring'', direct from the DuMont Network!",
+          "head_status": 206
+        },
+        {
+          "identifier": "10610293970678219625898594593176n970677549625965",
+          "title": "Brigantine Castle New Jersey Pier",
+          "year": null,
+          "runtime_seconds": 116,
+          "licenseurl": "http://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_commercials",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/10610293970678219625898594593176n970677549625965/10610293_970678219625898_594593176_n_970677549625965.mp4",
+          "poster_url": "https://archive.org/download/10610293970678219625898594593176n970677549625965/__ia_thumb.jpg",
+          "description": "TV commercials and stills commemorating the popular New Jersey attraction Brigantine Castle (aka Haunted Mansion) with was destroyed by Arson in the 1980s. These commercials were broadcast across the east coast from Connecticut to Maryland from Spring though the Halloween season in the late 1970s.",
+          "head_status": 206
+        },
+        {
+          "identifier": "1970sTelevisionCode",
+          "title": "National Association of Broadcasters Television Code",
+          "year": null,
+          "runtime_seconds": 61,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vinnierattolle",
+            "classic_tv_commercials",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/1970sTelevisionCode/1970s%20Television%20Code.mp4",
+          "poster_url": "https://archive.org/download/1970sTelevisionCode/__ia_thumb.jpg",
+          "description": "A commercial from the early '70s assuring parents that on this station your child \"might see bad guys, but not in the role of heroes.\" In my opinion, the villains were always more fun.",
+          "head_status": 206
+        },
+        {
+          "identifier": "1970ChuckWagonDogFoodCommercial",
+          "title": "1970 Chuck Wagon Dog Food Commercial",
+          "year": null,
+          "runtime_seconds": 59,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_commercials",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/1970ChuckWagonDogFoodCommercial/1970_Chuck_Wagon_Dog_Food_Commercial.mp4",
+          "poster_url": "https://archive.org/download/1970ChuckWagonDogFoodCommercial/__ia_thumb.jpg",
+          "description": "I never saw the dog catch that dang wagon...",
+          "head_status": 206
+        },
+        {
+          "identifier": "IMG1313_201708",
+          "title": "Dragon Ball Commercials Toonami February 26, 2002",
+          "year": null,
+          "runtime_seconds": 216,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_commercials",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/IMG1313_201708/IMG_1313.mp4",
+          "poster_url": "https://archive.org/download/IMG1313_201708/__ia_thumb.jpg",
+          "description": "Ads from the Toonami premiere of Horrifying Buyon.",
+          "head_status": 206
+        },
+        {
+          "identifier": "Election_Ads_03",
+          "title": "Presidential Campaign Ads 1968",
+          "year": null,
+          "runtime_seconds": 64,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_commercials",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/Election_Ads_03/Commercial-GeorgeWallace1968ElectionAdonVietNam_512kb.mp4",
+          "poster_url": "https://archive.org/download/Election_Ads_03/__ia_thumb.jpg",
+          "description": "Presidential Campaign Ads 1968 George Wallace, Hubert Humphery, Richard Nixon",
+          "head_status": 206
+        },
+        {
+          "identifier": "1971KodakInstamaticMovieCameraWithDickVanDyke",
+          "title": "Kodak Instamatic Movie Camera with Dick Van Dyke",
+          "year": null,
+          "runtime_seconds": 60,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vinnierattolle",
+            "classic_tv_commercials",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/1971KodakInstamaticMovieCameraWithDickVanDyke/1971%20Kodak%20Instamatic%20Movie%20Camera%20with%20Dick%20Van%20Dyke.mp4",
+          "poster_url": "https://archive.org/download/1971KodakInstamaticMovieCameraWithDickVanDyke/__ia_thumb.jpg",
+          "description": "Dick Van Dyke pushes movie cameras by Kodak in this 1971 commercial.",
+          "head_status": 206
+        },
+        {
+          "identifier": "november-13-1988-commercials-givefastlink",
+          "title": "November 13, 1988 Commercials",
+          "year": null,
+          "runtime_seconds": 285,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_commercials",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/november-13-1988-commercials-givefastlink/november-13-1988-commercials-givefastlink.mp4",
+          "poster_url": "https://archive.org/download/november-13-1988-commercials-givefastlink/__ia_thumb.jpg",
+          "description": "VHS BREAK 2",
+          "head_status": 206
+        },
+        {
+          "identifier": "JackBennysCarnivalNights",
+          "title": "Jack Benny's Carnival Nights",
+          "year": null,
+          "runtime_seconds": 3505,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_commercials",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/JackBennysCarnivalNights/Jack%20Benny's%20Carnival%20Nights.mp4",
+          "poster_url": "https://archive.org/download/JackBennysCarnivalNights/__ia_thumb.jpg",
+          "description": "A Jack Benny TV Special revolving around the theme of Carnivals. Jack's guests are Johnny Carson, Lucille Ball, Paul Revere and The Raiders, Danny Thomas, Bob Hope, Ben Blue, Sudney Fields and Herb Vigran. Sketches include many revolving around carnival acts with one about Gypsy life featuring Jack, Lucille Ball and Johnny Carson. Note: Please forgive the long periods of black which is where the local tv stations would have inserted their commercials. I don't currently have the ability to edit t",
+          "head_status": 206
+        },
+        {
+          "identifier": "the-shortest-straw-geoff-husson-edit",
+          "title": "Husson, Geoff - The Shortest Straw - Feature Film, 16mm film",
+          "year": 1968,
+          "runtime_seconds": 3334,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_commercials",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/the-shortest-straw-geoff-husson-edit/The%20Shortest%20Straw%20-%20Geoff%20Husson%20edit.mp4",
+          "poster_url": "https://archive.org/download/the-shortest-straw-geoff-husson-edit/__ia_thumb.jpg",
+          "description": "\"The Shortest Straw\" (feature film) , 1968 Starring Jane Robertson and Rex Mahan Directed and Edited by Geoff Husson Screenplay and Cinematography by Randall Parker Music by The Serfs (featuring Mike Finnegan) \"The Shortest Straw\" (feature film) , 1968 Starring Jane Robertson and Rex Mahan Directed and Edited by Geoff Husson Screenplay and Cinematography by Randall Parker Music by The Serfs (featuring Mike Finnegan) This is an alternate edit of the feature film shot in Kansas, “The Shortest Stra",
+          "head_status": 206
+        },
+        {
+          "identifier": "TheManWhoFoughtTheBank5.0",
+          "title": "The Man Who Fought The Bank 5.0",
+          "year": null,
+          "runtime_seconds": 609,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_commercials",
+            "television",
+            "fringe",
+            "deemphasize"
+          ],
+          "mp4_url": "https://archive.org/download/TheManWhoFoughtTheBank5.0/The%20Man%20Who%20Fought%20The%20Bank%205.0.mp4",
+          "poster_url": "https://archive.org/download/TheManWhoFoughtTheBank5.0/__ia_thumb.jpg",
+          "description": "Adolf Hitler - The Man Who Fought The Bank 5.0 (New Visuals | Fresh New 2017 Version - Download & ReUpload! Make The Truth Go Viral!) http://TruthGoneViral.WordPress.com",
+          "head_status": 206
+        },
+        {
+          "identifier": "RemingtonRand2",
+          "title": "Classic Commercial: Remington Rand Shaver (21 Feb 1954)",
+          "year": 1954,
+          "runtime_seconds": 125,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_commercials",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/RemingtonRand2/RemingtonShaver21Feb1954_512kb.mp4",
+          "poster_url": "https://archive.org/download/RemingtonRand2/__ia_thumb.jpg",
+          "description": "A classic commercial for the hugely popular Remington Rand Shaver, aired 21 Feb 1954. \"For the shaver that can shave a brush will make your beard behave, the shaver that can shave a peach, will give you a peach of a shave\". Catchy little jingle.",
+          "head_status": 206
+        },
+        {
+          "identifier": "1981ToyotaCommercialWithEarlCampbell",
+          "title": "Toyota Commercial with Earl Campbell",
+          "year": 1981,
+          "runtime_seconds": 30,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vinnierattolle",
+            "classic_tv_commercials",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/1981ToyotaCommercialWithEarlCampbell/1981%20Toyota%20Commercial%20with%20Earl%20Campbell.mp4",
+          "poster_url": "https://archive.org/download/1981ToyotaCommercialWithEarlCampbell/__ia_thumb.jpg",
+          "description": "Houston Oilers NFL player Earl Campbell appears in this 1981 Toyota commercial. The quality's pretty sucky, but I don't see it available in any quality anywhere else.",
+          "head_status": 206
+        },
+        {
+          "identifier": "1977HappyDaysFonzieLovesPinkyPromo",
+          "title": "Happy Days/Fonzie Loves Pinky promo",
+          "year": 1977,
+          "runtime_seconds": 31,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vinnierattolle",
+            "classic_tv_commercials",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/1977HappyDaysFonzieLovesPinkyPromo/1977%20Happy%20Days-Fonzie%20Loves%20Pinky%20promo.mp4",
+          "poster_url": "https://archive.org/download/1977HappyDaysFonzieLovesPinkyPromo/__ia_thumb.jpg",
+          "description": "Original ABC promo for the \"Happy Days\" episodes \"A Shot in the Dark\" and \"Fonzie Loves Pinky,\" which aired on January 25, 1977. Narration by Ernie Anderson.",
+          "head_status": 206
+        },
+        {
+          "identifier": "1960sViceroyCigarettesWithMichaelMurphy",
+          "title": "1960s Viceroy Cigarettes with Michael Murphy",
+          "year": null,
+          "runtime_seconds": 60,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vinnierattolle",
+            "classic_tv_commercials",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/1960sViceroyCigarettesWithMichaelMurphy/1960s%20Viceroy%20Cigarettes%20with%20Michael%20Murphy.mp4",
+          "poster_url": "https://archive.org/download/1960sViceroyCigarettesWithMichaelMurphy/__ia_thumb.jpg",
+          "description": "Actor Michael Murphy (\"Count Yorga,\" \"Cloak & Dagger,\" \"Batman Returns,\" etc.) stars in this 1960s commercial for Viceroy Cigarettes. Can anyone identify the other actor?",
+          "head_status": 206
+        },
+        {
+          "identifier": "1965ClassicCommercialForcueToothpaste",
+          "title": "1965 Classic Commercial for ''Cue Toothpaste''",
+          "year": 1965,
+          "runtime_seconds": 66,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_commercials",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/1965ClassicCommercialForcueToothpaste/Cue_Toothpaste_512kb.mp4",
+          "poster_url": "https://archive.org/download/1965ClassicCommercialForcueToothpaste/__ia_thumb.jpg",
+          "description": "Another classic 1960's commercial, this time for \"Cue Toothpaste\". Taken from a 1965 Television episode.",
+          "head_status": 206
+        },
+        {
+          "identifier": "2022-commercials-vol.-191-discovery-august-27",
+          "title": "2022 Commercials Vol. 191 (Discovery August 27)",
+          "year": null,
+          "runtime_seconds": 195,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_commercials",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/2022-commercials-vol.-191-discovery-august-27/2022%20Commercials%20Vol.%20191%20(Discovery%20-%20August%2027).mp4",
+          "poster_url": "https://archive.org/download/2022-commercials-vol.-191-discovery-august-27/__ia_thumb.jpg",
+          "description": "Yay!!! :D",
+          "head_status": 206
+        },
+        {
+          "identifier": "Promo_O.K.Crackerby_ABC-TV_1965_Thursday_night",
+          "title": "Promo_O.K.Crackerby_ABC-TV_1965_Thursday_night",
+          "year": null,
+          "runtime_seconds": 59,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_commercials",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/Promo_O.K.Crackerby_ABC-TV_1965_Thursday_night/Promo_O.K.Crackerby_ABC-TV_1965_Thursday_night_512kb.mp4",
+          "poster_url": "https://archive.org/download/Promo_O.K.Crackerby_ABC-TV_1965_Thursday_night/__ia_thumb.jpg",
+          "description": "Promo O.K.Crackerby ABC-TV 1965 Thursday_night",
+          "head_status": 206
+        },
+        {
+          "identifier": "Promo__The_F.B.I._ABC-TV_1965_Sunday_night",
+          "title": "Promo__The_F.B.I._ABC-TV_1965_Sunday_night",
+          "year": null,
+          "runtime_seconds": 60,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_commercials",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/Promo__The_F.B.I._ABC-TV_1965_Sunday_night/Promo__The_F.B.I._ABC-TV_1965_Sunday_night_512kb.mp4",
+          "poster_url": "https://archive.org/download/Promo__The_F.B.I._ABC-TV_1965_Sunday_night/__ia_thumb.jpg",
+          "description": "Promo The F.B.I. ABC-TV 1965 Sunday night",
+          "head_status": 206
+        },
+        {
+          "identifier": "KoolAidKoolersCommercial1986",
+          "title": "Kool Aid Koolers Commercial 1986",
+          "year": null,
+          "runtime_seconds": 32,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_commercials",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/KoolAidKoolersCommercial1986/Kool_Aid_Koolers_commercial_1986.mp4",
+          "poster_url": "https://archive.org/download/KoolAidKoolersCommercial1986/__ia_thumb.jpg",
+          "description": "My second favorite TV commercial after the Levi's Trademark.",
+          "head_status": 206
+        },
+        {
+          "identifier": "KelloggsCommercial2",
+          "title": "Kellogg's Commercial 2",
+          "year": 1953,
+          "runtime_seconds": 66,
+          "licenseurl": "http://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_commercials",
+            "classic_tv",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/KelloggsCommercial2/KelloggsCommercial2.mp4",
+          "poster_url": "https://archive.org/download/KelloggsCommercial2/__ia_thumb.jpg",
+          "description": "A Kellogg's Sugar Frosted Flakes commercial, made sometime between 1951 and 1953, featuring Adventures of Superman star George Reeves.",
+          "head_status": 206
+        },
+        {
+          "identifier": "LoisJeansSpotJamaica1980",
+          "title": "Lois jeans commercial (Jamaica, 1980)",
+          "year": null,
+          "runtime_seconds": 61,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "classic_tv_commercials",
+            "television"
+          ],
+          "mp4_url": "https://archive.org/download/LoisJeansSpotJamaica1980/Lois%20Jeans%20Spot%20Jamaica%20%201980.mp4",
+          "poster_url": "https://archive.org/download/LoisJeansSpotJamaica1980/__ia_thumb.jpg",
+          "description": "The Jeans History Project",
+          "head_status": 206
+        }
+      ],
+      "cycle_seconds": 12731
+    },
+    {
+      "id": "retrotv.creature-features",
+      "slug": "creature-features",
+      "name": "Creature Features",
+      "tier": "pd",
+      "query": "collection:feature_films AND licenseurl:*publicdomain* AND (subject:(horror) OR subject:(science fiction)) AND mediatype:(movies)",
+      "items": [
+        {
+          "identifier": "TheLostMissile",
+          "title": "The Lost Missile",
+          "year": null,
+          "runtime_seconds": 4244,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "feature_films_picfixer",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/TheLostMissile/The%20Lost%20Missile.mp4",
+          "poster_url": "https://archive.org/download/TheLostMissile/__ia_thumb.jpg",
+          "description": "“A ‘lost’ sci-fi classic” “Underrated” “Not bad” “Fifties shock cinema” “Fine effort” “Atomic doom” (IMDB reviews quotes). Red scare sci-fi terror -- but without the Reds. Large, okay cast and good production values for a drive-in quickie. IMDB rating 5.2. Directed by William Berke. Released in 1958. Complete print.",
+          "head_status": 206
+        },
+        {
+          "identifier": "Tormented_861",
+          "title": "Tormented",
+          "year": 1960,
+          "runtime_seconds": 4471,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "SciFi_Horror",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/Tormented_861/MoviePowderPresentsTormented.mp4",
+          "poster_url": "https://archive.org/download/Tormented_861/__ia_thumb.jpg",
+          "description": "A man lets a former flame fall to her death rather than let her interfere with his new relationship, but her ghost returns to disrupt his impending nuptials. - IMDB Description",
+          "head_status": 206
+        },
+        {
+          "identifier": "TortureShip",
+          "title": "Torture Ship",
+          "year": 1939,
+          "runtime_seconds": 2929,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "SciFi_Horror",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/TortureShip/TortureShip.mp4",
+          "poster_url": "https://archive.org/download/TortureShip/__ia_thumb.jpg",
+          "description": "A well known doctor is indicted for his experiments toward curing the criminal mind. Needing to continue his work and hoping that success will clear him, he buys a boat, loads it with several high profile criminals hoping to escape the law and heads out to sea. At least that's the plan, but things start to go wrong and things are revealed to be not what they seemed at first.",
+          "head_status": 206
+        },
+        {
+          "identifier": "Horror_Express",
+          "title": "Horror Express",
+          "year": 1973,
+          "runtime_seconds": 5287,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "film_scifi",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/Horror_Express/Horror_Express.mp4",
+          "poster_url": "https://archive.org/download/Horror_Express/__ia_thumb.jpg",
+          "description": "In 1906, on a train racing through Siberia, Christopher Lee and Peter Cushing are engulfed in nightmare when a frozen missing link comes to life. You can load the mpeg2 file into DVDAuthorGUI (a free program) and, with the push of a button, quickly create the structure of a DVD to watch on your television (after burning with ImgBurn or the like).",
+          "head_status": 206
+        },
+        {
+          "identifier": "KingOfTheZombies",
+          "title": "King of the Zombies",
+          "year": 1941,
+          "runtime_seconds": 4031,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "SciFi_Horror",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/KingOfTheZombies/KingOfTheZombies.mp4",
+          "poster_url": "https://archive.org/download/KingOfTheZombies/__ia_thumb.jpg",
+          "description": "A plane flying to the Bahamas gets blown off course and crashes on the island of the mysterious Dr. Sangare. Jefferson Jackson (Mantan Moreland) tries to warn his fellow survivors that the island's haunted but they all soon learn there's more going on than they initially supposed... Find out more about this movie on its IMDB page .",
+          "head_status": 206
+        },
+        {
+          "identifier": "IBuryTheLiving1958",
+          "title": "I Bury The Living (1958)",
+          "year": null,
+          "runtime_seconds": 4621,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "SciFi_Horror",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/IBuryTheLiving1958/IBuryTheLiving1958.mp4",
+          "poster_url": "https://archive.org/download/IBuryTheLiving1958/__ia_thumb.jpg",
+          "description": "From IMDB: A newly appointed cemetary chairman discovers that, merely by inserting a black pin into a wall-sized map of the cemetary, he can cause the death of the plot's owner. Richard Boone stars.",
+          "head_status": 206
+        },
+        {
+          "identifier": "the.-magician.-1926.-dvdrip.-600-mb.h-264.-mp-4-zoetrope",
+          "title": "The Magician (1926)",
+          "year": null,
+          "runtime_seconds": 4809,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "silent_films",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/the.-magician.-1926.-dvdrip.-600-mb.h-264.-mp-4-zoetrope/The%20Magician%20(1926).mp4",
+          "poster_url": "https://archive.org/download/the.-magician.-1926.-dvdrip.-600-mb.h-264.-mp-4-zoetrope/__ia_thumb.jpg",
+          "description": "I've been researching newly public domain films from 1929 and earlier, along with other pictures of the era that I find interesting, so I'm uploading the best possible copies that I can find. One of Rex Ingram's strangest films, The Magician was thought to be lost for decades before being rediscovered. At the time, it was uncommon to find horror films that were not at least partially comedic. In the picture, a woman is injured in an accident. Upon recovering, an occultist begins to stalk and obs",
+          "head_status": 206
+        },
+        {
+          "identifier": "the.-amazing.-mr..-x.-1948",
+          "title": "The Amazing Mr. X (1948)",
+          "year": null,
+          "runtime_seconds": 4675,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "Film_Noir",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/the.-amazing.-mr..-x.-1948/The%20Amazing%20Mr.%20X%20(1948)/mp4/The.Amazing.Mr..X.1948.mp4",
+          "poster_url": "https://archive.org/download/the.-amazing.-mr..-x.-1948/__ia_thumb.jpg",
+          "description": "The Amazing Mr. X, also known as The Spiritualist, is a 1948 American horror thriller film noir directed by Bernard Vorhaus. The film features a blend of mystery and supernatural elements, focusing on a fraudulent spiritualist.The story revolves around Christine Faber, a wealthy widow who seeks the help of Alexis, a supposed spiritualist. He appears to communicate with her deceased husband, but his abilities are revealed to be illusions created through special effects and prior knowledge of Chri",
+          "head_status": 206
+        },
+        {
+          "identifier": "Dead_People_movie",
+          "title": "Dead People",
+          "year": 1973,
+          "runtime_seconds": 5375,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "SciFi_Horror",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/Dead_People_movie/Dead_People.mp4",
+          "poster_url": "https://archive.org/download/Dead_People_movie/__ia_thumb.jpg",
+          "description": "Also known as \"Messiah of Evil\". Strikingly photographed, eerie, low-budget scary movie. The IMDB page is here. The MPEG2 is in NTSC format with NAV packets, so you can load it into dvdAuthorGUI and create a DVD to watch on your television.",
+          "head_status": 206
+        },
+        {
+          "identifier": "night_of_the_living_dead_ipod",
+          "title": "Night of the Living Dead iPod and Flash video versions",
+          "year": 1968,
+          "runtime_seconds": 5717,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "SciFi_Horror",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/night_of_the_living_dead_ipod/night_of_the_living_dead.mp4",
+          "poster_url": "https://archive.org/download/night_of_the_living_dead_ipod/__ia_thumb.jpg",
+          "description": "In this classic yet still creepy horror film, strangers hold up in a rural Pennsylvania farmhouse and battle constant attacks from dead locals who have been brought back to life by mysterious radiation. WARNING - This is a graphic horror film with some gory special effects. You can find more information regarding this film on its IMDb page Flash Web Video FLV File (right-click to download)",
+          "head_status": 206
+        },
+        {
+          "identifier": "TheBat1926",
+          "title": "The Bat (1926)",
+          "year": null,
+          "runtime_seconds": 5134,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "silent_films",
+            "SciFi_Horror",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/TheBat1926/TheBat1926.mp4",
+          "poster_url": "https://archive.org/download/TheBat1926/__ia_thumb.jpg",
+          "description": "A Silent film based upon the Broadway play by Mary Roberts Rinehart and Avery Hopwood, this Silent Gem was directed by Roland West in 1926, later being Remade as the Bat Whispers in 1930 (by Roland West) and again in 1958 in the Bat starring Vincent Price, also available at the Archive. Oh, and when I say silent, I mean silent - this was transferred from a 16mm print and was probably meant to be played with live musical accompaniment. SYNOPSIS: The Bat, a masked criminal, terrorises a mansion fi",
+          "head_status": 206
+        },
+        {
+          "identifier": "Indestructible_Man_movie",
+          "title": "Indestructible Man",
+          "year": 1956,
+          "runtime_seconds": 4232,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "film_scifi",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/Indestructible_Man_movie/Indestructible_Man.mp4",
+          "poster_url": "https://archive.org/download/Indestructible_Man_movie/__ia_thumb.jpg",
+          "description": "Betrayed by his fellow criminals, Lon Chaney, Jr. is executed, but has his chance for revenge when he is reanimated by a scientist. (This copy seems to have no gaps.) Find out more at the IMDB . (The video is interlaced in the MPEG2 file. If viewing with VLC, deinterlace with menu-path Video/Deinterlace/Blend.) The mpeg2 file can be loaded into DVDAuthorGUI (a free program) to create a DVD.",
+          "head_status": 206
+        },
+        {
+          "identifier": "horror_express_201508",
+          "title": "Horror_Express",
+          "year": null,
+          "runtime_seconds": 5224,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "SciFi_Horror",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/horror_express_201508/horror_express.mp4",
+          "poster_url": "https://archive.org/download/horror_express_201508/__ia_thumb.jpg",
+          "description": "This film has fallen into the Public Domain.",
+          "head_status": 206
+        },
+        {
+          "identifier": "TheDevilsDaughter",
+          "title": "The Devils Daughter",
+          "year": 1939,
+          "runtime_seconds": 3086,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "SciFi_Horror",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/TheDevilsDaughter/TheDevilsDaughter.mp4",
+          "poster_url": "https://archive.org/download/TheDevilsDaughter/__ia_thumb.jpg",
+          "description": "Sylvia Walton (Ida James) of Harlem inherits a Jamaican banana plantation and returns to manage it. Since her arrival, there's been no sign of her disinherited half-sister Isabelle (Nina Mae McKinney), who ran the plantation until their father's death. But Sylvia, her two rival suitors, and her comic- relief servant Percy are disturbed by the constant, growing sound of drums.",
+          "head_status": 206
+        },
+        {
+          "identifier": "LaLgendeDuFantome",
+          "title": "La L'gende du Fantome",
+          "year": 1908,
+          "runtime_seconds": 822,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "segundodechomon",
+            "silent_films",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/LaLgendeDuFantome/1908SegundoDeChomnLaLgendeDuFantome-LegendOfAGhost.mp4",
+          "poster_url": "https://archive.org/download/LaLgendeDuFantome/__ia_thumb.jpg",
+          "description": "1908 Segundo de Chomón La L'gende du Fantome - Legend of a Ghost",
+          "head_status": 206
+        },
+        {
+          "identifier": "dead_people_ipod",
+          "title": "Dead People",
+          "year": 1973,
+          "runtime_seconds": 5375,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "SciFi_Horror",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/dead_people_ipod/dead_people.mp4",
+          "poster_url": "https://archive.org/download/dead_people_ipod/__ia_thumb.jpg",
+          "description": "Creepy Drive-In style living dead movie",
+          "head_status": 206
+        },
+        {
+          "identifier": "the-sky-calls-1959ru",
+          "title": "Nebo Zovyot (The Sky Calls)1959",
+          "year": null,
+          "runtime_seconds": 4395,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "film_scifi",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/the-sky-calls-1959ru/nebo%20zovyot%20(1959)ru/The%20Sky%20Calls%20(1959)ru.mp4",
+          "poster_url": "https://archive.org/download/the-sky-calls-1959ru/__ia_thumb.jpg",
+          "description": "The Sky Calls, also known as Nebo Zovyot, is a 1959 Soviet science fiction film about a scientific expedition preparing to be the first to land on Mars. The story follows the Soviet spaceship Homeland as it encounters an American ship, Typhoon, which is also aiming for Mars, leading to a series of challenges and a dramatic rescue mission. Directed by Aleksandr Kozyr and Mikhail Karyukov, i t was filmed at Dovzhenko Film Studios in 1959 and premiered September 12, 1959. In 1962, an Americanized e",
+          "head_status": 206
+        },
+        {
+          "identifier": "shock",
+          "title": "Shock",
+          "year": 1946,
+          "runtime_seconds": 4169,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "Film_Noir",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/shock/Shock.mp4",
+          "poster_url": "https://archive.org/download/shock/__ia_thumb.jpg",
+          "description": "This post-World War II suspense thriller sets off an emotional roller coaster after the psychologically fragile wife of a POW (Anabel Shaw) witnesses a brutal murder from a hotel window while waiting to be reunited with her husband (Frank Latimer). By the time he arrives, she's nearly comatose with shock. The hotel's psychiatrist (Vincent Price) is called in to help Film noir classic, noted for its dark themes, stark camera angles and high-contrast lighting.",
+          "head_status": 206
+        },
+        {
+          "identifier": "CityOfTheDeadVideoQualityUpgrade",
+          "title": "THE CITY OF THE DEAD video quality upgrade",
+          "year": null,
+          "runtime_seconds": 4679,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "feature_films_picfixer",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/CityOfTheDeadVideoQualityUpgrade/CityOfTheDeadVideoQualityUpgrade.mp4",
+          "poster_url": "https://archive.org/download/CityOfTheDeadVideoQualityUpgrade/__ia_thumb.jpg",
+          "description": "This print is much sharper and cleaner than the existing IA copies, and it's in the correct aspect ratio. Known for its highly atmospheric settings and structural similarity to \"Psycho,\" which was purely coincidental, \"City of the Dead\" was poorly received at its US and UK theatrical openings. This changed in 1963 when it was released to US television. It has since achieved cult status and is recognized as a horror classic. Directed by John Liewellyn Moxey (as John Moxey) UK release 1960 US rele",
+          "head_status": 206
+        },
+        {
+          "identifier": "MutinyInOuterSpace_201901",
+          "title": "Mutiny in Outer Space",
+          "year": null,
+          "runtime_seconds": 4874,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "feature_films_picfixer",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/MutinyInOuterSpace_201901/Mutiny%20in%20Outer%20Space.mp4",
+          "poster_url": "https://archive.org/download/MutinyInOuterSpace_201901/__ia_thumb.jpg",
+          "description": "“Nice little movie” “Satisfactory sixties quickie” “Unconventional” “Not as bad as I expected” (IMDB reviews quotes). The fungus among us isn’t a mushroom omelet in this low-budget sci-fi adventure that’s not bad considering. (see TRIVIA) Large, okay cast. The production values are adequate for the plot. This print’s audio quality could be better. IMDB rating 5.0. Directed by Hugo Grimaldi (and Arthur C Pierce uncredited); Released in 1965. Complete print. TRIVIA: Filmed in six days with a reput",
+          "head_status": 206
+        },
+        {
+          "identifier": "THENINTHGUESTVideoQualityUpgrade",
+          "title": "THE NINTH GUEST video quality upgrade",
+          "year": null,
+          "runtime_seconds": 4032,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "feature_films_picfixer",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/THENINTHGUESTVideoQualityUpgrade/THE%20NINTH%20GUEST%20video%20quality%20upgrade.mp4",
+          "poster_url": "https://archive.org/download/THENINTHGUESTVideoQualityUpgrade/__ia_thumb.jpg",
+          "description": "This version has much improved contrast and brightness, plus it’s in the standard MPEG4 (MP4) format with a smaller download footprint than the existing IA copy. “Entertaining classic horror whodunit” “Amazing low-budget thriller” “A hidden gem” “Terrific mystery thriller” (IMDB reviews quotes). Thanks to its clever screenplay and dynamic direction this horror whodunit packs a lot of chills into a compact 65 minutes. Good cast too. Adapted from the novel “The Invisible Host.” Recommended. IMDB r",
+          "head_status": 206
+        },
+        {
+          "identifier": "SNOWCREATUREPHANTOMPLANET",
+          "title": "BOOTLEGGER'S DRIVE-IN SATURDAY NIGHT: SNOW CREATURE & THE PHANTOM PLANET",
+          "year": null,
+          "runtime_seconds": 447,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "film_scifi",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/SNOWCREATUREPHANTOMPLANET/VIDEO_TS/VIDEO_TS.mp4",
+          "poster_url": "https://archive.org/download/SNOWCREATUREPHANTOMPLANET/__ia_thumb.jpg",
+          "description": "A COMPLETE DVD. Features a custom menu with either poster art or a still photo from one of the movies and drive-in style audio. Burning this DVD is really easy: Download the zipped folder, open it, and extract the VIDEO TS folder. Grab a blank DVD and burn the VIDEO TS folder, that's the easiest way. I've also uploaded the files outside the .zip so they can be viewed here on this site. This DVD features SNOW CREATURE & THE PHANTOM PLANET, with previews and intermission reels. Enjoy the show!",
+          "head_status": 206
+        },
+        {
+          "identifier": "TheBrainThatWouldntDie_300",
+          "title": "The Brain That Wouldn't Die",
+          "year": 1962,
+          "runtime_seconds": 4941,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "film_scifi",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/TheBrainThatWouldntDie_300/TheBrainThatWouldntDiePresentedByMoviePowder.mp4",
+          "poster_url": "https://archive.org/download/TheBrainThatWouldntDie_300/__ia_thumb.jpg",
+          "description": "A doctor experimenting with transplant techniques keeps his girlfriend's head alive when she is decapitated in a car crash, then goes hunting for a new body. - IMDB Description",
+          "head_status": 206
+        },
+        {
+          "identifier": "TeenagersFromOuterSpace",
+          "title": "Teenagers From Outer Space",
+          "year": 1959,
+          "runtime_seconds": 5129,
+          "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+          "tier": "pd",
+          "collection": [
+            "film_scifi",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/TeenagersFromOuterSpace/TeenagersFromOuterSpace.mp4",
+          "poster_url": "https://archive.org/download/TeenagersFromOuterSpace/__ia_thumb.jpg",
+          "description": "A young alien (David Love) falls for a pretty teenage Earth girl (Dawn Anderson) and they team up to try to stop the plans of his invading cohorts. NOTE: This is the MPEG2 (and derivative versions). An AVI version is available here .",
+          "head_status": 206
+        },
+        {
+          "identifier": "ThingsHappenatNight",
+          "title": "Things Happen at Night",
+          "year": 1947,
+          "runtime_seconds": 3370,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "Comedy_Films",
+            "feature_films",
+            "moviesandfilms"
+          ],
+          "mp4_url": "https://archive.org/download/ThingsHappenatNight/ThingsHappenatNight.mp4",
+          "poster_url": "https://archive.org/download/ThingsHappenatNight/__ia_thumb.jpg",
+          "description": "A young girl finds herself possessed by the spirit of a mischievous demon.",
+          "head_status": 206
+        }
+      ],
+      "cycle_seconds": 106068
+    },
+    {
+      "id": "retrotv.vhs-vault",
+      "slug": "vhs-vault",
+      "name": "VHS Vault",
+      "tier": "pd",
+      "query": "collection:vhsvault AND licenseurl:*publicdomain* AND mediatype:(movies)",
+      "items": [
+        {
+          "identifier": "ImWithBusey",
+          "title": "I`m With Busey",
+          "year": null,
+          "runtime_seconds": 1276,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vhstvshows",
+            "vhsvault"
+          ],
+          "mp4_url": "https://archive.org/download/ImWithBusey/I'm%20With%20Busey/I%60m%20With%20Busey%20-%20Episode%2001.mp4",
+          "poster_url": "https://archive.org/download/ImWithBusey/__ia_thumb.jpg",
+          "description": "I'm with Busey was a comedy/documentary television show which aired on Comedy Central in the summer of 2003. It revolved around a young writer named Adam de la Peña, who met and befriended his childhood idol, actor Gary Busey. The premise of the show revolved around the idea of Gary Busey teaching Adam de la Peña all about the world. In one episode, for example, de la Peña complained to Busey about his lack of a love life. Busey helped de la Peña become more confident by setting him up with a da",
+          "head_status": 206
+        },
+        {
+          "identifier": "mike-jacksons-concert-for-little-kids-1994-aus-vhs-1",
+          "title": "Mike Jacksons Concert For Little Kids with Ian Blake",
+          "year": null,
+          "runtime_seconds": 3166,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vhskids",
+            "vhsvault"
+          ],
+          "mp4_url": "https://archive.org/download/mike-jacksons-concert-for-little-kids-1994-aus-vhs-1/Mike%20Jacksons%20Concert%20For%20Little%20Kids%20(1994%20AUS%20VHS)%20(1).mp4",
+          "poster_url": "https://archive.org/download/mike-jacksons-concert-for-little-kids-1994-aus-vhs-1/__ia_thumb.jpg",
+          "description": "Mike Jacksons Concert For Little Kids",
+          "head_status": 206
+        },
+        {
+          "identifier": "1_20210224_20210224_2055",
+          "title": "Reader's Digest Maravillas Naturales de Europa - Mitos y Leyendas - 1995",
+          "year": null,
+          "runtime_seconds": 3816,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vhsmisc",
+            "vhsvault"
+          ],
+          "mp4_url": "https://archive.org/download/1_20210224_20210224_2055/2.mp4",
+          "poster_url": "https://archive.org/download/1_20210224_20210224_2055/__ia_thumb.jpg",
+          "description": "El video Mitos y Leyendas proyecta una nueva y fascinante luz sobre las antiguas tradiciones de Europa y especialmente, sobre relatos cuyo orígenes habría que buscarlos en el propio paisaje. Es la naturaleza de los lugares su geografía, su clima, su atmósfera y sobre todo su belleza, la que da origen a la leyenda. ¿En qué otro lugar, a no ser bajo las centelleantes aguas azul turquesa de Santorini, se podría localizar la ciudad mágica y perdida de la Atlántida?, ¿acaso hay un sitio más apropiado",
+          "head_status": 206
+        },
+        {
+          "identifier": "blues-clues-its-joe-time",
+          "title": "Blue's Clues: It's Joe Time! (2002 VHS Rip)",
+          "year": null,
+          "runtime_seconds": 3498,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vhskids",
+            "vhsvault"
+          ],
+          "mp4_url": "https://archive.org/download/blues-clues-its-joe-time/Blue's%20Clue's%20-%20It's%20Joe%20Time!%20(2002%20VHS%20Rip).mp4",
+          "poster_url": "https://archive.org/download/blues-clues-its-joe-time/__ia_thumb.jpg",
+          "description": "Blue's Clues - It's Joe Time",
+          "head_status": 206
+        },
+        {
+          "identifier": "opening-to-to-wong-foo-thanks-for-everything-julie-newmar-1996-demo-vhs-true-hq",
+          "title": "Opening to To Wong Foo Thanks for Everything, Julie Newmar 1996 Demo VHS [True HQ]",
+          "year": null,
+          "runtime_seconds": 587,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vhsopenings",
+            "vhsvault"
+          ],
+          "mp4_url": "https://archive.org/download/opening-to-to-wong-foo-thanks-for-everything-julie-newmar-1996-demo-vhs-true-hq/Opening%20to%20To%20Wong%20Foo%20Thanks%20for%20Everything%2C%20Julie%20Newmar%201996%20Demo%20VHS%20%5BTrue%20HQ%5D.mp4",
+          "poster_url": "https://archive.org/download/opening-to-to-wong-foo-thanks-for-everything-julie-newmar-1996-demo-vhs-true-hq/__ia_thumb.jpg",
+          "description": "Distributed by: MCA.Universal Home Video | Screener copy | Tape print date: 48th week of 1995 | Sale date: February 20, 1996.",
+          "head_status": 206
+        },
+        {
+          "identifier": "mulan-mozis-elozetes-vhs",
+          "title": "Mulan | Mozis előzetes (VHS)",
+          "year": null,
+          "runtime_seconds": 126,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vhstrailers",
+            "vhsvault"
+          ],
+          "mp4_url": "https://archive.org/download/mulan-mozis-elozetes-vhs/Mulan%20Mozis%20el%C5%91zetes%20(VHS).mp4",
+          "poster_url": "https://archive.org/download/mulan-mozis-elozetes-vhs/__ia_thumb.jpg",
+          "description": "",
+          "head_status": 206
+        },
+        {
+          "identifier": "backyard-adventures-2003-vhs",
+          "title": "Baby Looney Tunes: Backyard Adventures (2003 VHS)",
+          "year": null,
+          "runtime_seconds": 2182,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vhskids",
+            "vhsvault"
+          ],
+          "mp4_url": "https://archive.org/download/backyard-adventures-2003-vhs/Backyard%20Adventures%20(2003%20VHS).mp4",
+          "poster_url": "https://archive.org/download/backyard-adventures-2003-vhs/__ia_thumb.jpg",
+          "description": "Baby Bugs Bunny and friends discover a whole new world outside their windows, including insects, flowers, and other wonders.",
+          "head_status": 206
+        },
+        {
+          "identifier": "vhs-1984-vid-20260917-151508",
+          "title": "Charlie St. Cloud (2010) WMax (September 2nd, 2011) Full Movie",
+          "year": null,
+          "runtime_seconds": 127,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vhsmovies",
+            "vhsvault"
+          ],
+          "mp4_url": "https://archive.org/download/vhs-1984-vid-20260917-151508/VHS1984_VID_20260917_151143.mp4",
+          "poster_url": "https://archive.org/download/vhs-1984-vid-20260917-151508/__ia_thumb.jpg",
+          "description": "Zac Efron Charlie St Cloud",
+          "head_status": 206
+        },
+        {
+          "identifier": "1990-11-16-the-disney-afternoon-gummi-bears-duck-tales-rescue-rangers-tale-spin-",
+          "title": "1990 11 16 The Disney Afternoon Gummi Bears, Duck Tales, Rescue Rangers, Tale Spin ( FOX WOFL TV 35 Orlando) [ Retro CCN# 607] TE NOS",
+          "year": null,
+          "runtime_seconds": 7189,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vhskids",
+            "vhsvault"
+          ],
+          "mp4_url": "https://archive.org/download/1990-11-16-the-disney-afternoon-gummi-bears-duck-tales-rescue-rangers-tale-spin-/1990-11-16%20-%20The%20Disney%20Afternoon%20-%20Gummi%20Bears%2C%20DuckTales%2C%20Rescue%20Rangers%2C%20TaleSpin%20(FOX%20WOFL-TV%2035%20Orlando)%20%5BRetroCCN%23607%5D_TE_NOS.mp4",
+          "poster_url": "https://archive.org/download/1990-11-16-the-disney-afternoon-gummi-bears-duck-tales-rescue-rangers-tale-spin-/__ia_thumb.jpg",
+          "description": "Video - #030",
+          "head_status": 206
+        },
+        {
+          "identifier": "sylvester-and-tweetys-crazy-capers-1985-warner-home-video-vhs",
+          "title": "Sylvester And Tweety's Crazy Capers 1985 WARNER HOME VIDEO VHS",
+          "year": null,
+          "runtime_seconds": 3491,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vhskids",
+            "vhsvault"
+          ],
+          "mp4_url": "https://archive.org/download/sylvester-and-tweetys-crazy-capers-1985-warner-home-video-vhs/Full%20VHS%20tape%20Sylvester%20and%20Tweety's%20Crazy%20Capers%201985%20vhs.mp4",
+          "poster_url": "https://archive.org/download/sylvester-and-tweetys-crazy-capers-1985-warner-home-video-vhs/__ia_thumb.jpg",
+          "description": "Contain: Tweet &amp; Lovely, Tweety &amp; The Beanstalk, Tree For Two, The Last Hungry Cat, Mouse Taken Identity, Tweety's S.O.S., Canned Feud, Hyde &amp; Go Tweet.",
+          "head_status": 206
+        },
+        {
+          "identifier": "vhs-1984-vid-20260412-083040",
+          "title": "Malibu's Most Wanted (2003) HBO Black (August 8th, 2004) Full Movie",
+          "year": null,
+          "runtime_seconds": 127,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vhsmisc",
+            "vhsvault"
+          ],
+          "mp4_url": "https://archive.org/download/vhs-1984-vid-20260412-083040/VHS1984_VID_20260412_083040.mp4",
+          "poster_url": "https://archive.org/download/vhs-1984-vid-20260412-083040/__ia_thumb.jpg",
+          "description": "Malibu's Most Wanted 2k3",
+          "head_status": 206
+        },
+        {
+          "identifier": "inspector-gadget-monster-madness-1993-video-release",
+          "title": "Inspector Gadget Monster Madness (1993 Video Release)",
+          "year": null,
+          "runtime_seconds": 2801,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vhskids",
+            "vhsvault"
+          ],
+          "mp4_url": "https://archive.org/download/inspector-gadget-monster-madness-1993-video-release/Inspector%20Gadget%20Monster%20Madness%20(1993%20Video%20Release).mp4",
+          "poster_url": "https://archive.org/download/inspector-gadget-monster-madness-1993-video-release/__ia_thumb.jpg",
+          "description": "Request by James Beasley",
+          "head_status": 206
+        },
+        {
+          "identifier": "full-size-render_20220912_1019",
+          "title": "Original VHS Opening and Closing To The Nature Of Australia Part One UK VHS Tape",
+          "year": null,
+          "runtime_seconds": 84,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vhsopenings",
+            "vhsvault"
+          ],
+          "mp4_url": "https://archive.org/download/full-size-render_20220912_1019/FullSizeRender.mp4",
+          "poster_url": "https://archive.org/download/full-size-render_20220912_1019/__ia_thumb.jpg",
+          "description": "Here is the Original VHS Opening and Closing To The Nature Of Australia Part One. Enjoy this one viewers.",
+          "head_status": 206
+        },
+        {
+          "identifier": "full-size-render_20220201_1553",
+          "title": "Original VHS Opening and Closing To Yes Prime Minister The Bishop’s Gambit UK VHS Tape",
+          "year": null,
+          "runtime_seconds": 93,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vhsopenings",
+            "vhsvault"
+          ],
+          "mp4_url": "https://archive.org/download/full-size-render_20220201_1553/FullSizeRender.mp4",
+          "poster_url": "https://archive.org/download/full-size-render_20220201_1553/__ia_thumb.jpg",
+          "description": "Here is the Original VHS Opening and Closing To Yes Prime Minister The Bishop’s Gambit on BBC Video! Enjoy!",
+          "head_status": 206
+        },
+        {
+          "identifier": "dvd-6847-disc-1-of-4-playboy-after-dark-1968-08-08",
+          "title": "DVD-6847 - Disc 1 of 4 - Playboy After Dark - August 8, 1968",
+          "year": null,
+          "runtime_seconds": 3174,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vhstvshows",
+            "vhsvault"
+          ],
+          "mp4_url": "https://archive.org/download/dvd-6847-disc-1-of-4-playboy-after-dark-1968-08-08/dvd-6847-disc-1-of-4-playboy-after-dark-1968-08-08.mp4",
+          "poster_url": "https://archive.org/download/dvd-6847-disc-1-of-4-playboy-after-dark-1968-08-08/__ia_thumb.jpg",
+          "description": "Recorded By: Mister T. Collection: The Mister T. DVD Collection Medium Type: DVD Uploaded Format: DVD ISO DVD-6847 - Disc 1 of 4 - Playboy After Dark - August 8, 1968 Playboy After Dark Musical Performance Compilation Iron Butterfly 8/8/68 (In A Gadda Da Vidda and Iron Butterfly Theme) Deep Purple 10/23/68 (And the Address and Hush) The Byrds 9/28/68(You Ain't Goin' Nowhere and This Wheel's On Fire) Grand Funk Railroad 12/3/69 (Mr. Limousine Driver and Please Don`t Worry) Steppenwolf 8/9/68(Sook",
+          "head_status": 206
+        },
+        {
+          "identifier": "opening-to-winnie-the-pooh-frankenpooh-2001-vhs",
+          "title": "Opening to Winnie the Pooh: Frankenpooh 2001 VHS",
+          "year": 2001,
+          "runtime_seconds": 427,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vhsopenings",
+            "vhsvault"
+          ],
+          "mp4_url": "https://archive.org/download/opening-to-winnie-the-pooh-frankenpooh-2001-vhs/y2mate.com%20-%20Opening%20to%20Winnie%20the%20Pooh%20Frankenpooh%202001%20VHS_480p%20(1).mp4",
+          "poster_url": "https://archive.org/download/opening-to-winnie-the-pooh-frankenpooh-2001-vhs/__ia_thumb.jpg",
+          "description": "This is the 2001 VHS of Winnie the Pooh: Frankenpooh. The order is: 1. Navy Blue Warning Screens 2. Walt Disney Home Entertainment Logo 3. Coming Soon to Own on Video and DVD (Halloween Version) 4. Dumbo: 60th Anniversary Edition Preview 5. Coming Soon to Own on Video (Halloween Version) 6. The Book of Pooh Videos Preview 7. Coming This Holiday Season 8. Rolie Polie Olie: A Jingle Jangle Holiday Preview 9. Mickey's Magical Christmas: Snowed In at the House of Mouse Preview 10. Now Available to O",
+          "head_status": 206
+        },
+        {
+          "identifier": "dvd-6883-two-and-a-half-men-2006-01-23",
+          "title": "DVD-6883 - Two and a Half Men - January 23, 2006",
+          "year": null,
+          "runtime_seconds": 5500,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vhstvshows",
+            "vhsvault"
+          ],
+          "mp4_url": "https://archive.org/download/dvd-6883-two-and-a-half-men-2006-01-23/dvd-6883-two-and-a-half-men-2006-01-23.mp4",
+          "poster_url": "https://archive.org/download/dvd-6883-two-and-a-half-men-2006-01-23/__ia_thumb.jpg",
+          "description": "Recorded By: Mister T. Collection: The Mister T. DVD Collection Medium Type: DVD Uploaded Format: DVD ISO DVD-6883 - Two and a Half Men - January 23, 2006 Two and a Half Men Humiliation Is a Visual Medium 1/23/2006 Charley uncharacteristically finds himself in a relationship that isn't based on sex. Love Isn't Blind, It's Retarded 2/6/2006 Charlie and Mia (Emmanuelle Vaugier) decide to make love, but after the long wait, he's worried that he won't live up to her expectations. Meanwhile, Alan has",
+          "head_status": 206
+        },
+        {
+          "identifier": "october-2011-7two-commercial-break-4",
+          "title": "October 2011 7Two commercial break (4)",
+          "year": null,
+          "runtime_seconds": 232,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vhscommercials",
+            "vhsvault"
+          ],
+          "mp4_url": "https://archive.org/download/october-2011-7two-commercial-break-4/October%202011%207Two%20commercial%20break%20(4).mp4",
+          "poster_url": "https://archive.org/download/october-2011-7two-commercial-break-4/__ia_thumb.jpg",
+          "description": "A commercial break which was recorded off 7two (Prime7 Newcastle) during October 2011, but I don't know when the break is produced at all.",
+          "head_status": 206
+        },
+        {
+          "identifier": "title-01-1_202509",
+          "title": "Thomas & Friends: Gallant Old Engine & Other Thomas Adventures (2001 VHS)",
+          "year": null,
+          "runtime_seconds": 2107,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vhskids",
+            "vhsvault"
+          ],
+          "mp4_url": "https://archive.org/download/title-01-1_202509/16b.%20Gallant%20Old%20Engine%20(US%20VHS)%20(Anchor%20Bay)%20%5B2001%5D.mp4",
+          "poster_url": "https://archive.org/download/title-01-1_202509/__ia_thumb.jpg",
+          "description": "PEEP! PEEP! Everyone's favorite #1 engine is back with more exciting stories from the Island of Sodor. Meet Bulstrode the Barge and find out how, even with his bad temper, he turned out to be really useful. Join in on the trick Stuart plays on Duke, and see how an elephant leaves Henry all washed up. So make sure your ticket is stamped and don't miss the train for another fun-filled adventure with Thomas and Friends.",
+          "head_status": 206
+        },
+        {
+          "identifier": "09a.-daisy-us-vhs-no-echo-1993",
+          "title": "Thomas & Friends: Daisy & Other Thomas Stories (1993 VHS)",
+          "year": null,
+          "runtime_seconds": 2166,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vhskids",
+            "vhsvault"
+          ],
+          "mp4_url": "https://archive.org/download/09a.-daisy-us-vhs-no-echo-1993/09a.%20Daisy%20(US%20VHS)%20(No%20Echo)%20%5B1993%5D.mp4",
+          "poster_url": "https://archive.org/download/09a.-daisy-us-vhs-no-echo-1993/__ia_thumb.jpg",
+          "description": "PEEP-PEEP! Come Journey to the Island of Sodor and share in the fun-filled escapades of Thomas the Tank Engine and Friends. Meet Daisy, a \"classy sassy passenger diesel,\" as well as Trevor, the very useful tractor engine. You'll see why Percy's up to his funnel in water, Gordon looks foolish, and Henry is proud, in their adventures through the Island of Sodor. So join the gang on Sir Topham Hatt's Railway line in Thomas the Tank Engine and Friends Volume 9.",
+          "head_status": 206
+        },
+        {
+          "identifier": "jungledyret-hugo-den-store-filmhelt-1996-swedish-dub",
+          "title": "Jungledyret Hugo – den store filmhelt (1996) - Swedish Dub",
+          "year": null,
+          "runtime_seconds": 4196,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vhsmovies",
+            "vhsvault"
+          ],
+          "mp4_url": "https://archive.org/download/jungledyret-hugo-den-store-filmhelt-1996-swedish-dub/Jungledyret%20Hugo%20%E2%80%93%20den%20store%20filmhelt%20(1996)%20-%20Swedish%20Dub.mp4",
+          "poster_url": "https://archive.org/download/jungledyret-hugo-den-store-filmhelt-1996-swedish-dub/__ia_thumb.jpg",
+          "description": "The fox girl Rita thinks day in and day out about the jungle animal Hugo ever since he went back to the jungle. But one day Hugo is captured by Konrad, the film star Izabella's ex. husband and companion from the first film, who wants to include him in his new film. Hugo manages to escape from the film studio and reunites with Rita, but Konrad and his men are on the hunt for Hugo. This will be the beginning of Hugo and Rita's journey towards many more adventures. Copyright Disclaimer under Sectio",
+          "head_status": 206
+        },
+        {
+          "identifier": "01-opening_20260215",
+          "title": "Veggietales Lyle the Kindly Viking 2001 Fanmade VHS",
+          "year": null,
+          "runtime_seconds": 1176,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vhskids",
+            "vhsvault"
+          ],
+          "mp4_url": "https://archive.org/download/01-opening_20260215/01%20Opening.mp4",
+          "poster_url": "https://archive.org/download/01-opening_20260215/__ia_thumb.jpg",
+          "description": "Opening Previews Jonah a Veggietales Movie Teaser Trailer Shrek Trailer Atlantis: The Lost Empire Trailer Jimmy Neutron Boy Genius Teaser Trailer Monsters: Inc. Teaser Trailer Rugrats in Paris: The Movie Trailer The Emperor's New Groove Trailer The Book of Pooh Teaser Trailer Nick Jr videos Trailer (including the upcoming Little Bill and Dora the Explorer videos) The Little Bear Movie Trailer Bob the Builder Trailer Kipper Trailer VeggieTales: The Ultimate Silly Song Collection (aka The Ultimate",
+          "head_status": 206
+        },
+        {
+          "identifier": "christmas-cartoons-1990-simitar-entertainment-vhsrip",
+          "title": "Christmas Cartoons (1990, Simitar Entertainment - VHSrip)",
+          "year": null,
+          "runtime_seconds": 3609,
+          "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vhskids",
+            "vhsvault"
+          ],
+          "mp4_url": "https://archive.org/download/christmas-cartoons-1990-simitar-entertainment-vhsrip/Christmas%20Cartoons%20(1990%2C%20Simitar%20Entertainment%20-%20VHSrip).mp4",
+          "poster_url": "https://archive.org/download/christmas-cartoons-1990-simitar-entertainment-vhsrip/__ia_thumb.jpg",
+          "description": "8 classic festive shorts including: Rudolph the Red Nosed Reindeer Santa's Surprise- featuring Little Audrey Christmas Comes But Once a Year - featuring Grampy Hector's Hectic Life - featuring Hector the Dog Jack Frost The Shanty Where Santy Claus Lives - featuring Father Christmas Snow Foolin' (A Screen Song cartoon) Howdy Doody's Christmas - featuring Howdy Doody",
+          "head_status": 206
+        },
+        {
+          "identifier": "sleeping-beauty-1959_20240121",
+          "title": "Walt disney platinum diamond and signature edition films",
+          "year": null,
+          "runtime_seconds": 5057,
+          "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vhskids",
+            "vhsvault"
+          ],
+          "mp4_url": "https://archive.org/download/sleeping-beauty-1959_20240121/101%20Dalmatians%20(1961).mp4",
+          "poster_url": "https://archive.org/download/sleeping-beauty-1959_20240121/__ia_thumb.jpg",
+          "description": "These are the 13 disney animated films that were released through platinum editions diamond editions and signature editions here's the films in there original vhs releases",
+          "head_status": 206
+        },
+        {
+          "identifier": "thomas-friends-come-for-the-ride-james-on-the-turntable",
+          "title": "Thomas & Friends; Come For The Ride! [James On The Turntable]",
+          "year": null,
+          "runtime_seconds": 224,
+          "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "tier": "pd",
+          "collection": [
+            "vhskids",
+            "vhsvault",
+            "fringe",
+            "deemphasize"
+          ],
+          "mp4_url": "https://archive.org/download/thomas-friends-come-for-the-ride-james-on-the-turntable/Thomas%20%26%20Friends%3B%20Come%20For%20The%20Ride!%20%5BJames%20On%20The%20Turntable%5D.mp4",
+          "poster_url": "https://archive.org/download/thomas-friends-come-for-the-ride-james-on-the-turntable/__ia_thumb.jpg",
+          "description": "Sometimes things get very busy in the yard and the Fat Controller has to ask the big engines to do shunting. They didn't like it and decide to take action. Lyrics: All these engines on the railway would like you all to see Just how much fun rockin' on the railway can be So why don't you come along and join them for the ride Just hang on tight, catch your breath and come for the ride of your life! CHORUS: Rockin', rockin' on the railway, Rollin', rollin' on the railway Movin', movin' down the lin",
+          "head_status": 206
+        }
+      ],
+      "cycle_seconds": 56431
+    }
+  ],
+  "skipped": [
+    {
+      "identifier": "the-biggest-ever-childens-tv-collection-volume-26",
+      "channel": "Saturday Morning Cartoons",
+      "reason": "runtime 17076s outside 20s-2h scheduling window"
+    },
+    {
+      "identifier": "the-biggest-ever-childrens-tv-collection-volume-15",
+      "channel": "Saturday Morning Cartoons",
+      "reason": "no MP4 derivative"
+    },
+    {
+      "identifier": "the-biggest-ever-childrens-tv-collection-volume-18",
+      "channel": "Saturday Morning Cartoons",
+      "reason": "no MP4 derivative"
+    },
+    {
+      "identifier": "the_conceited_general",
+      "channel": "Saturday Morning Cartoons",
+      "reason": "duplicate of an earlier channel"
+    },
+    {
+      "identifier": "the-biggest-ever-childrens-tv-collection-volume-9-christmas-edition",
+      "channel": "Saturday Morning Cartoons",
+      "reason": "runtime 19307s outside 20s-2h scheduling window"
+    },
+    {
+      "identifier": "the-biggest-ever-childrens-tv-collection-volume-1",
+      "channel": "Saturday Morning Cartoons",
+      "reason": "runtime 17430s outside 20s-2h scheduling window"
+    },
+    {
+      "identifier": "this_is_your_life_duke_kahanamoku",
+      "channel": "Classic TV",
+      "reason": "HEAD check failed (500 )"
+    },
+    {
+      "identifier": "ZIV_Television_Logos",
+      "channel": "Classic TV",
+      "reason": "runtime 6s outside 20s-2h scheduling window"
+    },
+    {
+      "identifier": "The_Trouble_With_Father",
+      "channel": "Classic TV",
+      "reason": "duplicate of an earlier channel"
+    },
+    {
+      "identifier": "till-the-clouds-roll-by-1946_202505",
+      "channel": "Drive-In Movies",
+      "reason": "runtime 8166s outside 20s-2h scheduling window"
+    },
+    {
+      "identifier": "TripDownMarketStreetrBeforeTheFireA_remove",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "202307_Schmidt_Collection_06",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0915_Getting_Ready_Emotionally_00_19_15_07",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "6088_HM_Honeymoon_Trip_June_1941_01_42_24_07",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "hair-raising_moments",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "city_of_neighbors_give_once_for_all",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "098286b",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "098388",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "this_is_automation",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "AbcsOfWalkin",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "PA100007MountShasta",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "200386_Facial_Changes",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0617_Waters_of_the_Commonwealth_M01995_19_01_01_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0577_Television_Commercials_Folgers_Coffee_15_30_30_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0780_Panama_Canal_14_52_26_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0649_Television_Commercials_Toy_Reel_20_35_24_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "rpcokeonthego001",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "Home_Movie_000236",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "098687",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "1099_How_to_Listen_To_New_Dimensions_in_Sound_M04056_15_24_44_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "1005_Story_of_a_Star_The_10_07_16_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "11090_hm_san_francisco_family",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "1498EasyOut",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0335_Message_to_No_One_12_29_01_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0358_HM_Wathen_Collection_San_Francisco_Yellowstone_Colorado_Illinoi_12_00_55_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0471_HM_Century_of_Progress_01_26_16_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0363_Wilson_Dam_School_The_17_01_09_15",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0369_HM_Medicus_Collection_Little_Journey_to_Washington_D_C_April_19_22_01_04_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0747_Coast_to_Coast_in_48_Hours_07_01_04_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0747_Television_Commercials_07_53_05_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0774_Gould_can_5185_1_12_49_23_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0780_Gould_can_5117_14_17_22_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0768_Idahos_State_Hospitals_19_02_36_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0779_Gould_can_5161_2_09_39_17_24",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0786_Patty_Garman_Teen-ager_05_34_42_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0632_Charlies_Atlas_13_50_50_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0632_Information_Machine_The_13_20_27_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0627_HM_Trip_Around_New_York_City_Summer_1954_2_18_46_11_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0670_Coffee_Break_02_38_41_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0679_Untitled_Cooking_Demonstration_06_26_28_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0691_Impact_66_02_02_40_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "1161ImaginationUnlimited",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0914_Dictators_or_Democracy_00_31_26_28",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0865_Unidentified_Old_Movie_Dupe_Footage_19_28_33_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0871_HM_Family_and_Childs_Birthday_Party__04_35_28_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0880_Retrievers_at_Work_12_42_56_20",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0905_Trimming_Beets_02_22_04_23",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0922_Structure_of_the_Earth_Volcanoes_The_00_17_03_19",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0885_Experimental_Neurosis_In_a_Dog_20_53_31_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0885_Photographic_Studies_in_Hypnosis_Abnormal_Psychology_20_43_50_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "0892_Installation_of_Books_Butler_Library_Columbia_University_01_18_30_00",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "Community_Development_with_Gunnison_Homes",
+      "channel": "Prelinger Theater",
+      "reason": "pd tier requires publicdomain licenseurl (got: (none))"
+    },
+    {
+      "identifier": "ShastaSodaCommercial-Frankenstein",
+      "channel": "Ad Break",
+      "reason": "duplicate of an earlier channel"
+    },
+    {
+      "identifier": "cnn-25-march-1993",
+      "channel": "Ad Break",
+      "reason": "HEAD check failed (500 )"
+    },
+    {
+      "identifier": "Network_IDs",
+      "channel": "Ad Break",
+      "reason": "runtime 6s outside 20s-2h scheduling window"
+    },
+    {
+      "identifier": "ScaryNightAtTheBijudoubleFeature",
+      "channel": "Creature Features",
+      "reason": "runtime 8516s outside 20s-2h scheduling window"
+    },
+    {
+      "identifier": "Week69",
+      "channel": "Creature Features",
+      "reason": "runtime 11600s outside 20s-2h scheduling window"
+    },
+    {
+      "identifier": "horrornight2atthebijoudoublefeature",
+      "channel": "Creature Features",
+      "reason": "runtime 10470s outside 20s-2h scheduling window"
+    },
+    {
+      "identifier": "ShockerInternetDriveIn-Week41boosForBelaDoubleFeature",
+      "channel": "Creature Features",
+      "reason": "runtime 12148s outside 20s-2h scheduling window"
+    },
+    {
+      "identifier": "ShockerInternetDriveIn-Week53halloweenNuclearHorrorsDoubleFeature",
+      "channel": "Creature Features",
+      "reason": "runtime 10996s outside 20s-2h scheduling window"
+    },
+    {
+      "identifier": "ShockerInternetDriveIn-Week37summerSpaghettiDoubleFeature",
+      "channel": "Creature Features",
+      "reason": "runtime 10820s outside 20s-2h scheduling window"
+    },
+    {
+      "identifier": "ShockerInternetDriveInWeek8-TerrorTripleFeature",
+      "channel": "Creature Features",
+      "reason": "runtime 13018s outside 20s-2h scheduling window"
+    },
+    {
+      "identifier": "ShockerInternetDriveInWeek9-horrorHeadDoubleFeature",
+      "channel": "Creature Features",
+      "reason": "runtime 11463s outside 20s-2h scheduling window"
+    },
+    {
+      "identifier": "Week99",
+      "channel": "Creature Features",
+      "reason": "runtime 11030s outside 20s-2h scheduling window"
+    },
+    {
+      "identifier": "citv-plus-cbbc-and-tiny-tcc-shows-1996-1997",
+      "channel": "VHS Vault",
+      "reason": "runtime 15807s outside 20s-2h scheduling window"
+    },
+    {
+      "identifier": "2025-07-21-15-40-56-1",
+      "channel": "VHS Vault",
+      "reason": "runtime 9845s outside 20s-2h scheduling window"
+    },
+    {
+      "identifier": "in-shot-20241231-224114729",
+      "channel": "VHS Vault",
+      "reason": "runtime 8290s outside 20s-2h scheduling window"
+    },
+    {
+      "identifier": "citv-and-cbbc-collection-1997",
+      "channel": "VHS Vault",
+      "reason": "runtime 18151s outside 20s-2h scheduling window"
+    }
+  ]
+}

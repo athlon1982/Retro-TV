@@ -1,0 +1,144 @@
+{
+  "folders": [
+    {
+      "limit": 200,
+      "name": "Saturday Morning Cartoons",
+      "query": "collection:animationandcartoons AND licenseurl:*publicdomain* AND mediatype:(movies)",
+      "tier": "pd"
+    },
+    {
+      "limit": 200,
+      "name": "Classic TV",
+      "query": "collection:classic_tv AND licenseurl:*publicdomain* AND mediatype:(movies)",
+      "tier": "pd"
+    },
+    {
+      "limit": 200,
+      "name": "Drive-In Movies",
+      "query": "collection:feature_films AND licenseurl:*publicdomain* AND mediatype:(movies)",
+      "tier": "pd"
+    },
+    {
+      "limit": 200,
+      "name": "Prelinger Theater",
+      "query": "collection:prelinger AND mediatype:(movies)",
+      "tier": "pd"
+    },
+    {
+      "limit": 100,
+      "name": "Ad Break",
+      "query": "collection:classic_tv_commercials AND licenseurl:*publicdomain* AND mediatype:(movies)",
+      "tier": "pd"
+    },
+    {
+      "limit": 100,
+      "name": "Creature Features",
+      "query": "collection:feature_films AND licenseurl:*publicdomain* AND (subject:(horror) OR subject:(science fiction)) AND mediatype:(movies)",
+      "tier": "pd"
+    },
+    {
+      "limit": 100,
+      "name": "VHS Vault",
+      "query": "collection:vhsvault AND licenseurl:*publicdomain* AND mediatype:(movies)",
+      "tier": "pd"
+    },
+    {
+      "limit": 100,
+      "name": "Soaps",
+      "query": "(title:(General Hospital) OR title:(Guiding Light) OR title:(Dark Shadows)) AND mediatype:(movies)",
+      "tier": "user-uploaded"
+    },
+    {
+      "limit": 100,
+      "name": "Toonami",
+      "query": "title:(Toonami) AND mediatype:(movies)",
+      "tier": "user-uploaded"
+    },
+    {
+      "limit": 100,
+      "name": "Anime",
+      "query": "collection:anime AND mediatype:(movies)",
+      "tier": "user-uploaded"
+    }
+  ],
+  "libraryName": "Retro TV",
+  "mp4Preference": "full",
+  "outputDir": "./output",
+  "pilot": [
+    {
+      "folder": "Saturday Morning Cartoons",
+      "identifier": "all-new-popeye-and-friends",
+      "tier": "pd"
+    },
+    {
+      "folder": "Saturday Morning Cartoons",
+      "identifier": "the_conceited_general",
+      "tier": "pd"
+    },
+    {
+      "folder": "Classic TV",
+      "identifier": "The_Trouble_With_Father",
+      "tier": "pd"
+    },
+    {
+      "folder": "Classic TV",
+      "identifier": "Yet_More_Lucy",
+      "tier": "pd"
+    },
+    {
+      "folder": "Drive-In Movies",
+      "identifier": "TheManInGrey",
+      "tier": "pd"
+    },
+    {
+      "folder": "Drive-In Movies",
+      "identifier": "UnknownWorld_201503",
+      "tier": "pd"
+    },
+    {
+      "folder": "Prelinger Theater",
+      "identifier": "ToEnrichMank",
+      "tier": "pd"
+    },
+    {
+      "folder": "Prelinger Theater",
+      "identifier": "TraderTh1956",
+      "tier": "pd"
+    },
+    {
+      "folder": "Ad Break",
+      "identifier": "ShastaSodaCommercial-Frankenstein",
+      "tier": "pd"
+    },
+    {
+      "folder": "Soaps",
+      "identifier": "general-hospital-3-11-1992-part-2-of-4",
+      "tier": "user-uploaded"
+    },
+    {
+      "folder": "Soaps",
+      "identifier": "dark-shadows-disc-6",
+      "tier": "user-uploaded"
+    },
+    {
+      "folder": "Toonami",
+      "identifier": "toonami-pre-flight-saturday-august-29th-2020",
+      "tier": "user-uploaded"
+    }
+  ],
+  "prune": [],
+  "requestsPerSecond": 1,
+  "userAgent": "RetroTV/0.1 (personal Jellyfin project)",
+  "overrides": {
+    "The_Trouble_With_Father": {
+      "title": "The Trouble with Father"
+    },
+    "Yet_More_Lucy": {
+      "title": "What's My Line with Lucille Ball"
+    },
+    "UnknownWorld_201503": {
+      "title": "Unknown World",
+      "year": 1951
+    }
+  }
+}

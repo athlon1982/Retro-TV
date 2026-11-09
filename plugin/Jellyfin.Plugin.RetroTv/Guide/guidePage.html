@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Retro TV — Channel Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{
+  --rtv-bg:#0000a8; --rtv-panel:#00007a; --rtv-text:#ffffff; --rtv-muted:#b8b8ff;
+  --rtv-accent:#ffff00; --rtv-header:#00005e; --rtv-grid:#3333cc; --rtv-now:#ffff00;
+  --rtv-block:#0000c8; --rtv-block-hover:#1a1ae8; --rtv-live:#ff0000;
+  --rtv-display:'Courier New',monospace; --rtv-body:'Courier New',monospace; --rtv-mono:'Courier New',monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--rtv-bg);color:var(--rtv-text);font-family:var(--rtv-body)}
+header{background:var(--rtv-header);padding:10px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;border-bottom:2px solid var(--rtv-accent)}
+header h1{font-family:var(--rtv-display);margin:0;font-size:24px;color:var(--rtv-accent);letter-spacing:1px}
+header .sub{color:var(--rtv-muted);font-size:12px}
+#weather{color:var(--rtv-accent);font-size:13px;font-weight:bold}
+#themes{display:flex;gap:6px;align-items:center;margin-left:auto}
+#themes button{background:var(--rtv-panel);color:var(--rtv-text);border:1px solid var(--rtv-grid);border-radius:4px;padding:5px 9px;cursor:pointer;font-family:var(--rtv-body);font-size:12px}
+#themes button.active{border-color:var(--rtv-accent);color:var(--rtv-accent)}
+#pager{display:flex;gap:6px;align-items:center;padding:8px 16px;border-bottom:1px solid var(--rtv-grid);flex-wrap:wrap}
+#pager button{background:var(--rtv-accent);color:#000;border:none;border-radius:4px;padding:6px 12px;cursor:pointer;font-family:var(--rtv-body);font-weight:bold}
+#pager input{width:64px;padding:5px;border:2px solid var(--rtv-accent);border-radius:4px;background:#fff;color:#000;font-family:var(--rtv-body);font-size:14px;text-align:center}
+#pager .pageinfo{color:var(--rtv-muted);font-size:13px}
+/* Channel-flip banner: big number + name, NOW with start-end, NEXT */
+#flip{display:flex;gap:16px;align-items:stretch;padding:12px 16px;border-bottom:2px solid var(--rtv-accent);flex-wrap:wrap}
+#flip .chnum{font-family:var(--rtv-display);font-size:64px;line-height:1;color:var(--rtv-accent);font-weight:bold;min-width:110px;text-align:center}
+#flip .chinfo{flex:1;min-width:260px}
+#flip .chname{font-family:var(--rtv-display);font-size:26px;color:var(--rtv-accent);text-transform:uppercase}
+#flip .tier{font-size:11px;color:var(--rtv-muted);text-transform:uppercase;letter-spacing:1px}
+#flip .nowline{font-size:17px;margin-top:6px}
+#flip .nowline b{color:var(--rtv-accent)}
+#flip .nextline{font-size:14px;color:var(--rtv-muted);margin-top:4px}
+#flip .nextline b{color:var(--rtv-text)}
+#livebox{flex:0 0 340px;max-width:100%}
+#livebox video{width:340px;max-width:100%;aspect-ratio:4/3;background:#000;border:2px solid var(--rtv-accent);display:block}
+#livebox .cap{font-size:11px;color:var(--rtv-muted);text-align:center;padding-top:3px}
+#meta{padding:6px 16px;color:var(--rtv-muted);font-size:12px;border-bottom:1px solid var(--rtv-grid)}
+#gridWrap{position:relative;overflow-x:auto;padding:0 0 20px 0}
+#grid{position:relative;min-width:900px}
+#timehead{display:flex;border-bottom:2px solid var(--rtv-accent);background:var(--rtv-header);position:sticky;top:0;z-index:6}
+#timehead .corner{flex:0 0 220px;padding:8px 12px;font-weight:bold;color:var(--rtv-accent);border-right:1px solid var(--rtv-grid)}
+#timehead .cols{flex:1;position:relative;height:34px}
+#timehead .tcol{position:absolute;top:8px;font-size:13px;color:var(--rtv-accent);font-weight:bold;transform:translateX(-50%);white-space:nowrap}
+.row{display:flex;border-bottom:1px solid var(--rtv-grid);min-height:64px;cursor:pointer}
+.row.sel{background:rgba(255,255,0,0.08)}
+.chan{flex:0 0 220px;padding:8px 12px;background:var(--rtv-panel);border-right:1px solid var(--rtv-grid);display:flex;gap:10px;align-items:center}
+.chan .num{font-family:var(--rtv-display);font-size:26px;color:var(--rtv-accent);font-weight:bold;min-width:44px}
+.chan .nm{font-size:14px;line-height:1.25}
+.chan .nm small{display:block;font-size:10px;color:var(--rtv-muted);text-transform:uppercase;letter-spacing:1px}
+.slots{flex:1;position:relative}
+.prog{position:absolute;top:6px;bottom:6px;background:var(--rtv-block);border:1px solid var(--rtv-grid);border-radius:3px;padding:5px 7px;overflow:hidden;cursor:pointer}
+.prog:hover{background:var(--rtv-block-hover)}
+.prog b{display:block;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.prog span{font-size:11px;color:var(--rtv-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+.prog.now{border-color:var(--rtv-now);box-shadow:inset 0 0 0 1px var(--rtv-now)}
+.prog .live{display:inline-block;background:var(--rtv-live);color:#fff;font-size:10px;border-radius:3px;padding:0 5px;margin-left:6px;vertical-align:middle}
+#nowLine{position:absolute;top:0;bottom:0;width:2px;background:var(--rtv-now);z-index:5;pointer-events:none}
+#detail{padding:12px 16px;border-top:1px solid var(--rtv-grid);min-height:60px}
+#detail h2{margin:0 0 4px 0;font-size:17px;font-family:var(--rtv-display);color:var(--rtv-accent)}
+#detail p{margin:0;color:var(--rtv-muted);font-size:13px}
+footer{padding:10px 16px;color:var(--rtv-muted);font-size:11px;border-top:1px solid var(--rtv-grid)}
+#crt{position:fixed;inset:0;pointer-events:none;z-index:50;display:none}
+#crt .scan{position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,0.22) 0 1px,transparent 1px 3px)}
+#crt .vig{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,0.45) 100%)}
+</style>
+</head>
+<body>
+<div id="crt"><div class="scan"></div><div class="vig"></div></div>
+<header>
+  <h1>📺 RETRO TV</h1>
+  <div class="sub">Channel guide — all times Eastern · streams from the Internet Archive</div>
+  <div id="weather"></div>
+  <div id="themes"></div>
+</header>
+<div id="pager">
+  <button id="prevPage">◀ PREV</button>
+  <button id="nextPage">NEXT ▶</button>
+  <span class="pageinfo" id="pageInfo"></span>
+  <span style="flex:1"></span>
+  <label for="jumpNum">Jump to channel:</label>
+  <input id="jumpNum" type="number" min="1" placeholder="CH #">
+  <button id="jumpGo">GO</button>
+</div>
+<div id="flip">
+  <div class="chnum" id="flipNum">--</div>
+  <div class="chinfo">
+    <div class="chname" id="flipName">Loading…</div>
+    <div class="tier" id="flipTier"></div>
+    <div class="nowline" id="flipNow"></div>
+    <div class="nextline" id="flipNext"></div>
+  </div>
+  <div id="livebox">
+    <video id="live" controls autoplay muted playsinline></video>
+    <div class="cap" id="liveCap">LIVE PICTURE — select a channel to watch</div>
+  </div>
+</div>
+<div id="meta">Loading guide…</div>
+<div id="gridWrap"><div id="grid"></div><div id="nowLine" style="display:none"></div></div>
+<div id="detail"><h2>Pick a program</h2><p>Click any program block to see what it is and flip to its channel.</p></div>
+<footer>Retro TV channel guide (Jellyfin plugin) · shared clock — when you tune in the show is already underway, just like real TV · Soaps play oldest episode first · Program data from the Internet Archive · Jellyfin's built-in Live TV guide shows the same channels and programs (its look is Jellyfin's own and can't be rethemed) · Weather via Open-Meteo (see the Weather channel)</footer>
+<script src="https://cdn.jsdelivr.net/npm/mpegts.js@1.7.3/dist/mpegts.min.js"></script>
+<script>
+const params = new URLSearchParams(location.search);
+let themeId = params.get('theme') || 'woodgrain-78';
+let themes = [];
+let guide = null;
+let selectedSlug = null;
+let page = 0;
+const PAGE_SIZE = 8;
+const HOURS = 2;
+let player = null;
+
+async function loadThemes(){
+  try {
+    const r = await fetch('/RetroTv/Guide/Themes'); themes = await r.json();
+  } catch(e){ themes = []; }
+  const box = document.getElementById('themes');
+  box.innerHTML = '';
+  for (const t of themes){
+    const b = document.createElement('button');
+    b.textContent = t.name;
+    if (t.id === themeId) b.classList.add('active');
+    b.onclick = () => { themeId = t.id; applyTheme(); [...box.children].forEach(x=>x.classList.remove('active')); b.classList.add('active'); };
+    box.appendChild(b);
+  }
+}
+async function applyTheme(){
+  try {
+    const t = themes.find(x => (x.id || x.Id) === themeId) || themes[0];
+    if (!t) return;
+    const root = document.documentElement.style;
+    const c = t.colors || {};
+    root.setProperty('--rtv-bg', c.background || '#0000a8');
+    root.setProperty('--rtv-panel', c.panel || '#00007a');
+    root.setProperty('--rtv-text', c.text || '#ffffff');
+    root.setProperty('--rtv-muted', c.mutedText || '#b8b8ff');
+    root.setProperty('--rtv-accent', c.accent || '#ffff00');
+    root.setProperty('--rtv-header', c.header || '#00005e');
+    root.setProperty('--rtv-grid', c.gridLine || '#3333cc');
+    root.setProperty('--rtv-now', c.nowLine || '#ffff00');
+    root.setProperty('--rtv-block', c.programBlock || '#0000c8');
+    root.setProperty('--rtv-block-hover', c.programBlockHover || '#1a1ae8');
+    root.setProperty('--rtv-live', c.liveBadge || '#ff0000');
+    const f = t.fonts || {};
+    root.setProperty('--rtv-display', f.display || "'Courier New',monospace");
+    root.setProperty('--rtv-body', f.body || "'Courier New',monospace");
+    root.setProperty('--rtv-mono', f.mono || "'Courier New',monospace");
+    document.getElementById('crt').style.display = (t.crtOverlay && t.crtOverlay.enabled) ? 'block' : 'none';
+  } catch(e){}
+}
+function fmtTime(iso){ const d = new Date(iso); let h = d.getHours(); const ap = h >= 12 ? 'P' : 'A'; h = h % 12 || 12; return h + ':' + String(d.getMinutes()).padStart(2,'0') + ap; }
+function fmtShort(iso){ const d = new Date(iso); let h = d.getHours(); const ap = h >= 12 ? 'P' : 'A'; h = h % 12 || 12; return h + ':' + String(d.getMinutes()).padStart(2,'0') + ap; }
+async function loadGuide(){
+  const r = await fetch('/RetroTv/Guide/Data?hours=' + HOURS);
+  guide = await r.json();
+  if (!selectedSlug && guide.channels.length) selectChannel(guide.channels[0].slug, false);
+  render();
+}
+function currentAndNext(ch, now){
+  let cur = null, nxt = null;
+  for (const p of ch.programs){
+    const s = new Date(p.start).getTime(), e = new Date(p.stop).getTime();
+    if (s <= now && e > now) cur = p;
+    else if (s > now && !nxt) { nxt = p; break; }
+  }
+  return { cur, nxt };
+}
+function selectChannel(slug, scroll){
+  selectedSlug = slug;
+  const ch = guide.channels.find(c => c.slug === slug);
+  if (!ch) return;
+  const now = Date.now();
+  const { cur, nxt } = currentAndNext(ch, now);
+  document.getElementById('flipNum').textContent = 'CH ' + ch.number;
+  document.getElementById('flipName').textContent = ch.name;
+  document.getElementById('flipTier').textContent = (ch.tier === 'user-uploaded' ? 'User-uploaded recordings — not public domain' : 'Public domain');
+  document.getElementById('flipNow').innerHTML = cur
+    ? 'NOW: <b></b> <span></span>'
+    : 'NOW: —';
+  if (cur){
+    const b = document.querySelector('#flipNow b'), s = document.querySelector('#flipNow span');
+    b.textContent = cur.title + (cur.year ? ' (' + cur.year + ')' : '');
+    s.textContent = fmtShort(cur.start) + ' – ' + fmtShort(cur.stop);
+  }
+  document.getElementById('flipNext').innerHTML = nxt ? 'NEXT: <b></b> <span></span>' : 'NEXT: —';
+  if (nxt){
+    const b = document.querySelector('#flipNext b'), s = document.querySelector('#flipNext span');
+    b.textContent = nxt.title + (nxt.year ? ' (' + nxt.year + ')' : '');
+    s.textContent = fmtShort(nxt.start) + ' – ' + fmtShort(nxt.stop);
+  }
+  document.getElementById('liveCap').textContent = 'LIVE PICTURE — CH ' + ch.number + ' ' + ch.name.toUpperCase();
+  attachPlayer(ch.slug);
+  render();
+}
+function attachPlayer(slug){
+  const video = document.getElementById('live');
+  const url = '/RetroTv/Live/' + slug;
+  try {
+    if (window.mpegts && mpegts.isSupported()){
+      if (player) { try { player.destroy(); } catch(e){} player = null; }
+      player = mpegts.createPlayer({ type: 'mse', isLive: true, url });
+      player.attachMediaElement(video);
+      player.load();
+      player.play().catch(()=>{});
+      return;
+    }
+  } catch(e){}
+  // Fallback: no MPEG-TS player available (CDN blocked) — show the current
+  // programme's poster as a still instead of a dead video box.
+  const ch = guide.channels.find(c => c.slug === slug);
+  const { cur } = ch ? currentAndNext(ch, Date.now()) : {};
+  if (cur && cur.poster_url){
+    video.style.display = 'none';
+    let img = document.getElementById('liveStill');
+    if (!img){
+      img = document.createElement('img');
+      img.id = 'liveStill';
+      img.style.cssText = 'width:340px;max-width:100%;aspect-ratio:4/3;object-fit:cover;border:2px solid var(--rtv-accent);display:block';
+      video.parentNode.insertBefore(img, video);
+    }
+    img.src = cur.poster_url;
+    document.getElementById('liveCap').textContent = 'LIVE PICTURE UNAVAILABLE (player library blocked) — showing current programme poster';
+  }
+}
+function jumpTo(num){
+  const ch = guide.channels.find(c => c.number === num);
+  if (!ch){ document.getElementById('pageInfo').textContent = 'No channel ' + num; return; }
+  const idx = guide.channels.indexOf(ch);
+  page = Math.floor(idx / PAGE_SIZE);
+  selectChannel(ch.slug, true);
+}
+function render(){
+  if (!guide) return;
+  const now = Date.now();
+  const winStart = now - 15*60*1000;
+  const winEnd = now + HOURS*3600*1000;
+  const winMs = winEnd - winStart;
+  const totalPages = Math.max(1, Math.ceil(guide.channels.length / PAGE_SIZE));
+  page = Math.min(page, totalPages - 1);
+  document.getElementById('pageInfo').textContent =
+    'Page ' + (page + 1) + ' of ' + totalPages + ' · ' + guide.channels.length + ' channels · now ' +
+    fmtTime(new Date(now).toISOString()) + ' · guide generated ' +
+    new Date(guide.generated_at).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',second:'2-digit'});
+  document.getElementById('meta').textContent =
+    guide.channels.length + ' channels · ' + guide.channels.reduce((s,c)=>s+c.programs.length,0) +
+    ' programs in the next ' + HOURS + ' h · up/down flips channels — click a row or type a channel number above';
+  const grid = document.getElementById('grid');
+  grid.innerHTML = '';
+  // Time-column header (30-min columns like 1:30P / 2:00P / 2:30P).
+  const head = document.createElement('div'); head.id = 'timehead';
+  const corner = document.createElement('div'); corner.className = 'corner'; corner.textContent = 'CHANNEL';
+  head.appendChild(corner);
+  const cols = document.createElement('div'); cols.className = 'cols';
+  const firstCol = Math.ceil(winStart / 1800000) * 1800000;
+  for (let t = firstCol; t <= winEnd; t += 1800000){
+    const el = document.createElement('div'); el.className = 'tcol';
+    el.style.left = ((t - winStart) / winMs * 100) + '%';
+    el.textContent = fmtShort(new Date(t).toISOString());
+    cols.appendChild(el);
+  }
+  head.appendChild(cols);
+  grid.appendChild(head);
+  const pageChans = guide.channels.slice(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE);
+  for (const ch of pageChans){
+    const row = document.createElement('div');
+    row.className = 'row' + (ch.slug === selectedSlug ? ' sel' : '');
+    row.onclick = () => selectChannel(ch.slug, false);
+    const cc = document.createElement('div'); cc.className = 'chan';
+    cc.innerHTML = '<div class="num"></div><div class="nm"><b></b><small></small></div>';
+    cc.querySelector('.num').textContent = ch.number;
+    cc.querySelector('.nm b').textContent = ch.name;
+    cc.querySelector('.nm small').textContent = ch.tier === 'user-uploaded' ? 'user-uploaded' : 'public domain';
+    row.appendChild(cc);
+    const slots = document.createElement('div'); slots.className = 'slots';
+    for (const p of ch.programs){
+      const s = new Date(p.start).getTime(), e = new Date(p.stop).getTime();
+      if (e <= winStart || s >= winEnd) continue;
+      const left = Math.max(0, (s - winStart) / winMs * 100);
+      const width = Math.min(100 - left, (Math.min(e, winEnd) - Math.max(s, winStart)) / winMs * 100);
+      if (width < 0.5) continue;
+      const d = document.createElement('div');
+      d.className = 'prog' + ((s <= now && e > now) ? ' now' : '');
+      d.style.left = left + '%'; d.style.width = width + '%';
+      d.innerHTML = '<b></b><span></span>';
+      d.querySelector('b').textContent = p.title + (p.year ? ' (' + p.year + ')' : '') + ((s <= now && e > now) ? ' ● LIVE' : '');
+      d.querySelector('span').textContent = fmtShort(p.start) + ' – ' + fmtShort(p.stop);
+      d.title = p.title + ' — ' + p.description;
+      d.onclick = (ev) => {
+        ev.stopPropagation();
+        selectChannel(ch.slug, false);
+        document.getElementById('detail').innerHTML = '<h2></h2><p></p>';
+        const h = document.querySelector('#detail h2'), pp = document.querySelector('#detail p');
+        h.textContent = p.title + (p.year ? ' (' + p.year + ')' : '') + ' — CH ' + ch.number + ' ' + ch.name;
+        pp.textContent = fmtShort(p.start) + ' – ' + fmtShort(p.stop) + ' · ' + (p.description || 'No description.') + ' · ' + (ch.tier === 'user-uploaded' ? 'User-uploaded recording — not public domain' : 'Public domain') + ' · archive.org/' + p.identifier;
+      };
+      slots.appendChild(d);
+    }
+    row.appendChild(slots);
+    grid.appendChild(row);
+  }
+  const nl = document.getElementById('nowLine');
+  nl.style.display = 'block';
+  nl.style.left = 'calc(220px + (100% - 220px) * ' + ((now - winStart) / winMs) + ')';
+}
+async function loadWeather(){
+  try {
+    const r = await fetch('/RetroTv/Guide/Weather');
+    if (!r.ok) return;
+    const d = await r.json();
+    const place = d.placeName || d.place || 'Wallingford, VT';
+    const temp = (d.temperatureF !== undefined && d.temperatureF !== null) ? Math.round(d.temperatureF) + '°F' : '';
+    const cond = d.condition || '';
+    document.getElementById('weather').textContent = '⛅ ' + place + (temp ? ': ' + temp : '') + (cond ? ', ' + cond : '');
+  } catch(e){}
+}
+document.getElementById('prevPage').onclick = () => { const totalPages = Math.max(1, Math.ceil(guide.channels.length / PAGE_SIZE)); page = (page - 1 + totalPages) % totalPages; render(); };
+document.getElementById('nextPage').onclick = () => { const totalPages = Math.max(1, Math.ceil(guide.channels.length / PAGE_SIZE)); page = (page + 1) % totalPages; render(); };
+document.getElementById('jumpGo').onclick = () => { const n = parseInt(document.getElementById('jumpNum').value, 10); if (n) jumpTo(n); };
+document.getElementById('jumpNum').addEventListener('keydown', (e) => { if (e.key === 'Enter'){ const n = parseInt(e.target.value, 10); if (n) jumpTo(n); } });
+document.addEventListener('keydown', (e) => {
+  if (document.activeElement && document.activeElement.tagName === 'INPUT') return;
+  if (!guide) return;
+  const idx = guide.channels.findIndex(c => c.slug === selectedSlug);
+  if (e.key === 'ArrowDown' || e.key === 'ArrowUp'){
+    const next = e.key === 'ArrowDown'
+      ? guide.channels[(idx + 1) % guide.channels.length]
+      : guide.channels[(idx - 1 + guide.channels.length) % guide.channels.length];
+    page = Math.floor(guide.channels.indexOf(next) / PAGE_SIZE);
+    selectChannel(next.slug, true);
+    e.preventDefault();
+  }
+});
+(async () => { await loadThemes(); await applyTheme(); await loadGuide(); loadWeather(); setInterval(loadGuide, 5*60*1000); setInterval(render, 30000); })();
+</script>
+</body>
+</html>
