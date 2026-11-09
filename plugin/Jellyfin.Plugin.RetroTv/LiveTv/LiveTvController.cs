@@ -580,6 +580,9 @@ public class LiveTvController : ControllerBase
             return null;
         }
 
+        // Declared outside the try so the timeout catch can kill it: a
+        // `using var` inside the try is out of scope in the catch blocks.
+        System.Diagnostics.Process? proc = null;
         try
         {
             var psi = new ProcessStartInfo
@@ -599,7 +602,7 @@ public class LiveTvController : ControllerBase
             psi.ArgumentList.Add("-of");
             psi.ArgumentList.Add("csv=p=0");
             psi.ArgumentList.Add(url);
-            using var proc = Process.Start(psi);
+            proc = Process.Start(psi);
             if (proc is null)
             {
                 return null;
@@ -610,10 +613,36 @@ public class LiveTvController : ControllerBase
             await proc.WaitForExitAsync(cts.Token).ConfigureAwait(false);
             return stdout.Contains("audio", StringComparison.Ordinal);
         }
-        catch (Exception ex) when (ex is not OperationCanceledException)
+        catch (OperationCanceledException)
+        {
+            // A slow source (archive.org can take a while to start serving a
+            // file) times the probe out — that is inconclusive, not a failure.
+            // Proceed without the audio answer, per this method's contract.
+            // Kill the probe: disposing the Process does not stop it, and a
+            // hung ffprobe would linger on the slow connection otherwise.
+            try
+            {
+                if (!proc.HasExited)
+                {
+                    proc.Kill(entireProcessTree: true);
+                }
+            }
+            catch
+            {
+                // Already gone.
+            }
+
+            _logger.LogInformation("[RetroTv] Audio probe timed out for {Url} (proceeding).", url);
+            return null;
+        }
+        catch (Exception ex)
         {
             _logger.LogInformation("[RetroTv] Audio probe failed for {Url} (proceeding): {Message}", url, ex.Message);
             return null;
+        }
+        finally
+        {
+            proc?.Dispose();
         }
     }
 

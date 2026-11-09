@@ -57,7 +57,12 @@
                 <div class="inputContainer">
                     <label class="inputLabel inputLabelUnfocused" for="txtOutputFolder">Output folder</label>
                     <input id="txtOutputFolder" name="txtOutputFolder" type="text" is="emby-input" />
-                    <div class="fieldDescription">Where .strm / .nfo / poster files and catalog.json go for the on-demand library (Stage 1). Leave blank if you only want Live TV — the channels do not need it. If you do want the library, set a folder and add it to Jellyfin as a Movies library named "Retro TV".</div>
+                    <div class="fieldDescription">Where .strm / .nfo / poster files and catalog.json go for the on-demand library (Stage 1). Leave blank if you only want Live TV — the channels do not need it. If you do want the library, set a folder, press Save at the bottom, then press <b>Create the Retro TV library</b> below — the plugin creates the library for you (mixed movies + TV) and the catalog build puts the Retro TV icon on it. No manual library step.</div>
+                </div>
+
+                <div class="inputContainer">
+                    <button type="button" class="raised button-submit block emby-button" id="btnCreateLibrary">Create the Retro TV library</button>
+                    <div class="fieldDescription" id="retroTvLibraryResult">Creates a Jellyfin library from the output folder above, named from the library name below. Only for the on-demand catalog — Live TV does not need a library. The library shows the Retro TV icon automatically (the catalog build writes it into the folder).</div>
                 </div>
 
                 <div class="inputContainer">
@@ -341,6 +346,35 @@
                 el.textContent = "Theme " + theme + " applied to Jellyfin's guide." + (replaced ? " Replaced the previous Retro TV theme." : "") + (kept ? " Your other CSS was kept." : "") + " Reload the guide page to see it.";
             }).catch(function (err) {
                 el.textContent = "Could not apply the theme: " + (err && err.statusText ? err.statusText : err) + ". You can still paste the CSS by hand into Dashboard → General → Custom CSS.";
+            });
+        });
+
+        document.querySelector("#btnCreateLibrary").addEventListener("click", function () {
+            var folder = (document.querySelector("#txtOutputFolder").value || "").trim();
+            var name = (document.querySelector("#txtLibraryName").value || "Retro TV").trim();
+            var el = document.querySelector("#retroTvLibraryResult");
+            if (!folder) {
+                el.textContent = "Set the output folder above first, then press this button again.";
+                return;
+            }
+            el.textContent = "Checking for a library named " + name + "...";
+            ApiClient.ajax({ type: "GET", url: "Library/VirtualFolders" }).then(function (folders) {
+                var existing = (folders || []).filter(function (f) {
+                    var n = f.Name || f.name || "";
+                    return n.toLowerCase() === name.toLowerCase();
+                })[0];
+                if (existing) {
+                    var locs = existing.Locations || existing.locations || [];
+                    el.textContent = "A library named " + name + " already exists" + (locs.length ? " (" + locs.join(", ") + ")" : "") + ". Nothing created.";
+                    return;
+                }
+                el.textContent = "Creating the " + name + " library from " + folder + "...";
+                var url = "Library/VirtualFolders?name=" + encodeURIComponent(name) + "&collectionType=mixed&paths=" + encodeURIComponent(folder) + "&refreshLibrary=true";
+                return ApiClient.ajax({ type: "POST", url: url, data: JSON.stringify({ libraryOptions: {} }), contentType: "application/json" }).then(function () {
+                    el.textContent = "Library " + name + " created. It scans the folder now and shows the Retro TV icon automatically. Remember to press Save at the bottom so the output folder sticks for the catalog build.";
+                });
+            }).catch(function (err) {
+                el.textContent = "Could not create the library: " + (err && err.statusText ? err.statusText : err) + ". You can still add it by hand in Dashboard → Libraries.";
             });
         });
 
