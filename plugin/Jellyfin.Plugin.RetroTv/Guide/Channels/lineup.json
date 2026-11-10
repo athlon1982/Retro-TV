@@ -330,7 +330,7 @@
     "folder": "Drive-In Movies",
     "tier": "pd",
     "enabled": true,
-    "notes": "General movie channel — everything in the Drive-In folder. BackWhen slot 79 SILVER SCREEN CLASSICS."
+    "notes": "General movie channel \u2014 everything in the Drive-In folder. BackWhen slot 79 SILVER SCREEN CLASSICS."
   },
   {
     "number": 29,
@@ -427,7 +427,7 @@
     ],
     "oldestFirst": true,
     "enabled": true,
-    "notes": "User-uploaded tier — NOT in the linear guide in v0.2.0.0 (linear is PD-only); on-demand only. Soaps play oldest episode first when enabled."
+    "notes": "User-uploaded tier \u2014 NOT in the linear guide in v0.2.0.0 (linear is PD-only); on-demand only. Soaps play oldest episode first when enabled."
   },
   {
     "number": 37,
@@ -441,7 +441,7 @@
     ],
     "oldestFirst": true,
     "enabled": true,
-    "notes": "User-uploaded tier — NOT in the linear guide in v0.2.0.0 (linear is PD-only); on-demand only. Soaps play oldest episode first when enabled."
+    "notes": "User-uploaded tier \u2014 NOT in the linear guide in v0.2.0.0 (linear is PD-only); on-demand only. Soaps play oldest episode first when enabled."
   },
   {
     "number": 38,
@@ -768,7 +768,7 @@
     "folder": "Audiobooks",
     "tier": "pd",
     "enabled": false,
-    "notes": "Audio-only MP3 channel — the plugin has no audio-only stream path yet (sidecar-only). Enabled=false so it appears in neither the M3U nor the guide."
+    "notes": "Audio-only MP3 channel \u2014 the plugin has no audio-only stream path yet (sidecar-only). Enabled=false so it appears in neither the M3U nor the guide."
   },
   {
     "number": 68,
@@ -776,6 +776,15 @@
     "slug": "nasa",
     "group": "News, nature & science",
     "folder": "NASA",
+    "tier": "pd",
+    "enabled": true
+  },
+  {
+    "number": 69,
+    "name": "Holiday TV",
+    "slug": "holiday-tv",
+    "group": "Holiday & seasonal",
+    "folder": "Holiday TV",
     "tier": "pd",
     "enabled": true
   },

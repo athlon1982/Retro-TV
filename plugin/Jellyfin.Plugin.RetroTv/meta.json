@@ -1,6 +1,6 @@
 {
   "category": "MoviesAndShows",
-  "changelog": "Stream output raised from 640x480 to 720p (1280x720) \u2014 the 720p sources in the catalog were being downscaled to 640x480; the 1660 Ti NVENC handles 720p easily. Everything else from 0.3.0.4 is unchanged.",
+  "changelog": "New channel: Holiday TV (ch 69) \u2014 a permanent 365-day channel for Thanksgiving, Christmas, New Year, Valentine's Day, Easter and Summer, built from public-domain Internet Archive content (15 items: Rudolph 1948, Santa Claus 1959, Sappy New Year 1961, Christmas Comes But Once A Year 1936, and more). Everything else from 0.3.0.5 is unchanged.",
   "description": "Turns the Internet Archive into a retro-video library and live channels inside Jellyfin.",
   "guid": "25eef671-4023-4c23-badb-6c051fa0620f",
   "name": "Retro TV",
@@ -8,5 +8,5 @@
   "owner": "Michael DeCato",
   "targetAbi": "12.0.0.0",
   "timestamp": "2026-11-09T00:00:00Z",
-  "version": "0.3.0.5"
+  "version": "0.3.0.6"
 }
