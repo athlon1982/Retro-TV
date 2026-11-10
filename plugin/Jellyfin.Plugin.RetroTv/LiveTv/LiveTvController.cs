@@ -420,7 +420,7 @@ public class LiveTvController : ControllerBase
         args.Add("-map");
         args.Add("0:a:0?");
         args.Add("-vf");
-        args.Add("scale=640:480:force_original_aspect_ratio=decrease,pad=640:480:(ow-iw)/2:(oh-ih)/2,fps=30,format=yuv420p");
+        args.Add("scale=1280:720:force_original_aspect_ratio=decrease,pad=1280:720:(ow-iw)/2:(oh-ih)/2,fps=30,format=yuv420p");
         if (nvenc)
         {
             args.Add("-c:v");
