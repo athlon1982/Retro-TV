@@ -255,20 +255,24 @@ keeps working untouched alongside it.
   like one product. This is the proof of the theme plumbing in the
   skeleton: the config page reads the active theme and applies it.
 
-### 5.3 Starter themes (3 — all retro, all distinct)
+### 5.3 Starter themes (7 — all retro, all distinct)
 
 | # | Theme | Look | When it fits |
 |---|---|---|---|
 | 1 | **Woodgrain '78** (default) | Warm walnut browns, cream text, amber accent, serif display type, gentle scanlines + vignette. The 70s console TV in the living room. | The default. Warm, readable, on-brand. |
 | 2 | **Neon Nights** | Near-black navy background, hot-pink + cyan accents, glow on the now-line and live badges, condensed display type. The 80s/90s video-store window. | Night viewing; the flashy one. |
 | 3 | **VHS Blue Screen** | The classic VCR blue screen: solid blue background, white monospace text, "PLAY" style badges, minimal decoration, tracking-noise shimmer. High contrast, dead readable. | Accessibility / daylight; the joke that is also genuinely usable. |
+| 4 | **Green Mountain** | Deep forest green and Vermont gold — the dashboard's colors, on the guide. | The green one. Matches the Mega Dashboard. |
+| 5 | **Harvest Gold** | Warm harvest gold — amber fields at dusk. | Warm and bright; the golden one. |
+| 6 | **Burnt Orange** | Burnt orange — 70s shag carpet and sunset. | The orange one. |
+| 7 | **Cherry Red** | Cherry red — bold, warm, and loud. | The red one. |
 
 Each theme also sets `density`, `showPosters`, and the CRT overlay
 intensity, so switching themes changes feel, not just colors.
 
 ### 5.4 What lands when
 
-- **Skeleton (v0.1.0.0):** theme model + loader + the 3 built-in theme
+- **Skeleton (v0.1.0.0):** theme model + loader + the 7 built-in theme
   JSONs + `ActiveGuideTheme` config field; the config page applies the
   active theme's variables (proof the plumbing works). No guide page yet.
 - **Stage 2:** the guide page itself + guide data API + the in-guide
@@ -573,8 +577,8 @@ touched on Dayz). Results:
 - **Weather geocode verified live.** `GET /RetroTv/Weather/Geocode?zip=
   05773` → Wallingford, 43.47192, -72.97823, source "Open-Meteo
   geocoding". Zip 05773 is confirmed as Wallingford VT.
-- **Themes verified live.** `GET /RetroTv/Guide/Themes` returns all 3
-  built-ins (woodgrain-78, neon-nights, vhs-blue-screen);
+- **Themes verified live.** `GET /RetroTv/Guide/Themes` returns all 7
+  built-ins (woodgrain-78, neon-nights, vhs-blue-screen, green-mountain, harvest-gold, burnt-orange, cherry-red);
   `GET /RetroTv/Guide/Theme` returns the active theme JSON with colors.
 - **Pilot build end to end: 12 items, 0 skipped, 34.7 s.**
   Output: 37 files — 12 items x (.strm + .nfo + poster.jpg) +

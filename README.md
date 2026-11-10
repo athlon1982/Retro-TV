@@ -106,7 +106,7 @@ CSS is applied. On the plugin settings page, pick a theme from the
 dropdown and press **Apply this theme**. That writes the theme into
 Jellyfin's Branding settings — it keeps any custom CSS you already had
 and only replaces a previous Retro TV theme. Themes: **woodgrain-78**
-(default), **neon-nights**, **vhs-blue-screen**.
+(default), **neon-nights**, **vhs-blue-screen**, **green-mountain**, **harvest-gold**, **burnt-orange**, **cherry-red**.
 
 ### Step 4 — That's it. No library needed.
 
