@@ -102,10 +102,10 @@ public class RetroTvCatalogBuilder
             // First run (or a corrupt previous catalog): start at version 0.
         }
 
-        var jobs = new List<(string Folder, string Tier, string Identifier)>();
+        var jobs = new List<(string Folder, string Tier, string Identifier, bool MultiFile)>();
         if (pilot)
         {
-            jobs.AddRange(pilotItems.Select(p => (p.Folder, p.Tier, p.Identifier)));
+            jobs.AddRange(pilotItems.Select(p => (p.Folder, p.Tier, p.Identifier, false)));
             _logger.LogInformation("[RetroTv] Pilot mode: {Count} curated items", jobs.Count);
         }
         else
@@ -124,7 +124,7 @@ public class RetroTvCatalogBuilder
                 _logger.LogInformation("[RetroTv] Found {NumFound} total, taking {Count}", numFound, docs.Count);
                 foreach (var doc in docs)
                 {
-                    jobs.Add((folder.Name, folder.Tier, doc.Identifier));
+                    jobs.Add((folder.Name, folder.Tier, doc.Identifier, folder.MultiFile));
                 }
             }
         }
@@ -137,11 +137,11 @@ public class RetroTvCatalogBuilder
             var job = jobs[i];
             try
             {
-                var entry = await BuildItemAsync(_ia, outputDir, job.Folder, job.Tier, job.Identifier, pruneSet, overrides, cancellationToken).ConfigureAwait(false);
-                if (entry is not null)
+                var entries = await BuildItemAsync(_ia, outputDir, job.Folder, job.Tier, job.Identifier, job.MultiFile, pruneSet, overrides, cancellationToken).ConfigureAwait(false);
+                if (entries.Count > 0)
                 {
-                    items.Add(entry);
-                    _logger.LogInformation("[RetroTv] - {Identifier} [{Folder} / {Tier}] OK ({Title})", job.Identifier, job.Folder, job.Tier, entry.Title);
+                    items.AddRange(entries);
+                    _logger.LogInformation("[RetroTv] - {Identifier} [{Folder} / {Tier}] OK ({Count} entries)", job.Identifier, job.Folder, job.Tier, entries.Count);
                 }
                 else
                 {
@@ -205,12 +205,22 @@ public class RetroTvCatalogBuilder
     }
 
     /// <summary>Builds one item: metadata -> license filter -> MP4 pick -> files. Returns null when the item is skipped (reason logged).</summary>
-    private async Task<CatalogEntry?> BuildItemAsync(
+    /// <summary>
+    /// Builds the catalog entries for one IA item. Single-file mode (the
+    /// default) picks the best MP4 and returns one entry. Multi-file mode
+    /// (folders with MultiFile=true — full-series collections) returns one
+    /// entry per distinct episode file, each with a synthesized unique
+    /// identifier ("{identifier}--{file-slug}") so the guide pool treats
+    /// episodes as distinct items. Returns an empty list when the item is
+    /// pruned, fails the license check, or has no usable MP4.
+    /// </summary>
+    private async Task<List<CatalogEntry>> BuildItemAsync(
         InternetArchiveClient client,
         string outDir,
         string folder,
         string tier,
         string identifier,
+        bool multiFile,
         HashSet<string> pruneSet,
         Dictionary<string, TitleOverride> overrides,
         CancellationToken cancellationToken)
@@ -218,7 +228,7 @@ public class RetroTvCatalogBuilder
         if (pruneSet.Contains(identifier))
         {
             _logger.LogInformation("[RetroTv] - {Identifier} SKIP (pruned)", identifier);
-            return null;
+            return new List<CatalogEntry>();
         }
 
         var data = await client.MetadataAsync(identifier, cancellationToken).ConfigureAwait(false);
@@ -229,7 +239,7 @@ public class RetroTvCatalogBuilder
         if (tier == "pd" && !licenseUrl.Contains("publicdomain", StringComparison.OrdinalIgnoreCase))
         {
             _logger.LogInformation("[RetroTv] - {Identifier} SKIP (pd tier requires publicdomain licenseurl, got: {License})", identifier, licenseUrl.Length == 0 ? "(none)" : licenseUrl);
-            return null;
+            return new List<CatalogEntry>();
         }
 
         var mp4s = files
@@ -240,11 +250,8 @@ public class RetroTvCatalogBuilder
         if (mp4s.Count == 0)
         {
             _logger.LogInformation("[RetroTv] - {Identifier} SKIP (no MP4 derivative)", identifier);
-            return null;
+            return new List<CatalogEntry>();
         }
-
-        var chosen = mp4s[0].File;
-        var small = files.Find(f => f.Name.EndsWith("_512kb.mp4", StringComparison.OrdinalIgnoreCase));
 
         var title = FirstString(meta.Title);
         if (string.IsNullOrWhiteSpace(title))
@@ -254,7 +261,6 @@ public class RetroTvCatalogBuilder
 
         title = title.Trim();
         var year = ParseYear(meta.Year);
-        var runtimeSeconds = ParseRuntimeSeconds(meta, chosen);
         var description = StripHtml(FirstString(meta.Description)).Trim();
         if (description.Length > 1000)
         {
@@ -265,51 +271,156 @@ public class RetroTvCatalogBuilder
         var finalTitle = ov?.Title ?? title;
         var finalYear = ov?.Year ?? year;
         var collection = AsStringList(meta.Collection);
-
-        var mp4Url = $"{InternetArchiveClient.BaseUrl}/download/{Uri.EscapeDataString(identifier)}/{EncodeUriComponentPath(chosen.Name)}";
         var posterFile = files.Find(f => f.Name == "__ia_thumb.jpg");
         var posterUrl = posterFile is null
             ? null
             : $"{InternetArchiveClient.BaseUrl}/download/{Uri.EscapeDataString(identifier)}/__ia_thumb.jpg";
-
-        var baseName = Sanitize(finalYear.HasValue ? $"{finalTitle} ({finalYear.Value})" : finalTitle);
         var safeFolder = Sanitize(folder);
-        var itemDir = Path.Combine(outDir, safeFolder, baseName);
-        Directory.CreateDirectory(itemDir);
 
-        var strmName = baseName + ".strm";
-        var nfoName = baseName + ".nfo";
-        await File.WriteAllTextAsync(Path.Combine(itemDir, strmName), mp4Url + "\n", cancellationToken).ConfigureAwait(false);
-
-        var entry = new CatalogEntry
+        if (!multiFile)
         {
-            Identifier = identifier,
-            Title = finalTitle,
-            Year = finalYear,
-            RuntimeSeconds = runtimeSeconds,
-            LicenseUrl = licenseUrl,
-            Tier = tier,
-            Collection = collection,
-            Folder = folder,
-            Mp4Url = mp4Url,
-            Mp4512kbUrl = small is null ? null : $"{InternetArchiveClient.BaseUrl}/download/{Uri.EscapeDataString(identifier)}/{EncodeUriComponentPath(small.Name)}",
-            PosterUrl = posterUrl,
-            Description = description,
-            Files = new CatalogFiles
+            var chosen = mp4s[0].File;
+            var small = files.Find(f => f.Name.EndsWith("_512kb.mp4", StringComparison.OrdinalIgnoreCase));
+            var runtimeSeconds = ParseRuntimeSeconds(meta, chosen);
+            var mp4Url = $"{InternetArchiveClient.BaseUrl}/download/{Uri.EscapeDataString(identifier)}/{EncodeUriComponentPath(chosen.Name)}";
+
+            var baseName = Sanitize(finalYear.HasValue ? $"{finalTitle} ({finalYear.Value})" : finalTitle);
+            var itemDir = Path.Combine(outDir, safeFolder, baseName);
+            Directory.CreateDirectory(itemDir);
+
+            var strmName = baseName + ".strm";
+            var nfoName = baseName + ".nfo";
+            await File.WriteAllTextAsync(Path.Combine(itemDir, strmName), mp4Url + "\n", cancellationToken).ConfigureAwait(false);
+
+            var entry = new CatalogEntry
             {
-                Strm = $"{safeFolder}/{baseName}/{strmName}",
-                Nfo = $"{safeFolder}/{baseName}/{nfoName}",
-                Poster = posterFile is null ? null : $"{safeFolder}/{baseName}/poster.jpg"
+                Identifier = identifier,
+                Title = finalTitle,
+                Year = finalYear,
+                RuntimeSeconds = runtimeSeconds,
+                LicenseUrl = licenseUrl,
+                Tier = tier,
+                Collection = collection,
+                Folder = folder,
+                Mp4Url = mp4Url,
+                Mp4512kbUrl = small is null ? null : $"{InternetArchiveClient.BaseUrl}/download/{Uri.EscapeDataString(identifier)}/{EncodeUriComponentPath(small.Name)}",
+                PosterUrl = posterUrl,
+                Description = description,
+                Files = new CatalogFiles
+                {
+                    Strm = $"{safeFolder}/{baseName}/{strmName}",
+                    Nfo = $"{safeFolder}/{baseName}/{nfoName}",
+                    Poster = posterFile is null ? null : $"{safeFolder}/{baseName}/poster.jpg"
+                }
+            };
+            await File.WriteAllTextAsync(Path.Combine(itemDir, nfoName), NfoWriter.BuildNfo(entry), cancellationToken).ConfigureAwait(false);
+            if (posterFile is not null && posterUrl is not null)
+            {
+                var bytes = await client.DownloadBytesAsync(posterUrl, cancellationToken).ConfigureAwait(false);
+                await File.WriteAllBytesAsync(Path.Combine(itemDir, "poster.jpg"), bytes, cancellationToken).ConfigureAwait(false);
             }
-        };
-        await File.WriteAllTextAsync(Path.Combine(itemDir, nfoName), NfoWriter.BuildNfo(entry), cancellationToken).ConfigureAwait(false);
-        if (posterFile is not null && posterUrl is not null)
-        {
-            var bytes = await client.DownloadBytesAsync(posterUrl, cancellationToken).ConfigureAwait(false);
-            await File.WriteAllBytesAsync(Path.Combine(itemDir, "poster.jpg"), bytes, cancellationToken).ConfigureAwait(false);
+
+            return new List<CatalogEntry> { entry };
         }
 
-        return entry;
+        // Multi-file mode: one entry per distinct episode. Group MP4s by
+        // their base file name (stripping .ia / _512kb / _edit variants and
+        // any directory prefix) and keep the best-scoring file per group,
+        // so a file and its .ia.mp4 derivative don't become two entries.
+        var byBase = new Dictionary<string, (InternetArchiveClient.IaFile File, int Score)>(StringComparer.OrdinalIgnoreCase);
+        foreach (var (file, score) in mp4s)
+        {
+            var leaf = (file.Name ?? string.Empty).Replace('\\', '/').Split('/').Last();
+            var stem = Regex.Replace(leaf, "\\.mp4$", string.Empty, RegexOptions.IgnoreCase);
+            stem = Regex.Replace(stem, "(\\.ia|_512kb|_edit)$", string.Empty, RegexOptions.IgnoreCase);
+            if (stem.Length == 0)
+            {
+                continue;
+            }
+            if (!byBase.TryGetValue(stem, out var cur) || score > cur.Score)
+            {
+                byBase[stem] = (file, score);
+            }
+        }
+
+        var entries = new List<CatalogEntry>();
+        var seenIds = new HashSet<string>(StringComparer.Ordinal);
+        foreach (var (stem, (file, _)) in byBase.OrderBy(kv => kv.Key, StringComparer.OrdinalIgnoreCase))
+        {
+            var epTitle = EpisodeTitleFromFileName(stem, finalTitle);
+            var epId = identifier + "--" + Sanitize(stem).Replace(' ', '-').ToLowerInvariant();
+            if (epId.Length > 120)
+            {
+                epId = epId.Substring(0, 120).TrimEnd('-');
+            }
+            if (!seenIds.Add(epId))
+            {
+                continue;
+            }
+
+            var epRuntime = ParseRuntimeSeconds(meta, file);
+            var epMp4Url = $"{InternetArchiveClient.BaseUrl}/download/{Uri.EscapeDataString(identifier)}/{EncodeUriComponentPath(file.Name)}";
+            var epBase = Sanitize(epTitle);
+            var epDir = Path.Combine(outDir, safeFolder, epBase);
+            Directory.CreateDirectory(epDir);
+            var epStrm = epBase + ".strm";
+            var epNfo = epBase + ".nfo";
+            await File.WriteAllTextAsync(Path.Combine(epDir, epStrm), epMp4Url + "\n", cancellationToken).ConfigureAwait(false);
+
+            var epEntry = new CatalogEntry
+            {
+                Identifier = epId,
+                Title = epTitle,
+                Year = finalYear,
+                RuntimeSeconds = epRuntime,
+                LicenseUrl = licenseUrl,
+                Tier = tier,
+                Collection = collection,
+                Folder = folder,
+                Mp4Url = epMp4Url,
+                Mp4512kbUrl = null,
+                PosterUrl = posterUrl,
+                Description = description,
+                Files = new CatalogFiles
+                {
+                    Strm = $"{safeFolder}/{epBase}/{epStrm}",
+                    Nfo = $"{safeFolder}/{epBase}/{epNfo}",
+                    Poster = posterFile is null ? null : $"{safeFolder}/{epBase}/poster.jpg"
+                }
+            };
+            await File.WriteAllTextAsync(Path.Combine(epDir, epNfo), NfoWriter.BuildNfo(epEntry), cancellationToken).ConfigureAwait(false);
+            entries.Add(epEntry);
+        }
+
+        return entries;
+    }
+
+    /// <summary>
+    /// Derives a readable episode title from a series-collection file stem
+    /// (e.g. "Mash S1E1 Pilot PAL" or "Animaniacs S01E01 De-Zanitized, The
+    /// Monkey Song, Nighty-Night Toon"). Falls back to the series title plus
+    /// the raw stem when the stem carries no episode name.
+    /// </summary>
+    private static string EpisodeTitleFromFileName(string stem, string seriesTitle)
+    {
+        var s = stem.Replace('_', ' ').Trim();
+        s = Regex.Replace(s, "\\s+", " ");
+        // Strip common trailing tags that aren't part of the episode name.
+        s = Regex.Replace(s, "\\s+(PAL|NTSC|360p|480p|720p|1080p|UPSCALED|RE-DVDRIP|DVDRIP)$", string.Empty, RegexOptions.IgnoreCase).Trim();
+        if (s.Length == 0)
+        {
+            return seriesTitle;
+        }
+        // If the stem already starts with the series name (or a close
+        // variant), use it as-is; otherwise prefix the series title so the
+        // guide shows which show the episode belongs to.
+        var norm = Regex.Replace(s.ToLowerInvariant(), "[^a-z0-9]+", string.Empty);
+        var seriesNorm = Regex.Replace(seriesTitle.ToLowerInvariant(), "[^a-z0-9]+", string.Empty);
+        if (norm.StartsWith(seriesNorm, StringComparison.Ordinal) || seriesNorm.StartsWith(norm, StringComparison.Ordinal))
+        {
+            return s;
+        }
+        return seriesTitle + " — " + s;
     }
 
     // ---- Ports of the Node builder helpers (same rules, same outputs) ----

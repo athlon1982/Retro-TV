@@ -65,6 +65,55 @@
       "tier": "pd",
       "query": "identifier:(RudolphTheRedNosedReindeer1948 OR santa-claus-1959 OR sappy-new-year-1961 OR Ozzie-Harriet_Valentine_Show OR 600417TheJackBennyProgramS10e14EasterShow OR ChristmasComesButOnceAYear-1936 OR TheSnowman1933ColorSoundCartoon OR Ozzie-Harriet--Late_Christmas_Gift OR Dragnet_A_Gun_For_Christmas OR Beverly_Hillbillies_Ep13_Home_For_Christmas OR DragnetTheBigNewYear OR VAS_17_The_Turkey_Shoot OR Beverly_Hillbillies_Ep46_Turkey_Day OR 1977TheEasterBunnysComingToTownPromo OR 1968EasterSealsWithCarolBurnett) AND mediatype:(movies)",
       "limit": 50
+    },
+    {
+      "name": "Swamp TV",
+      "tier": "user-uploaded",
+      "query": "identifier:(mashmulti) AND mediatype:(movies)",
+      "limit": 50,
+      "multiFile": true
+    },
+    {
+      "name": "Mockingbird",
+      "tier": "user-uploaded",
+      "query": "identifier:(munsters_the OR the-munsters-today-season-1-3-complete) AND mediatype:(movies)",
+      "limit": 50,
+      "multiFile": true
+    },
+    {
+      "name": "Blue's Clues & Friends",
+      "tier": "user-uploaded",
+      "query": "identifier:(blues-clues-s-03-e-59-blues-big-musical-movie) AND mediatype:(movies)",
+      "limit": 50,
+      "multiFile": true
+    },
+    {
+      "name": "Watertower Kids",
+      "tier": "user-uploaded",
+      "query": "identifier:(animaniacs-1993-1998-movie_202601 OR pinky.and.the.-brain.-s-01-e-12.-a.-pinky.and.the.-brain.-christmas.-1080p.-upsc OR tiny-toon-adventures-1990-1995_202512) AND mediatype:(movies)",
+      "limit": 50,
+      "multiFile": true
+    },
+    {
+      "name": "Checkerboard",
+      "tier": "user-uploaded",
+      "query": "identifier:(dexters-laboratory-the-complete-series OR powerpuff-girls-complete-series) AND mediatype:(movies)",
+      "limit": 50,
+      "multiFile": true
+    },
+    {
+      "name": "Mouse House",
+      "tier": "user-uploaded",
+      "query": "identifier:(ducktales-1987_202601) AND mediatype:(movies)",
+      "limit": 50,
+      "multiFile": true
+    },
+    {
+      "name": "Moose TV",
+      "tier": "user-uploaded",
+      "query": "identifier:(MashSeries OR the-beachcombers-1975-11-16 OR the-beachcombers-1975-09-28-invisible-relic) AND mediatype:(movies)",
+      "limit": 50,
+      "multiFile": true
     }
   ],
   "libraryName": "Retro TV",

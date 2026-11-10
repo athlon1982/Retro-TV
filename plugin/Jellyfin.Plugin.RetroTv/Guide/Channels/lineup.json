@@ -1611,5 +1611,68 @@
     "folder": "Station Break",
     "tier": "pd",
     "enabled": true
+  },
+  {
+    "number": 217,
+    "name": "Swamp TV",
+    "slug": "swamp-tv",
+    "group": "Sitcoms & classic TV",
+    "folder": "Swamp TV",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 218,
+    "name": "Mockingbird",
+    "slug": "mockingbird",
+    "group": "Sitcoms & classic TV",
+    "folder": "Mockingbird",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 219,
+    "name": "Blue's Clues & Friends",
+    "slug": "blues-clues-friends",
+    "group": "Kids & cartoons",
+    "folder": "Blue's Clues & Friends",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 220,
+    "name": "Watertower Kids",
+    "slug": "watertower-kids",
+    "group": "Kids & cartoons",
+    "folder": "Watertower Kids",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 221,
+    "name": "Checkerboard",
+    "slug": "checkerboard",
+    "group": "Kids & cartoons",
+    "folder": "Checkerboard",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 222,
+    "name": "Mouse House",
+    "slug": "mouse-house",
+    "group": "Kids & cartoons",
+    "folder": "Mouse House",
+    "tier": "user-uploaded",
+    "enabled": true
+  },
+  {
+    "number": 223,
+    "name": "Moose TV",
+    "slug": "moose-tv",
+    "group": "Kids & cartoons",
+    "folder": "Moose TV",
+    "tier": "user-uploaded",
+    "enabled": true
   }
 ]

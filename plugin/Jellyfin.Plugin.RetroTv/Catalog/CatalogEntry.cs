@@ -94,6 +94,18 @@ public class CatalogFolder
 
     [JsonPropertyName("limit")]
     public int Limit { get; set; } = 100;
+
+    /// <summary>
+    /// When true, a folder's IA items are series collections: emit one catalog
+    /// entry per MP4 file (one per episode) instead of one entry per item.
+    /// Each entry gets a synthesized unique identifier
+    /// ("{identifier}--{file-slug}") so the guide pool treats episodes as
+    /// distinct items. Used by the Backwhen series channels (Swamp TV,
+    /// Mockingbird, Blue's Clues, Watertower Kids, Checkerboard, Mouse
+    /// House, Moose TV) whose IA sources are full-series collections.
+    /// </summary>
+    [JsonPropertyName("multiFile")]
+    public bool MultiFile { get; set; } = false;
 }
 
 /// <summary>A curated pilot item from config: folder, tier, identifier.</summary>

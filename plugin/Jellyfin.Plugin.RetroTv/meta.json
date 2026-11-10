@@ -1,12 +1,1 @@
-{
-  "category": "MoviesAndShows",
-  "changelog": "New channel: Holiday TV (ch 69) \u2014 a permanent 365-day channel for Thanksgiving, Christmas, New Year, Valentine's Day, Easter and Summer, built from public-domain Internet Archive content (15 items: Rudolph 1948, Santa Claus 1959, Sappy New Year 1961, Christmas Comes But Once A Year 1936, and more). Everything else from 0.3.0.5 is unchanged.",
-  "description": "Turns the Internet Archive into a retro-video library and live channels inside Jellyfin.",
-  "guid": "25eef671-4023-4c23-badb-6c051fa0620f",
-  "name": "Retro TV",
-  "overview": "Retro TV \u2014 Saturday-morning cartoons, classic TV, drive-in movies and more, from the Internet Archive.",
-  "owner": "Michael DeCato",
-  "targetAbi": "12.0.0.0",
-  "timestamp": "2026-11-09T00:00:00Z",
-  "version": "0.3.0.6"
-}
+{"category": "MoviesAndShows", "changelog": "Seven new channels from the Backwhen lineup, all in the user-uploaded tier: Swamp TV (ch 217, M*A*S*H 24/7), Mockingbird (ch 218, The Munsters + The Munsters Today), Blue's Clues & Friends (ch 219), Watertower Kids (ch 220, Kids' WB: Animaniacs, Pinky and the Brain, Tiny Toon Adventures), Checkerboard (ch 221, Cartoon Network: Dexter's Laboratory, Powerpuff Girls), Mouse House (ch 222, Disney Afternoon: DuckTales), Moose TV (ch 223, Canadian classics: Fraggle Rock, The Beachcombers). New multi-file catalog support: folders marked multiFile now emit one catalog entry per episode file, so full-series collections on the Archive play as real 24/7 channels instead of a single episode. Star Trek (The Bridge) is not included yet \u2014 no clean full-episode MP4 source found on the Archive. Everything else from 0.3.0.6 is unchanged (720p output, Holiday TV, 7 guide themes).", "description": "Turns the Internet Archive into a retro-video library and live channels inside Jellyfin.", "guid": "25eef671-4023-4c23-badb-6c051fa0620f", "name": "Retro TV", "overview": "Retro TV \u2014 Saturday-morning cartoons, classic TV, drive-in movies and more, from the Internet Archive.", "owner": "Michael DeCato", "targetAbi": "12.0.0.0", "timestamp": "2026-11-10T00:00:00Z", "version": "0.3.0.7"}
