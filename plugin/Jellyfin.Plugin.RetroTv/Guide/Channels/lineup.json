@@ -1674,5 +1674,14 @@
     "folder": "Moose TV",
     "tier": "user-uploaded",
     "enabled": true
+  },
+  {
+    "number": 224,
+    "name": "The Bridge",
+    "slug": "the-bridge",
+    "group": "Drama, mystery & sci-fi",
+    "folder": "The Bridge",
+    "tier": "user-uploaded",
+    "enabled": true
   }
 ]

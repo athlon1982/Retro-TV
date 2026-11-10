@@ -114,6 +114,13 @@
       "query": "identifier:(MashSeries OR the-beachcombers-1975-11-16 OR the-beachcombers-1975-09-28-invisible-relic) AND mediatype:(movies)",
       "limit": 50,
       "multiFile": true
+    },
+    {
+      "name": "The Bridge",
+      "tier": "user-uploaded",
+      "query": "identifier:(star-trek-1x-01-the-cage_20231231) AND mediatype:(movies)",
+      "limit": 50,
+      "multiFile": true
     }
   ],
   "libraryName": "Retro TV",
