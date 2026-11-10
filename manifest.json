@@ -1,1 +1,46 @@
-[{"category":"MoviesAndShows","changelog":"Settings page is now fully generic and simpler: no Dayz paths, no Wallingford zip default (weather zip is blank until you enter your own), no personal references anywhere in the UI, errors, or logs \u2014 and no library setup on this page at all, because Live TV pulls everything from the guide and needs no library. Everything else from 0.3.0.2 is unchanged (Getting-started box, copyable tuner links, one-click theme apply).","description":"Turns the Internet Archive into a retro-video library and live channels inside Jellyfin.","guid":"25eef671-4023-4c23-badb-6c051fa0620f","imageUrl":"https://raw.githubusercontent.com/athlon1982/Retro-TV/main/assets/icon.webp","name":"Retro TV","overview":"Retro TV \u2014 Saturday-morning cartoons, classic TV, drive-in movies and more, from the Internet Archive.","owner":"Michael DeCato","versions":[{"changelog":"Settings page is now fully generic and simpler: no Dayz paths, no Wallingford zip default (weather zip is blank until you enter your own), no personal references anywhere in the UI, errors, or logs \u2014 and no library setup on this page at all, because Live TV pulls everything from the guide and needs no library. Everything else from 0.3.0.2 is unchanged (Getting-started box, copyable tuner links, one-click theme apply).","checksum":"af808e56045c3d98b906a24f95d730a4","sourceUrl":"https://github.com/athlon1982/Retro-TV/releases/download/v0.3.0.3/retro-tv_0.3.0.3.zip","targetAbi":"12.0.0.0","timestamp":"2026-11-09T00:00:00Z","version":"0.3.0.3"},{"changelog":"Full 155-channel lineup (2,982 seed items) with the user-uploaded tier live, old-school commercial breaks (one 30-60 s vintage spot at most once an hour per channel, toggle on the settings page, default ON), 96 h guide window, and additive catalog refreshes that only ever grow the guide. Audiobooks is not served (MP3-only, no audio-only stream path yet).","checksum":"110fc03f49126e771dea9224475b1d06","sourceUrl":"https://github.com/athlon1982/Retro-TV/releases/download/v0.3.0.0/retro-tv_0.3.0.0.zip","targetAbi":"12.0.0.0","timestamp":"2026-11-09T00:00:00Z","version":"0.3.0.0"},{"changelog":"Channel guide \u2014 deterministic 48 h schedules, BackWhen-shaped lineup, themeable guide page, M3U + XMLTV, live ffmpeg streams, weather channel, folder.jpg write.","checksum":"aa44c4a64bfaa210ce2da14b8be61448","sourceUrl":"https://github.com/athlon1982/Retro-TV/releases/download/v0.2.0.0/retro-tv_0.2.0.0.zip","targetAbi":"12.0.0.0","timestamp":"2026-11-08T00:00:00Z","version":"0.2.0.0"}]}]
+[
+  {
+    "category": "MoviesAndShows",
+    "changelog": "Four new guide themes — Green Mountain (deep forest green and Vermont gold), Harvest Gold, Burnt Orange, and Cherry Red — 7 themes total. The settings dropdown and guide switcher pick them up automatically, and the one-click Apply-theme works for all four. Everything else from 0.3.0.3 unchanged.",
+    "description": "Turns the Internet Archive into a retro-video library and live channels inside Jellyfin.",
+    "guid": "25eef671-4023-4c23-badb-6c051fa0620f",
+    "imageUrl": "https://raw.githubusercontent.com/athlon1982/Retro-TV/main/assets/icon.webp",
+    "name": "Retro TV",
+    "overview": "Retro TV — Saturday-morning cartoons, classic TV, drive-in movies and more, from the Internet Archive.",
+    "owner": "Michael DeCato",
+    "versions": [
+      {
+        "changelog": "Four new guide themes — Green Mountain (deep forest green and Vermont gold), Harvest Gold, Burnt Orange, and Cherry Red — 7 themes total. The settings dropdown and guide switcher pick them up automatically, and the one-click Apply-theme works for all four. Everything else from 0.3.0.3 unchanged.",
+        "checksum": "4b2e882f3a8b71a38764db9c18fc7cb11b239cb7f2e40e7a3c1e71a4884365ad",
+        "sourceUrl": "https://github.com/athlon1982/Retro-TV/releases/download/v0.3.0.4/retro-tv_0.3.0.4.zip",
+        "targetAbi": "12.0.0.0",
+        "timestamp": "2026-11-09T00:00:00Z",
+        "version": "0.3.0.4"
+      },
+      {
+        "changelog": "Settings page is now fully generic and simpler: no Dayz paths, no Wallingford zip default (weather zip is blank until you enter your own), no personal references anywhere in the UI, errors, or logs — and no library setup on this page at all, because Live TV pulls everything from the guide and needs no library. Everything else from 0.3.0.2 is unchanged (Getting-started box, copyable tuner links, one-click theme apply).",
+        "checksum": "af808e56045c3d98b906a24f95d730a4",
+        "sourceUrl": "https://github.com/athlon1982/Retro-TV/releases/download/v0.3.0.3/retro-tv_0.3.0.3.zip",
+        "targetAbi": "12.0.0.0",
+        "timestamp": "2026-11-09T00:00:00Z",
+        "version": "0.3.0.3"
+      },
+      {
+        "changelog": "Full 155-channel lineup (2,982 seed items) with the user-uploaded tier live, old-school commercial breaks (one 30-60 s vintage spot at most once an hour per channel, toggle on the settings page, default ON), 96 h guide window, and additive catalog refreshes that only ever grow the guide. Audiobooks is not served (MP3-only, no audio-only stream path yet).",
+        "checksum": "110fc03f49126e771dea9224475b1d06",
+        "sourceUrl": "https://github.com/athlon1982/Retro-TV/releases/download/v0.3.0.0/retro-tv_0.3.0.0.zip",
+        "targetAbi": "12.0.0.0",
+        "timestamp": "2026-11-09T00:00:00Z",
+        "version": "0.3.0.0"
+      },
+      {
+        "changelog": "Channel guide — deterministic 48 h schedules, BackWhen-shaped lineup, themeable guide page, M3U + XMLTV, live ffmpeg streams, weather channel, folder.jpg write.",
+        "checksum": "aa44c4a64bfaa210ce2da14b8be61448",
+        "sourceUrl": "https://github.com/athlon1982/Retro-TV/releases/download/v0.2.0.0/retro-tv_0.2.0.0.zip",
+        "targetAbi": "12.0.0.0",
+        "timestamp": "2026-11-08T00:00:00Z",
+        "version": "0.2.0.0"
+      }
+    ]
+  }
+]
