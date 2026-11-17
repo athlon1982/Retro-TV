@@ -1,7 +1,7 @@
 [
   {
     "category": "MoviesAndShows",
-    "changelog": "Four new guide themes — Green Mountain (deep forest green and Vermont gold), Harvest Gold, Burnt Orange, and Cherry Red — 7 themes total. The settings dropdown and guide switcher pick them up automatically, and the one-click Apply-theme works for all four. Everything else from 0.3.0.3 unchanged.",
+    "changelog": "36 new channels (ch 225-260) plus Newswire (1990s national news) and TV Land Sitcoms (live Pluto TV channel passed straight through ffmpeg). The Bridge (ch 262, Star Trek TOS complete, 80 eps). Guide page: on-screen control bar (channel flip, guide overlay, mute, 4:3/widescreen, cast, fullscreen), type digits to jump, keyboard F/M/A/G/C/Enter, color-bars loading screen, in-player now/next overlay. Weather: enter your zip code on the config page and the forecast shows your local area. Known issue: the config-page Build pilot/full buttons POST to /web/RetroTv/Build and 404 - use the daily 3:00 AM build or POST /RetroTv/Build?pilot=false directly (fix planned in 0.3.0.9). Total: 200 channels, 4,617 catalog items.",
     "description": "Turns the Internet Archive into a retro-video library and live channels inside Jellyfin.",
     "guid": "25eef671-4023-4c23-badb-6c051fa0620f",
     "imageUrl": "https://raw.githubusercontent.com/athlon1982/Retro-TV/main/assets/icon.webp",
@@ -10,7 +10,15 @@
     "owner": "Michael DeCato",
     "versions": [
       {
-        "changelog": "Four new guide themes — Green Mountain (deep forest green and Vermont gold), Harvest Gold, Burnt Orange, and Cherry Red — 7 themes total. The settings dropdown and guide switcher pick them up automatically, and the one-click Apply-theme works for all four. Everything else from 0.3.0.3 unchanged.",
+        "changelog": "36 new channels (ch 225-260) plus Newswire (1990s national news) and TV Land Sitcoms (live Pluto TV channel passed straight through ffmpeg). The Bridge (ch 262, Star Trek TOS complete, 80 eps). Guide page: on-screen control bar (channel flip, guide overlay, mute, 4:3/widescreen, cast, fullscreen), type digits to jump, keyboard F/M/A/G/C/Enter, color-bars loading screen, in-player now/next overlay. Weather: enter your zip code on the config page and the forecast shows your local area. Known issue: the config-page Build pilot/full buttons POST to /web/RetroTv/Build and 404 - use the daily 3:00 AM build or POST /RetroTv/Build?pilot=false directly (fix planned in 0.3.0.9). Total: 200 channels, 4,617 catalog items.",
+        "checksum": "c7a014abbf4fbf140903b68ad35b6165519bedd1045701393e9646189dc720f3",
+        "sourceUrl": "https://github.com/athlon1982/Retro-TV/releases/download/v0.3.0.8/retro-tv_0.3.0.8.zip",
+        "targetAbi": "12.0.0.0",
+        "timestamp": "2026-11-13T00:00:00Z",
+        "version": "0.3.0.8"
+      },
+{
+        "changelog": "Four new guide themes — Green Mountain (deep forest green and gold), Harvest Gold, Burnt Orange, and Cherry Red — 7 themes total. The settings dropdown and guide switcher pick them up automatically, and the one-click Apply-theme works for all four. Everything else from 0.3.0.3 unchanged.",
         "checksum": "4b2e882f3a8b71a38764db9c18fc7cb11b239cb7f2e40e7a3c1e71a4884365ad",
         "sourceUrl": "https://github.com/athlon1982/Retro-TV/releases/download/v0.3.0.4/retro-tv_0.3.0.4.zip",
         "targetAbi": "12.0.0.0",
@@ -18,7 +26,7 @@
         "version": "0.3.0.4"
       },
       {
-        "changelog": "Settings page is now fully generic and simpler: no Dayz paths, no Wallingford zip default (weather zip is blank until you enter your own), no personal references anywhere in the UI, errors, or logs — and no library setup on this page at all, because Live TV pulls everything from the guide and needs no library. Everything else from 0.3.0.2 is unchanged (Getting-started box, copyable tuner links, one-click theme apply).",
+        "changelog": "Settings page is now fully generic and simpler: no Dayz paths, no local zip default (weather zip is blank until you enter your own), no personal references anywhere in the UI, errors, or logs — and no library setup on this page at all, because Live TV pulls everything from the guide and needs no library. Everything else from 0.3.0.2 is unchanged (Getting-started box, copyable tuner links, one-click theme apply).",
         "checksum": "af808e56045c3d98b906a24f95d730a4",
         "sourceUrl": "https://github.com/athlon1982/Retro-TV/releases/download/v0.3.0.3/retro-tv_0.3.0.3.zip",
         "targetAbi": "12.0.0.0",
@@ -34,7 +42,7 @@
         "version": "0.3.0.0"
       },
       {
-        "changelog": "Channel guide — deterministic 48 h schedules, BackWhen-shaped lineup, themeable guide page, M3U + XMLTV, live ffmpeg streams, weather channel, folder.jpg write.",
+        "changelog": "Channel guide — deterministic 48 h schedules, classic-shaped lineup, themeable guide page, M3U + XMLTV, live ffmpeg streams, weather channel, folder.jpg write.",
         "checksum": "aa44c4a64bfaa210ce2da14b8be61448",
         "sourceUrl": "https://github.com/athlon1982/Retro-TV/releases/download/v0.2.0.0/retro-tv_0.2.0.0.zip",
         "targetAbi": "12.0.0.0",
